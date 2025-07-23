@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Kajpa - Agencja Internetowa</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+            --primary-white: #ffffff;
+            --primary-light-gray: #f8f9fa;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-indigo: #6366f1;
+            --text-dark-charcoal: #1f2937;
+            --text-medium-charcoal: #374151;
+            --cta-green: #10b981;
+            --cta-blue: #0ea5e9;
+        }
+        
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: var(--primary-white);
+            color: var(--text-medium-charcoal);
+        }
+        
+        .main-container {
+            @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+        }
+        
+        .section {
+            @apply py-20 md:py-28;
+        }
+        
+        .h1-heading {
+            @apply text-4xl md:text-6xl font-extrabold text-[var(--text-dark-charcoal)] tracking-tighter;
+        }
+        
+        .h2-heading {
+            @apply text-3xl md:text-4xl font-bold text-[var(--text-dark-charcoal)] tracking-tight;
+        }
+        
+        .body-text {
+            @apply text-lg text-[var(--text-medium-charcoal)] leading-relaxed;
+        }
+        
+        .cta-button {
+            @apply bg-[var(--accent-indigo)] text-[var(--primary-white)] rounded-full px-8 py-4 text-base font-semibold hover:bg-opacity-90 focus:outline-none focus:ring-4 focus:ring-indigo-300 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1;
+        }
+        
+        .card {
+            @apply bg-[var(--primary-white)] rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2;
+        }
+        
+        .input-field {
+            @apply w-full bg-[var(--primary-light-gray)] border border-gray-200 rounded-lg px-4 py-3 text-[var(--text-medium-charcoal)] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--accent-indigo)] focus:border-transparent transition-all duration-300;
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-orb {
+            @apply absolute rounded-full filter blur-3xl opacity-30 animate-pulse;
+        }
+        
+        .orb-1 {
+            @apply bg-gradient-to-br from-indigo-300 to-purple-300 w-96 h-96 -top-20 -left-40;
+        }
+        
+        .orb-2 {
+            @apply bg-gradient-to-br from-blue-200 to-green-200 w-80 h-80 -bottom-20 -right-40;
+        }
+        
+        .orb-3 {
+            @apply bg-gradient-to-br from-purple-200 to-pink-200 w-72 h-72 top-1/2 -translate-y-1/2 -right-32;
+        }
+        
+        .orb-4 {
+            @apply bg-gradient-to-br from-green-200 to-cyan-200 w-80 h-80 bottom-0 -left-32;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            
+            <!-- Header -->
+            <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-sm transition-all duration-300 shadow-sm">
+                <nav class="main-container flex items-center justify-between py-4">
+                    <a class="flex items-center gap-2" href="#">
+                        <div class="size-9 text-[var(--accent-indigo)]">
+                            <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-2xl font-bold tracking-tight text-[var(--text-dark-charcoal)]">Kajpa</span>
+                    </a>
+                    
+                    <div class="hidden md:flex items-center gap-8">
+                        <a class="text-base font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="#services">Usługi</a>
+                        <a class="text-base font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="#process">Proces</a>
+                        <a class="text-base font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="#portfolio">Portfolio</a>
+                        <a class="text-base font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="#about">O nas</a>
+                    </div>
+                    
+                    <a class="hidden md:inline-block cta-button px-6 py-2.5" href="#contact">Kontakt</a>
+                    
+                    <button class="md:hidden p-2 rounded-md text-[var(--text-dark-charcoal)]">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                    </button>
+                </nav>
+            </header>
+
+            <main>
+                <!-- Hero Section -->
+                <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+                    <div class="absolute inset-0 bg-[var(--primary-light-gray)] [clip-path:polygon(0_0,_100%_0,_100%_90%,_0_100%)]"></div>
+                    <div class="gradient-orb orb-2" style="animation-delay: 2s"></div>
+                    <div class="gradient-orb orb-1"></div>
+                    
+                    <div class="main-container relative z-10 text-center">
+                        <div class="max-w-4xl mx-auto">
+                            <h1 class="h1-heading fade-in-up">Tworzymy produkty cyfrowe, które napędzają wzrost.</h1>
+                            <p class="body-text mt-6 max-w-2xl mx-auto fade-in-up" style="animation-delay: 0.2s">
+                                Od eleganckich stron internetowych i solidnych aplikacji webowych po intuicyjne aplikacje mobilne i wydajne rozwiązania SaaS - wprowadzamy Twoje pomysły w życie.
+                            </p>
+                            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 fade-in-up" style="animation-delay: 0.4s">
+                                <a class="cta-button" href="#portfolio">Zobacz nasze prace</a>
+                                <a class="font-semibold text-[var(--text-medium-charcoal)] hover:text-[var(--text-dark-charcoal)] transition-colors duration-300" href="#contact">Bezpłatna wycena →</a>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-20 fade-in-up" style="animation-delay: 0.6s">
+                            <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-6">
+                                Zaufane przez innowacyjne startupy i uznane marki
+                            </p>
+                            <div class="flex flex-wrap justify-center items-center gap-x-10 sm:gap-x-16 gap-y-6 grayscale opacity-70">
+                                <img alt="LearnPilot" class="h-8" src="https://learnpilot.pl/logo/logo_sowa.png"/>
+                                <img alt="Elitegram" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK_g_Ks5N9Ms2povk5kq4BgYp5bK0fERYjORVdpCIBAzQa8GR99NRE99vIiYojI6QJVGwu3D2h7lFiaQ8wO1QYndiEJkqGgEN7bvxHmF5LLNvyaMCARNMgTKprwNohYXmiVeYRGAvv9NVye5VI2InrK0lXoVQQrl0E39O-DrBV3capVFUhlwlWseUjYLjOJaOERJiHzKfz5V0DZI5n_HOVycXZ9_py6F0tWZOkcOYD2VojIlh1aTPjXHXrpcyGAlX2T79-dlrezA"/>
+                                <img alt="iWalk" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0LjxvXcnSIG2bFs1IXMeKt__2cRV2CKevVPAVREV-DGghmXfveK5qBcwg-XDtACsIIikbVC-TpcV5slK1G33MPgfKE-jCI1SEaxlZnF2UFvTLndLfgU-ohScLNVe9VfsFqhJYtMguNCZS7-3U14k_kSf-7XtRPnaxDZ98toYjQWCPBXtgbzn8q5M_Doz4n12HuA0cK3v8rnsMUTB43kxYhf00J1Fs0MbY3FYGQ04xGXhLJiKpGrwgRqH_ik7xn6EmIByaqkYmgw"/>
+                                <img alt="Glowee" class="h-8" src="https://glowee.ai/static/images/logo%20poziom%20biale.png"/>
+                                <img alt="Statamic" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBypeTv8s7755TulyIk_TijYLnjYdgQLKowMvF0J9Feu2Sy0FdM--hlJq85lxIbxHc34JVC7O0NuEbteIZcrvPCx3fBHimPWcDUcilNGqzCMWYz6C6PHj8b7SxJVESblwlKxujMREYVcvhHZ4gtUSjEvQLAF9nqGcAxZHl_OsIVIQr4aTBe2ID_bGmOlZkNyNsfR_zaVtSlG2mpxfwiV4nLTAJzJPRKI3qyvq_BU2REMH_G0GSjPtV5RoFktMshTyX55Jlk0Lh3xw"/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Services Section -->
+                <section class="section bg-[var(--primary-white)] relative overflow-hidden" id="services">
+                    <div class="gradient-orb orb-3"></div>
+                    <div class="gradient-orb orb-4" style="animation-delay: 3s"></div>
+                    
+                    <div class="main-container relative z-10">
+                        <div class="text-center max-w-2xl mx-auto">
+                            <h2 class="h2-heading">Nasza ekspertyza</h2>
+                            <p class="body-text mt-4">
+                                Dostarczamy kompleksowe rozwiązania cyfrowe, które pomogą Twojemu biznesowi odnieść sukces w cyfrowym świecie.
+                            </p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+                            <div class="card text-center">
+                                <div class="inline-block p-4 bg-indigo-100 text-[var(--accent-indigo)] rounded-xl mb-6">
+                                    <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)] mb-3">Strony internetowe i aplikacje webowe</h3>
+                                <p class="text-base text-[var(--text-medium-charcoal)]">
+                                    Tworzymy responsywne, wydajne strony internetowe i złożone aplikacje webowe, które są bezpieczne i skalowalne.
+                                </p>
+                            </div>
+                            
+                            <div class="card text-center">
+                                <div class="inline-block p-4 bg-indigo-100 text-[var(--accent-indigo)] rounded-xl mb-6">
+                                    <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)] mb-3">Aplikacje mobilne</h3>
+                                <p class="text-base text-[var(--text-medium-charcoal)]">
+                                    Projektujemy i rozwijamy natywne oraz wieloplatformowe aplikacje mobilne na iOS i Android.
+                                </p>
+                            </div>
+                            
+                            <div class="card text-center">
+                                <div class="inline-block p-4 bg-indigo-100 text-[var(--accent-indigo)] rounded-xl mb-6">
+                                    <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)] mb-3">SaaS i produkty cyfrowe</h3>
+                                <p class="text-base text-[var(--text-medium-charcoal)]">
+                                    Budujemy skalowalne i bezpieczne rozwiązania Software as a Service oraz niestandardowe produkty cyfrowe od podstaw.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Process Section -->
+                <section class="section bg-[var(--primary-light-gray)]" id="process">
+                    <div class="main-container">
+                        <div class="text-center max-w-2xl mx-auto">
+                            <h2 class="h2-heading">Nasz sprawdzony proces</h2>
+                            <p class="body-text mt-4">
+                                Stosujemy ustrukturyzowany i przejrzysty proces, aby zapewnić sukces Twojego projektu od początku do końca.
+                            </p>
+                        </div>
+                        
+                        <div class="relative mt-16">
+                            <div class="absolute left-1/2 top-4 bottom-4 w-px bg-gray-300 hidden md:block"></div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+                                <div class="flex items-start gap-6">
+                                    <div class="flex-shrink-0 bg-[var(--accent-indigo)] text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl">1</div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)] mb-2">Odkrywanie i strategia</h3>
+                                        <p class="text-[var(--text-medium-charcoal)]">
+                                            Zaczynamy od zrozumienia Twoich celów, odbiorców i rynku, aby zbudować solidne strategiczne fundamenty.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-6 md:flex-row-reverse md:text-right">
+                                    <div class="flex-shrink-0 bg-[var(--accent-indigo)] text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl">2</div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)] mb-2">Projektowanie i prototypowanie</h3>
+                                        <p class="text-[var(--text-medium-charcoal)]">
+                                            Nasz zespół tworzy intuicyjne projekty UI/UX i interaktywne prototypy do Twojej oceny.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-6">
+                                    <div class="flex-shrink-0 bg-[var(--accent-indigo)] text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl">3</div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)] mb-2">Programowanie i testowanie</h3>
+                                        <p class="text-[var(--text-medium-charcoal)]">
+                                            Piszemy czysty, wydajny kod i gruntownie testujemy, aby zapewnić wolny od błędów, wysokiej jakości produkt.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-6 md:flex-row-reverse md:text-right">
+                                    <div class="flex-shrink-0 bg-[var(--accent-indigo)] text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl">4</div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)] mb-2">Wdrożenie i wsparcie</h3>
+                                        <p class="text-[var(--text-medium-charcoal)]">
+                                            Zajmujemy się wdrożeniem i zapewniamy ciągłe wsparcie, aby Twój produkt nadal działał optymalnie.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Portfolio Section -->
+                <section class="section" id="portfolio">
+                    <div class="main-container">
+                        <div class="text-center max-w-2xl mx-auto">
+                            <h2 class="h2-heading">Nasze najnowsze prace</h2>
+                            <p class="body-text mt-4">
+                                Spójrz na niektóre z cyfrowych doświadczeń, które niedawno stworzyliśmy dla naszych klientów.
+                            </p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+                            <div class="group card !p-0 overflow-hidden">
+                                <img alt="Project 1" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp75IGY3aw8wxmAMWczw2Db0Zrz-P06CGEEpsO7T_F6qbfgFA5y0gIzxONcTmrPcFbALfyba115E410ifSFeIGkaps9z-RnBIEsxI9Qb2UG08xYu6s3E-MG276Bzf8778LRHCLDOH4O3DRvu0BklLO4o2EAIlxaOrHTrOrzrPJRc1Dr7sGHvt2cidfmu83Buumy8iMHZxNesSHfc2zV7OLiZJGaD4zpuj1mSVGAyEITpfHqIaQbhDI_puZKx6UqsFayv3SVRc1mw"/>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)]">UI/UX platformy SaaS</h3>
+                                    <p class="text-[var(--text-medium-charcoal)] text-base mt-2">
+                                        Kompletny przeprojekt platformy B2B SaaS w celu zwiększenia zaangażowania użytkowników.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="group card !p-0 overflow-hidden">
+                                <img alt="Project 2" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA14Ls7JARN2QA9BK_5iDid-3Kc5gqrVfQjZwVB-rZvBKl49YZ8RWD-Q-88wC6ynOgmz0xCj-Dv0AWbg7ALNkWU8Szjs3ufMMj8VWFqcV51m_wmo6kaSKceBNGeN-sTvBXpZxmD_IIzDMCq4N7bw5TgiXzfnRHGGaSaL1B8Zvh7QlLeCg-ALgd7osk9hBcUhK2YxWfBwmvDk1VCOq5DnEJs3VLzCjoDiV5KvKedCW3rXTCydWuzMXGLRG4wqhXu4ZJYi5WJXztapw"/>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)]">Aplikacja e-commerce</h3>
+                                    <p class="text-[var(--text-medium-charcoal)] text-base mt-2">
+                                        Niestandardowe rozwiązanie e-commerce dla marki modowej z naciskiem na doświadczenie mobilne.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="group card !p-0 overflow-hidden">
+                                <img alt="Project 3" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ5MHOBzZFUCprfrXRHl6_HMABKHwSzlU7Xjx3wDEu0JMsJS-AasFbchtkCEoTO4ZlPzHeU8DcgtY-eAbjrHa4BfTCb_4yxsBfW-4gCzXRV4J1nl1JxcsD6sngTQIDrajNxQdj8sZXx0_3-HkeL6E4xRoD_XV2zG_3U0kKspYBmv_VjQvReVV7uGSR5YJ4VL8gvbbabC8Bu3lXy2MnK4L1IuNuWCXxQRiummyrPWxAFCdbqEA71JQzN_4yL4S2v8KNzETTFZimNQ"/>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)]">Aplikacja fitness</h3>
+                                    <p class="text-[var(--text-medium-charcoal)] text-base mt-2">
+                                        Wieloplatformowa aplikacja mobilna do śledzenia treningów i łączenia z trenerami.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tech Stack Section -->
+                <section class="section bg-[var(--primary-light-gray)]" id="tech-stack">
+                    <div class="main-container">
+                        <div class="text-center max-w-2xl mx-auto">
+                            <h2 class="h2-heading">Technologie, które używamy</h2>
+                            <p class="body-text mt-4">
+                                Używamy nowoczesnego, solidnego i skalowalnego stosu technologicznego do tworzenia światowej klasy produktów cyfrowych.
+                            </p>
+                        </div>
+                        
+                        <div class="mt-16 flex flex-wrap justify-center items-center gap-x-12 sm:gap-x-16 gap-y-10">
+                            <div class="flex items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                                <img alt="React" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR2VAZDbM9Sl6ObVOowcVMfA5XkKyBw3Pn1Hbilb0ve4VldXFHf2Dmw0ti4NlUAnE2Vgc6qUMEthoJtEhBowZBj6JLSmHRcALvFs18fPssUdW6R8TX0BShV5FZlFBN_11Ehqh3J9IvuZ_Pnyq_rPq11rIB2WmGcuXH-4-jutR_qFDbnPw2WNlJ3iafzRDddycVJSn00WvJ07Za_Eu8WwYGGoxqz8TrNcVy-01VdVBWuXS4SgMvucTiFb5U2RRfxPrAhbVmzo3YEQ"/>
+                                <span class="font-semibold text-lg">React</span>
+                            </div>
+                            
+                            <div class="flex items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                                <img alt="Next.js" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4oeq1D3-kDeNAfjVz2wjw1tpcSueh8ErSpPXwqW2w75dfjh6GLNu7ohJvuMZ3BeKmEA-nE1oXWQlZrumTkXwF5q6INU-M_CI2kgHaZLSQJPq0-s-ww1bqot6nmDIdbh8Cm2ydRODWkGJwymD6rPxYYHI67xlrz0naSlmoDa5cd5x5AaDd9pwAgoAcGz900mDoaz6V6dnVNwWCzkHV7OW-zK1ZsKvNU53E9AB-IFn52gMGcB3au6z1J68wsccADO6zPWOnAdkNVA"/>
+                                <span class="font-semibold text-lg">Next.js</span>
+                            </div>
+                            
+                            <div class="flex items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                                <img alt="Node.js" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmSJBYd02zAmK8mNv2NPDwZk4QG9qbm-mzan7j31sV7xknawJhdQaeQTqRGTjhqGDs9jJP50cNrrFGZxaRGuSOO-ggY6zya7YVcCknPYgE_QZMyA1csUty1d8bexD8yrOw64LZtm8B7MOuBBt_IVYqpXMZbHQ43urQOkp-kF6FKbBMmJfPPUE_SWCi_9PE3n_aAOwU2Anm9YFj-33Du71sdUR-L3_QQVtQ1F26ld-dJosd58jN0t4QW-k-nB0JxyRJlYrVQvV3gA"/>
+                                <span class="font-semibold text-lg">Node.js</span>
+                            </div>
+                            
+                            <div class="flex items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                                <img alt="TypeScript" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOtdeexYXEQkskywl6YLyv6IsTiAmUO56iULSYABLrdVjNaM9ZZGvTySFDfaa77TlbD5mB9v3plee9HPRL5Si5IjQq2fudvIW7hutJ54zzcY8XRyh3TsHZXZamG8LE6dpnYRCFe0CFh1KgXGQpaXaCbC2cQiA5_28Dp0M3Oc2rtSbvwh7pFjyuN3QtKAIRGX1btdSwovkedtd9oV4V6Wsmc7dLHo-BbPtJybv-jxXWu_8zN4nm1HRCUpfrSWfLFH5Jt3l9D_3iiw"/>
+                                <span class="font-semibold text-lg">TypeScript</span>
+                            </div>
+                            
+                            <div class="flex items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                                <img alt="Figma" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfow1pAAspcG6h4Nu0irRvn8JtqZSmsykFlLmkPvS5mI8vgp9BU5gjP26_d_rz6zsl3RWDBpqMaIsa9EIUd_ZJsT4qI9XP-trGbCdHhp4NYbaVNVrxTk9bI2plej2Q4WhZvVj1KVr458AakCDQYyMOs2UauLoGGnCQuesZuqC9hqLchuLsIowAwgtMCvNyqX6tS_lPMeA7jRCvOQO-U0s7OWT6PTzF7-9e7rjTbZg92PNTa8kea_nPRXCL0_2HpJ49-MDOlqGyWQ"/>
+                                <span class="font-semibold text-lg">Figma</span>
+                            </div>
+                            
+                            <div class="flex items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                                <img alt="AWS" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIdsZY59ClG3hNMFY1j8E2q0JniNPeLsEEcLcbI-6mJRrkDCE1baWdYlGA4MWqDmaaz9MEv6q1BeKw8B0pFfvf27QvRUVaAf0U18f70dgM-AhY4aF_Y51MZopTILpCa54Ns3KP3ST7IdBT2_XiiyYGjm9QRLoo2Gu0wiRRCExb3xHbyXkEWT4iRJKqvT0KZhj2LVfkinSPgPjtyqTzahCEMrptaVClOfWxxLmBawjsCVRONkatDQ9iAse8w_Pbjm-WYtJZGdl8Sw"/>
+                                <span class="font-semibold text-lg">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- About Section -->
+                <section class="section" id="about">
+                    <div class="main-container">
+                        <div class="text-center max-w-2xl mx-auto">
+                            <h2 class="h2-heading">Poznaj nasz zespół</h2>
+                            <p class="body-text mt-4">
+                                Jesteśmy zespołem pełnym pasji projektantów, programistów i strategów oddanych Twojemu sukcesowi.
+                            </p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+                            <div class="text-center">
+                                <img alt="Team member" class="w-32 h-32 rounded-full mx-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbxJKO7QmtIxrGK_mEmLGh0n8PJYEtVOc5Demp9WpExUtzh4HjqM7c2xcPTbj5LXTXMQ9bX8kFzjV-BF-LK-Ql0rS9TcAh2KM3vwF_xe-cAQ0gXS9vfL2chdNCU91kKuMYrh81c8GLuVILyykl9qIWEr1OhML0XONWUifkKmKKA6l62bUDCvNvgQw0XhTn6B9YuZGA2sBarhO02-274GTYDGHn_BdQLBflJY-nDRL6SKP-F48T95fIowuYTLYlYUsjqAJyzkU41g"/>
+                                <h3 class="mt-4 text-xl font-bold text-[var(--text-dark-charcoal)]">Jan Kowalski</h3>
+                                <p class="text-[var(--accent-indigo)] font-semibold">Główny programista</p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <img alt="Team member" class="w-32 h-32 rounded-full mx-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHYqSuUIobPZj9-zUl6Is2MfcuOb5JcHF6A0cYXBS5WL47q1oeHsGwJXIaI26vVrsMl_oBFuaDT0pY0cENFSW1HcBOaaWPTCwLKv-5aja8k2HDVtHHocjr_kZKitt9vyaNxHjovB-MSe_v_aOmGYbwJbpOVWM8-XDhdrbttSYXRtnSNSC-4xa4bchgH4esphR3dVfIl8SUu2M2UJnDtm-uH9EspHrXhNbLqvnudidspQKdTm1LZwRSnGyDiyr5IoaLUX9DRw9JVA"/>
+                                <h3 class="mt-4 text-xl font-bold text-[var(--text-dark-charcoal)]">Anna Nowak</h3>
+                                <p class="text-[var(--accent-indigo)] font-semibold">Projektant UI/UX</p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <img alt="Team member" class="w-32 h-32 rounded-full mx-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBViWUgDng1PhdlvYhKsTQqiUDRrmHqIfLbtxQFV7_VfA7aeiSvj38lGEReeKLywuD8VkvnXcXmQomG5feVgMRBjjwuSgwx4Da2ihp3Ip97UXGh_9T8GM5mZgHJP5e5CENqAPuggYwm3Fxam10QhSxccj-6StIECfVJ6ofkuwnkPrve1MZ2yyx70ixgkdiJieoaEgQ-aGgFvSF0w_jwu5G01b_u-RMRz_5sYOiXtJ5yL3b8ucJWEE_T_bHxHkD5V5_tvYJ_adKJsQ"/>
+                                <h3 class="mt-4 text-xl font-bold text-[var(--text-dark-charcoal)]">Piotr Wiśniewski</h3>
+                                <p class="text-[var(--accent-indigo)] font-semibold">Kierownik projektu</p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <img alt="Team member" class="w-32 h-32 rounded-full mx-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrcxfszjmbQ5jXh4qULvXKQSKx2tfia9LtA0CrOQd4Bp4y22GCIyu7eqFVwEr8lczM0-rcSWnGYDGsK1j3UmmUDffuqGS9m5_Ag5XcgVPkQfqxIhmNi-f-YGXvDRPI_yhmDrQFtpb6C7yLHzCY63V76PK_Kqao9Ht3VtzAXoTJXue95ORAGnEfTjnZTgjVzw5F8L4b8xcaioTyurUdERnEyfkSWRvnUzJYswAET1b03knv01O0EobqBGOJRCo_q3v9fIuDaFI9xA"/>
+                                <h3 class="mt-4 text-xl font-bold text-[var(--text-dark-charcoal)]">Katarzyna Zielińska</h3>
+                                <p class="text-[var(--accent-indigo)] font-semibold">Tester oprogramowania</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Testimonials Section -->
+                <section class="section bg-gradient-to-br from-indigo-50 to-purple-50" id="testimonials">
+                    <div class="main-container">
+                        <div class="max-w-4xl mx-auto text-center">
+                            <svg class="w-16 h-16 text-[var(--accent-indigo)] mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"></path>
+                            </svg>
+                            <blockquote class="text-2xl font-medium text-[var(--text-dark-charcoal)]">
+                                "Współpraca z Kajpa była przełomem dla naszego biznesu. Dostarczyli produkt, który przewyższył nasze oczekiwania na każdym poziomie. Ich zespół ma niezrównaną ekspertyzę i oddanie."
+                            </blockquote>
+                            <cite class="mt-8 block">
+                                <p class="text-lg font-semibold text-[var(--text-dark-charcoal)]">Monika Kowalczyk</p>
+                                <p class="text-[var(--text-medium-charcoal)]">CEO, Tech Solutions Poland</p>
+                            </cite>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+                <section class="section" id="contact">
+                    <div class="main-container">
+                        <div class="grid md:grid-cols-2 gap-12 items-center">
+                            <div class="max-w-md">
+                                <h2 class="h2-heading">Zbudujmy razem coś niesamowitego.</h2>
+                                <p class="body-text mt-4">
+                                    Masz pomysł na projekt? Chętnie o nim usłyszymy. Wypełnij formularz lub wyślij nam email.
+                                </p>
+                                
+                                <div class="mt-8 flex flex-col gap-4">
+                                    <div class="flex items-center gap-3">
+                                        <svg class="w-6 h-6 text-[var(--accent-indigo)]" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"></path>
+                                        </svg>
+                                        <a class="text-[var(--text-medium-charcoal)] hover:text-[var(--text-dark-charcoal)]" href="mailto:kontakt@kajpa.pl">kontakt@kajpa.pl</a>
+                                    </div>
+                                    
+                                    <div class="flex items-center gap-3">
+                                        <svg class="w-6 h-6 text-[var(--accent-indigo)]" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path>
+                                        </svg>
+                                        <span class="text-[var(--text-medium-charcoal)]">+48 123 456 789</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card !p-8 md:!p-12 bg-[var(--primary-light-gray)] border border-gray-200">
+                                <form class="flex flex-col gap-6">
+                                    <input class="input-field h-12" placeholder="Twoje imię" required="" type="text"/>
+                                    <input class="input-field h-12" placeholder="Twój email" required="" type="email"/>
+                                    <textarea class="input-field min-h-36" placeholder="Opowiedz nam o swoim projekcie..." required=""></textarea>
+                                    <button class="cta-button w-full" type="submit">Wyślij wiadomość</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="bg-gray-900 text-gray-400 relative overflow-hidden py-16">
+                <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black opacity-60"></div>
+                <div class="absolute top-0 left-0 w-72 h-72 bg-indigo-500/10 rounded-full filter blur-3xl animate-pulse"></div>
+                <div class="absolute bottom-0 right-0 w-72 h-72 bg-purple-500/10 rounded-full filter blur-3xl animate-pulse" style="animation-delay: 2s"></div>
+                
+                <div class="main-container relative z-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                        <div class="col-span-1 lg:col-span-1">
+                            <a class="flex items-center gap-2" href="#">
+                                <div class="size-8 text-[var(--accent-indigo)]">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 8V4m0 12v-4m8 4h-4m-4-8H4m16 4h-4M4 8h4m6 4a2 2 0 100-4 2 2 0 000 4z"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-xl font-bold text-white">Kajpa</span>
+                            </a>
+                            <p class="mt-4 max-w-sm text-gray-300">
+                                Pionierzy przyszłości internetu z inteligentnymi rozwiązaniami.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-white mb-4">Szybkie linki</h3>
+                            <ul class="space-y-3">
+                                <li><a class="hover:text-white transition-colors" href="#services">Usługi</a></li>
+                                <li><a class="hover:text-white transition-colors" href="#process">Proces</a></li>
+                                <li><a class="hover:text-white transition-colors" href="#portfolio">Portfolio</a></li>
+                                <li><a class="hover:text-white transition-colors" href="#contact">Kontakt</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-white mb-4">Nasze rozwiązania</h3>
+                            <ul class="space-y-3">
+                                <li><a class="hover:text-white transition-colors" href="#">Chatboty AI</a></li>
+                                <li><a class="hover:text-white transition-colors" href="#">Analityka predykcyjna</a></li>
+                                <li><a class="hover:text-white transition-colors" href="#">Narzędzia automatyzacji</a></li>
+                                <li><a class="hover:text-white transition-colors" href="#">Silniki personalizacji</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-white mb-4">Skontaktuj się z nami</h3>
+                            <div class="flex items-center gap-4">
+                                <a class="text-gray-400 hover:text-white transition-colors" href="#">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.28C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.48 2.96,10.28 2.38,9.95C2.38,9.97 2.38,9.98 2.38,10C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.45,16.03 6.17,17.25 8.29,17.29C6.83,18.45 4.92,19.12 2.86,19.12C2.5,19.12 2.15,19.1 1.82,19.04C3.96,20.43 6.5,21.25 9.25,21.25C16,21.25 20.34,15.37 20.34,10.5C20.34,10.33 20.33,10.15 20.31,9.98C21,9.44 21.8,8.75 22.46,8Z"></path>
+                                    </svg>
+                                </a>
+                                <a class="text-gray-400 hover:text-white transition-colors" href="#">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C14.39,9.94 13.4,10.46 12.92,11.24V10.13H10.13V18.5H12.92V13.57C12.92,12.8 13.54,12.17 14.31,12.17A1.4,1.4 0 0,1 15.71,13.57V18.5H18.5M6.88,8.56A1.68,1.68 0 0,0 8.56,6.88C8.56,6 8,5.44 7.21,5.44C6.42,5.44 5.85,6 5.85,6.88A1.68,1.68 0 0,0 6.88,8.56M8.27,18.5V10.13H5.5V18.5H8.27Z"></path>
+                                    </svg>
+                                </a>
+                                <a class="text-gray-400 hover:text-white transition-colors" href="#">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96s4.46 9.96 9.96 9.96c5.5 0 9.96-4.46 9.96-9.96S17.5 2.04 12 2.04zm4.63 7.84c.14.28.14.63.14.98 0 2.94-2.24 6.27-6.3 6.27-1.26 0-2.42-.35-3.4-.98.14 0 .28.07.42.07.98 0 1.96-.35 2.7-.98-.98 0-1.79-.63-2.07-1.47.14 0 .28.07.42.07.14 0 .35 0 .49-.07-1.05-.21-1.79-1.12-1.79-2.24v-.07c.28.14.63.28.98.28-.63-.42-1.05-1.12-1.05-1.96 0-.42.14-.84.28-1.12 1.12 1.37 2.8 2.24 4.76 2.38-.07-.14-.14-.42-.14-.63 0-1.47 1.12-2.7 2.7-2.7.7 0 1.4.28 1.82.7.56-.14 1.12-.28 1.68-.63-.21.56-.56 1.05-.98 1.37.49-.07.98-.21 1.4-.35-.35.49-.7.98-1.12 1.37z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            
+                            <div class="mt-6">
+                                <p class="text-sm">
+                                    Bądź na bieżąco. Zapisz się do naszego newslettera, aby otrzymywać najnowsze informacje z zakresu technologii internetowych.
+                                </p>
+                                <form class="mt-4 flex">
+                                    <input class="w-full bg-gray-800 border-gray-700 rounded-l-md px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[var(--accent-indigo)]" placeholder="Wpisz swój email" type="email"/>
+                                    <button class="bg-[var(--accent-indigo)] text-white font-semibold px-4 py-2 rounded-r-md hover:bg-opacity-90 transition-colors" type="submit">Zapisz się</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 pt-8 border-t border-gray-800/50 text-center text-sm">
+                        <p>© 2024 Kajpa. Wszelkie prawa zastrzeżone. Budujemy przyszłość inteligentnego internetu.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
