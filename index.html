@@ -98,6 +98,19 @@
         .orb-4 {
             @apply bg-gradient-to-br from-green-200 to-cyan-200 w-80 h-80 bottom-0 -left-32;
         }
+        .orb-5 {
+            @apply bg-gradient-to-br from-purple-400 to-indigo-500 w-96 h-96 top-1/4 -right-48;
+        }
+        
+        .orb-6 {
+            @apply bg-gradient-to-br from-fuchsia-400 to-violet-500 w-80 h-80 bottom-1/4 -left-52;
+        }
+        .orb-7 {
+            @apply bg-gradient-to-br from-blue-300 to-cyan-400 w-72 h-72 top-10 right-1/3;
+        }
+        .orb-8 {
+            @apply bg-gradient-to-br from-yellow-200 to-pink-300 w-64 h-64 bottom-10 left-1/4;
+        }
     </style>
 </head>
 
@@ -138,8 +151,11 @@
                 <!-- Hero Section -->
                 <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
                     <div class="absolute inset-0 bg-[var(--primary-light-gray)] [clip-path:polygon(0_0,_100%_0,_100%_90%,_0_100%)]"></div>
-                    <div class="gradient-orb orb-2" style="animation-delay: 2s"></div>
                     <div class="gradient-orb orb-1"></div>
+                    <div class="gradient-orb orb-3" style="animation-delay: 1s"></div>
+                    <div class="gradient-orb orb-4" style="animation-delay: 3s"></div>
+                    <div class="gradient-orb orb-5" style="animation-delay: 0.5s"></div>
+                    <div class="gradient-orb orb-6" style="animation-delay: 1.5s"></div>
                     
                     <div class="main-container relative z-10 text-center">
                         <div class="max-w-4xl mx-auto">
@@ -159,10 +175,34 @@
                             </p>
                             <div class="flex flex-wrap justify-center items-center gap-x-10 sm:gap-x-16 gap-y-6 grayscale opacity-70">
                                 <img alt="LearnPilot" class="h-8" src="https://learnpilot.pl/logo/logo_sowa.png"/>
-                                <img alt="Elitegram" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK_g_Ks5N9Ms2povk5kq4BgYp5bK0fERYjORVdpCIBAzQa8GR99NRE99vIiYojI6QJVGwu3D2h7lFiaQ8wO1QYndiEJkqGgEN7bvxHmF5LLNvyaMCARNMgTKprwNohYXmiVeYRGAvv9NVye5VI2InrK0lXoVQQrl0E39O-DrBV3capVFUhlwlWseUjYLjOJaOERJiHzKfz5V0DZI5n_HOVycXZ9_py6F0tWZOkcOYD2VojIlh1aTPjXHXrpcyGAlX2T79-dlrezA"/>
-                                <img alt="iWalk" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0LjxvXcnSIG2bFs1IXMeKt__2cRV2CKevVPAVREV-DGghmXfveK5qBcwg-XDtACsIIikbVC-TpcV5slK1G33MPgfKE-jCI1SEaxlZnF2UFvTLndLfgU-ohScLNVe9VfsFqhJYtMguNCZS7-3U14k_kSf-7XtRPnaxDZ98toYjQWCPBXtgbzn8q5M_Doz4n12HuA0cK3v8rnsMUTB43kxYhf00J1Fs0MbY3FYGQ04xGXhLJiKpGrwgRqH_ik7xn6EmIByaqkYmgw"/>
-                                <img alt="Glowee" class="h-8" src="https://glowee.ai/static/images/logo%20poziom%20biale.png"/>
-                                <img alt="Statamic" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBypeTv8s7755TulyIk_TijYLnjYdgQLKowMvF0J9Feu2Sy0FdM--hlJq85lxIbxHc34JVC7O0NuEbteIZcrvPCx3fBHimPWcDUcilNGqzCMWYz6C6PHj8b7SxJVESblwlKxujMREYVcvhHZ4gtUSjEvQLAF9nqGcAxZHl_OsIVIQr4aTBe2ID_bGmOlZkNyNsfR_zaVtSlG2mpxfwiV4nLTAJzJPRKI3qyvq_BU2REMH_G0GSjPtV5RoFktMshTyX55Jlk0Lh3xw"/>
+                                <p class="h-8 font-bold text-xl">ELITEGRAM</p>
+                                <img alt="iWalk" class="h-8" src="images/logo_iwalk.svg"/>
+                                <img alt="Glowee" class="h-8" src="images/logo-glowee.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Statistics Section -->
+                <section class="section bg-[var(--primary-white)] relative overflow-hidden" id="statistics">
+                    <div class="gradient-orb orb-8" style="animation-delay: 1.1s"></div>
+                    <div class="main-container relative z-10">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                            <div>
+                                <h3 class="text-4xl font-extrabold text-[var(--accent-indigo)]">200+</h3>
+                                <p class="text-base text-[var(--text-medium-charcoal)] mt-2">Zrealizowanych projektów</p>
+                            </div>
+                            <div>
+                                <h3 class="text-4xl font-extrabold text-[var(--accent-indigo)]">50+</h3>
+                                <p class="text-base text-[var(--text-medium-charcoal)] mt-2">Zadowolonych klientów</p>
+                            </div>
+                            <div>
+                                <h3 class="text-4xl font-extrabold text-[var(--accent-indigo)]">5</h3>
+                                <p class="text-base text-[var(--text-medium-charcoal)] mt-2">Lat doświadczenia</p>
+                            </div>
+                            <div>
+                                <h3 class="text-4xl font-extrabold text-[var(--accent-indigo)]">~4 tygodnie</h3>
+                                <p class="text-base text-[var(--text-medium-charcoal)] mt-2">Średni czas realizacji</p>
                             </div>
                         </div>
                     </div>
@@ -172,6 +212,7 @@
                 <section class="section bg-[var(--primary-white)] relative overflow-hidden" id="services">
                     <div class="gradient-orb orb-3"></div>
                     <div class="gradient-orb orb-4" style="animation-delay: 3s"></div>
+                    <div class="gradient-orb orb-7" style="animation-delay: 1.2s"></div>
                     
                     <div class="main-container relative z-10">
                         <div class="text-center max-w-2xl mx-auto">
@@ -222,7 +263,10 @@
                 </section>
 
                 <!-- Process Section -->
-                <section class="section bg-[var(--primary-light-gray)]" id="process">
+                <section class="section bg-[var(--primary-light-gray)] relative overflow-hidden" id="process">
+                    <div class="gradient-orb orb-2" style="animation-delay: 0.8s"></div>
+                    <div class="gradient-orb orb-8" style="animation-delay: 2.2s"></div>
+                    
                     <div class="main-container">
                         <div class="text-center max-w-2xl mx-auto">
                             <h2 class="h2-heading">Nasz sprawdzony proces</h2>
@@ -279,7 +323,9 @@
                 </section>
 
                 <!-- Portfolio Section -->
-                <section class="section" id="portfolio">
+                <section class="section relative overflow-hidden" id="portfolio">
+                    <div class="gradient-orb orb-5" style="animation-delay: 1.7s"></div>
+                    
                     <div class="main-container">
                         <div class="text-center max-w-2xl mx-auto">
                             <h2 class="h2-heading">Nasze najnowsze prace</h2>
@@ -322,8 +368,102 @@
                     </div>
                 </section>
 
+                <!-- Pricing Section -->
+                <section class="section bg-[var(--primary-light-gray)] relative overflow-hidden" id="pricing">
+                    <div class="gradient-orb orb-7" style="animation-delay: 1.6s"></div>
+                    <div class="main-container relative z-10">
+                        <div class="text-center max-w-2xl mx-auto">
+                            <h2 class="h2-heading">Cennik i pakiety</h2>
+                            <p class="body-text mt-4">Wybierz najlepszą opcję dla swojego biznesu. W przypadku projektów niestandardowych skontaktuj się z nami po indywidualną wycenę.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                            <div class="card text-center">
+                                <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)] mb-3">Starter</h3>
+                                <p class="text-base text-[var(--text-medium-charcoal)] mb-4">Strony wizytówki</p>
+                                <div class="text-3xl font-extrabold text-[var(--accent-indigo)] mb-2">5–10 tys. PLN</div>
+                            </div>
+                            <div class="card text-center">
+                                <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)] mb-3">Business</h3>
+                                <p class="text-base text-[var(--text-medium-charcoal)] mb-4">Sklepy internetowe</p>
+                                <div class="text-3xl font-extrabold text-[var(--accent-indigo)] mb-2">15–30 tys. PLN</div>
+                            </div>
+                            <div class="card text-center">
+                                <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)] mb-3">Enterprise</h3>
+                                <p class="text-base text-[var(--text-medium-charcoal)] mb-4">Aplikacje webowe</p>
+                                <div class="text-3xl font-extrabold text-[var(--accent-indigo)] mb-2">30 tys. PLN +</div>
+                                <div class="mt-4 text-sm text-[var(--text-medium-charcoal)]">Skontaktuj się po wycenę</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section class="section relative overflow-hidden" id="faq">
+                    <div class="gradient-orb orb-5" style="animation-delay: 2.1s"></div>
+                    <div class="main-container relative z-10">
+                        <div class="text-center max-w-2xl mx-auto">
+                            <h2 class="h2-heading">Najczęściej zadawane pytania</h2>
+                        </div>
+                        <div class="mt-12 max-w-3xl mx-auto space-y-6">
+                            <div class="card">
+                                <h3 class="font-semibold text-lg mb-2">Ile trwa realizacja projektu?</h3>
+                                <p class="text-[var(--text-medium-charcoal)]">Większość projektów realizujemy w 3–6 tygodni, w zależności od złożoności i wymagań.</p>
+                            </div>
+                            <div class="card">
+                                <h3 class="font-semibold text-lg mb-2">Czy zapewniacie hosting?</h3>
+                                <p class="text-[var(--text-medium-charcoal)]">Tak, oferujemy rozwiązania hostingowe lub pomagamy wybrać najlepszego dostawcę dla Twoich potrzeb.</p>
+                            </div>
+                            <div class="card">
+                                <h3 class="font-semibold text-lg mb-2">Czy moja strona będzie responsywna?</h3>
+                                <p class="text-[var(--text-medium-charcoal)]">Oczywiście! Wszystkie nasze strony są w pełni responsywne i świetnie wyglądają na każdym urządzeniu.</p>
+                            </div>
+                            <div class="card">
+                                <h3 class="font-semibold text-lg mb-2">Jak wygląda proces współpracy?</h3>
+                                <p class="text-[var(--text-medium-charcoal)]">Stosujemy przejrzysty proces: analiza, projektowanie, development, testy i wdrożenie, z regularnymi aktualizacjami i feedbackiem.</p>
+                            </div>
+                            <div class="card">
+                                <h3 class="font-semibold text-lg mb-2">Czy robicie SEO?</h3>
+                                <p class="text-[var(--text-medium-charcoal)]">Tak, wdrażamy najlepsze praktyki SEO i możemy zaoferować zaawansowaną optymalizację na życzenie.</p>
+                            </div>
+                            <div class="card">
+                                <h3 class="font-semibold text-lg mb-2">Co po uruchomieniu strony?</h3>
+                                <p class="text-[var(--text-medium-charcoal)]">Oferujemy wsparcie, aktualizacje i pomagamy rozwijać Twoją obecność w internecie.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Blog/Resources Section -->
+                <section class="section bg-[var(--primary-white)] relative overflow-hidden" id="blog">
+                    <div class="gradient-orb orb-6" style="animation-delay: 2.7s"></div>
+                    <div class="main-container relative z-10">
+                        <div class="text-center max-w-2xl mx-auto">
+                            <h2 class="h2-heading">Blog i materiały</h2>
+                            <p class="body-text mt-4">Bądź na bieżąco z najnowszymi trendami, poradnikami i case studies. Rozwijaj swój biznes dzięki wiedzy ekspertów.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                            <div class="card">
+                                <h3 class="font-bold text-lg mb-2">Trendy webowe 2024</h3>
+                                <p class="text-[var(--text-medium-charcoal)]">Poznaj najgorętsze trendy w projektowaniu i tworzeniu stron na ten rok.</p>
+                            </div>
+                            <div class="card">
+                                <h3 class="font-bold text-lg mb-2">Poradniki dla klientów</h3>
+                                <p class="text-[var(--text-medium-charcoal)]">Praktyczne wskazówki i instrukcje krok po kroku, które pomogą Ci odnieść sukces online.</p>
+                            </div>
+                            <div class="card">
+                                <h3 class="font-bold text-lg mb-2">Case studies</h3>
+                                <p class="text-[var(--text-medium-charcoal)]">Zobacz, jak pomogliśmy naszym klientom osiągnąć cele dzięki dedykowanym rozwiązaniom.</p>
+                            </div>
+                        </div>
+                        <div class="mt-12 text-center">
+                            <span class="inline-block bg-[var(--accent-indigo)] text-white rounded-full px-6 py-2 font-semibold">SEO boost i pozycjonowanie eksperckie</span>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- Tech Stack Section -->
-                <section class="section bg-[var(--primary-light-gray)]" id="tech-stack">
+                <section class="section bg-[var(--primary-light-gray)] relative overflow-hidden" id="tech-stack">
+                    <div class="gradient-orb orb-1" style="animation-delay: 2.5s"></div>
                     <div class="main-container">
                         <div class="text-center max-w-2xl mx-auto">
                             <h2 class="h2-heading">Technologie, które używamy</h2>
@@ -331,35 +471,41 @@
                                 Używamy nowoczesnego, solidnego i skalowalnego stosu technologicznego do tworzenia światowej klasy produktów cyfrowych.
                             </p>
                         </div>
-                        
-                        <div class="mt-16 flex flex-wrap justify-center items-center gap-x-12 sm:gap-x-16 gap-y-10">
-                            <div class="flex items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
-                                <img alt="React" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR2VAZDbM9Sl6ObVOowcVMfA5XkKyBw3Pn1Hbilb0ve4VldXFHf2Dmw0ti4NlUAnE2Vgc6qUMEthoJtEhBowZBj6JLSmHRcALvFs18fPssUdW6R8TX0BShV5FZlFBN_11Ehqh3J9IvuZ_Pnyq_rPq11rIB2WmGcuXH-4-jutR_qFDbnPw2WNlJ3iafzRDddycVJSn00WvJ07Za_Eu8WwYGGoxqz8TrNcVy-01VdVBWuXS4SgMvucTiFb5U2RRfxPrAhbVmzo3YEQ"/>
+                        <div class="mt-16 flex flex-row justify-center items-center gap-x-10 overflow-x-auto pb-4">
+                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                                <img src="https://cdn.simpleicons.org/react" alt="React" class="h-10 w-10" />
                                 <span class="font-semibold text-lg">React</span>
                             </div>
-                            
-                            <div class="flex items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
-                                <img alt="Next.js" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4oeq1D3-kDeNAfjVz2wjw1tpcSueh8ErSpPXwqW2w75dfjh6GLNu7ohJvuMZ3BeKmEA-nE1oXWQlZrumTkXwF5q6INU-M_CI2kgHaZLSQJPq0-s-ww1bqot6nmDIdbh8Cm2ydRODWkGJwymD6rPxYYHI67xlrz0naSlmoDa5cd5x5AaDd9pwAgoAcGz900mDoaz6V6dnVNwWCzkHV7OW-zK1ZsKvNU53E9AB-IFn52gMGcB3au6z1J68wsccADO6zPWOnAdkNVA"/>
+                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                                <img src="https://cdn.simpleicons.org/nextdotjs" alt="Next.js" class="h-10 w-10" />
                                 <span class="font-semibold text-lg">Next.js</span>
                             </div>
-                            
-                            <div class="flex items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
-                                <img alt="Node.js" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmSJBYd02zAmK8mNv2NPDwZk4QG9qbm-mzan7j31sV7xknawJhdQaeQTqRGTjhqGDs9jJP50cNrrFGZxaRGuSOO-ggY6zya7YVcCknPYgE_QZMyA1csUty1d8bexD8yrOw64LZtm8B7MOuBBt_IVYqpXMZbHQ43urQOkp-kF6FKbBMmJfPPUE_SWCi_9PE3n_aAOwU2Anm9YFj-33Du71sdUR-L3_QQVtQ1F26ld-dJosd58jN0t4QW-k-nB0JxyRJlYrVQvV3gA"/>
+                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                                <img src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js" class="h-10 w-10" />
                                 <span class="font-semibold text-lg">Node.js</span>
                             </div>
-                            
-                            <div class="flex items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
-                                <img alt="TypeScript" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOtdeexYXEQkskywl6YLyv6IsTiAmUO56iULSYABLrdVjNaM9ZZGvTySFDfaa77TlbD5mB9v3plee9HPRL5Si5IjQq2fudvIW7hutJ54zzcY8XRyh3TsHZXZamG8LE6dpnYRCFe0CFh1KgXGQpaXaCbC2cQiA5_28Dp0M3Oc2rtSbvwh7pFjyuN3QtKAIRGX1btdSwovkedtd9oV4V6Wsmc7dLHo-BbPtJybv-jxXWu_8zN4nm1HRCUpfrSWfLFH5Jt3l9D_3iiw"/>
+                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                                <img src="https://cdn.simpleicons.org/typescript" alt="TypeScript" class="h-10 w-10" />
                                 <span class="font-semibold text-lg">TypeScript</span>
                             </div>
-                            
-                            <div class="flex items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
-                                <img alt="Figma" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfow1pAAspcG6h4Nu0irRvn8JtqZSmsykFlLmkPvS5mI8vgp9BU5gjP26_d_rz6zsl3RWDBpqMaIsa9EIUd_ZJsT4qI9XP-trGbCdHhp4NYbaVNVrxTk9bI2plej2Q4WhZvVj1KVr458AakCDQYyMOs2UauLoGGnCQuesZuqC9hqLchuLsIowAwgtMCvNyqX6tS_lPMeA7jRCvOQO-U0s7OWT6PTzF7-9e7rjTbZg92PNTa8kea_nPRXCL0_2HpJ49-MDOlqGyWQ"/>
+                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                                <img src="https://cdn.simpleicons.org/python" alt="Python" class="h-10 w-10" />
+                                <span class="font-semibold text-lg">Python</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                                <img src="https://cdn-icons-png.flaticon.com/512/16183/16183567.png" alt="CSS3" class="h-10 w-10" />
+                                <span class="font-semibold text-lg">CSS3</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                                <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" class="h-10 w-10" />
+                                <span class="font-semibold text-lg">JavaScript</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                                <img src="https://cdn.simpleicons.org/figma" alt="Figma" class="h-10 w-10" />
                                 <span class="font-semibold text-lg">Figma</span>
                             </div>
-                            
-                            <div class="flex items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
-                                <img alt="AWS" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIdsZY59ClG3hNMFY1j8E2q0JniNPeLsEEcLcbI-6mJRrkDCE1baWdYlGA4MWqDmaaz9MEv6q1BeKw8B0pFfvf27QvRUVaAf0U18f70dgM-AhY4aF_Y51MZopTILpCa54Ns3KP3ST7IdBT2_XiiyYGjm9QRLoo2Gu0wiRRCExb3xHbyXkEWT4iRJKqvT0KZhj2LVfkinSPgPjtyqTzahCEMrptaVClOfWxxLmBawjsCVRONkatDQ9iAse8w_Pbjm-WYtJZGdl8Sw"/>
+                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/AWS_Simple_Icons_AWS_Cloud.svg/512px-AWS_Simple_Icons_AWS_Cloud.svg.png" alt="AWS" class="h-10 w-20 object-contain" />
                                 <span class="font-semibold text-lg">AWS</span>
                             </div>
                         </div>
@@ -367,7 +513,9 @@
                 </section>
 
                 <!-- About Section -->
-                <section class="section" id="about">
+                <section class="section relative overflow-hidden" id="about">
+                    <div class="gradient-orb orb-6" style="animation-delay: 1.3s"></div>
+                    
                     <div class="main-container">
                         <div class="text-center max-w-2xl mx-auto">
                             <h2 class="h2-heading">Poznaj nasz zespół</h2>
@@ -423,7 +571,9 @@
                 </section>
 
                 <!-- Contact Section -->
-                <section class="section" id="contact">
+                <section class="section relative overflow-hidden" id="contact">
+                    <div class="gradient-orb orb-4" style="animation-delay: 2.8s"></div>
+                    
                     <div class="main-container">
                         <div class="grid md:grid-cols-2 gap-12 items-center">
                             <div class="max-w-md">
@@ -464,9 +614,8 @@
 
             <!-- Footer -->
             <footer class="bg-gray-900 text-gray-400 relative overflow-hidden py-16">
-                <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black opacity-60"></div>
-                <div class="absolute top-0 left-0 w-72 h-72 bg-indigo-500/10 rounded-full filter blur-3xl animate-pulse"></div>
-                <div class="absolute bottom-0 right-0 w-72 h-72 bg-purple-500/10 rounded-full filter blur-3xl animate-pulse" style="animation-delay: 2s"></div>
+                <div class="gradient-orb orb-7" style="animation-delay: 2.5s"></div>
+                <div class="gradient-orb orb-8" style="animation-delay: 3.2s"></div>
                 
                 <div class="main-container relative z-10">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
