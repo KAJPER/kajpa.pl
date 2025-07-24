@@ -52,7 +52,11 @@
         }
         
         .card {
-            @apply bg-[var(--primary-white)] rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2;
+            @apply bg-[var(--primary-white)] rounded-2xl shadow-lg p-8 transition-all duration-300 hover:-translate-y-2 hover:scale-105;
+        }
+        
+        .card:hover {
+            box-shadow: 0 8px 0 0 #3b82f6, 0 20px 25px -5px rgba(59, 130, 246, 0.4);
         }
         
         .input-field {
@@ -110,6 +114,115 @@
         }
         .orb-8 {
             @apply bg-gradient-to-br from-yellow-200 to-pink-300 w-64 h-64 bottom-10 left-1/4;
+        }
+        
+        /* Animacje scroll reveal */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .scroll-reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .scroll-reveal-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .scroll-reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .scroll-reveal-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .scroll-reveal-scale {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .scroll-reveal-scale.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .scroll-reveal-delayed {
+            transition-delay: 0.2s;
+        }
+        
+        .scroll-reveal-delayed-2 {
+            transition-delay: 0.4s;
+        }
+        
+        .scroll-reveal-delayed-3 {
+            transition-delay: 0.6s;
+        }
+        
+        /* Ukryj scrollbar */
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* Animacja liczników */
+        .counter-number {
+            font-variant-numeric: tabular-nums;
+        }
+        
+        /* Dodatkowe animacje hover dla różnych elementów */
+        .stats-card {
+            @apply transition-all duration-300 hover:-translate-y-1 hover:scale-105 rounded-xl p-4;
+        }
+        
+        .stats-card:hover {
+            box-shadow: 0 8px 0 0 #3b82f6, 0 20px 25px -5px rgba(59, 130, 246, 0.4);
+        }
+        
+        .team-member {
+            @apply transition-all duration-300 hover:-translate-y-2 hover:scale-105 rounded-xl;
+        }
+        
+        .team-member:hover {
+            box-shadow: 0 8px 0 0 #3b82f6, 0 20px 25px -5px rgba(59, 130, 246, 0.4);
+        }
+        
+        .team-member img {
+            @apply transition-all duration-300 hover:shadow-xl hover:shadow-indigo-200/50;
+        }
+        
+        .tech-item {
+            @apply transition-all duration-300 hover:-translate-y-2 hover:scale-110 hover:rounded-xl p-3;
+        }
+        
+        .tech-item:hover {
+            box-shadow: 0 8px 0 0 #3b82f6, 0 20px 25px -5px rgba(59, 130, 246, 0.4);
+        }
+        
+        .faq-card {
+            @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-transparent;
+        }
+        
+        .faq-card:hover {
+            box-shadow: 0 8px 0 0 #3b82f6, 0 20px 25px -5px rgba(59, 130, 246, 0.4);
         }
     </style>
 </head>
@@ -191,21 +304,21 @@
                     <div class="gradient-orb orb-8" style="animation-delay: 1.1s"></div>
                     <div class="main-container relative z-10">
                         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                            <div>
-                                <h3 class="text-4xl font-extrabold text-[var(--accent-indigo)]">200+</h3>
-                                <p class="text-base text-[var(--text-medium-charcoal)] mt-2">200+ zrealizowanych projektów webowych</p>
+                            <div class="scroll-reveal stats-card">
+                                <h3 class="text-4xl font-extrabold text-[var(--accent-indigo)] counter-number" data-target="200" data-suffix="+">0+</h3>
+                                <p class="text-base text-[var(--text-medium-charcoal)] mt-2">zrealizowanych projektów webowych</p>
                             </div>
-                            <div>
-                                <h3 class="text-4xl font-extrabold text-[var(--accent-indigo)]">50+</h3>
-                                <p class="text-base text-[var(--text-medium-charcoal)] mt-2">50+ zadowolonych firm z całej Polski</p>
+                            <div class="scroll-reveal scroll-reveal-delayed stats-card">
+                                <h3 class="text-4xl font-extrabold text-[var(--accent-indigo)] counter-number" data-target="50" data-suffix="+">0+</h3>
+                                <p class="text-base text-[var(--text-medium-charcoal)] mt-2">zadowolonych firm z całej Polski</p>
                             </div>
-                            <div>
-                                <h3 class="text-4xl font-extrabold text-[var(--accent-indigo)]">5 lat</h3>
-                                <p class="text-base text-[var(--text-medium-charcoal)] mt-2">5 lat doświadczenia w branży IT</p>
+                            <div class="scroll-reveal scroll-reveal-delayed-2 stats-card">
+                                <h3 class="text-4xl font-extrabold text-[var(--accent-indigo)] counter-number" data-target="5" data-suffix=" lat">0 lat</h3>
+                                <p class="text-base text-[var(--text-medium-charcoal)] mt-2">doświadczenia w branży IT</p>
                             </div>
-                            <div>
+                            <div class="scroll-reveal scroll-reveal-delayed-3 stats-card">
                                 <h3 class="text-4xl font-extrabold text-[var(--accent-indigo)]">3-4 tygodnie</h3>
-                                <p class="text-base text-[var(--text-medium-charcoal)] mt-2">Średni czas realizacji: 3-4 tygodnie</p>
+                                <p class="text-base text-[var(--text-medium-charcoal)] mt-2">Średni czas realizacji</p>
                             </div>
                         </div>
                     </div>
@@ -218,7 +331,7 @@
                     <div class="gradient-orb orb-7" style="animation-delay: 1.2s"></div>
                     
                     <div class="main-container relative z-10">
-                        <div class="text-center max-w-2xl mx-auto">
+                        <div class="text-center max-w-2xl mx-auto scroll-reveal">
                             <h2 class="h2-heading">Kompleksowe usługi web development - od pomysłu do sukcesu</h2>
                             <p class="body-text mt-4">
                                 Dostarczamy kompleksowe rozwiązania cyfrowe, które pomogą Twojemu biznesowi odnieść sukces w cyfrowym świecie.
@@ -226,7 +339,7 @@
                         </div>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-                            <div class="card text-center">
+                            <div class="card text-center scroll-reveal-scale">
                                 <div class="inline-block p-4 bg-indigo-100 text-[var(--accent-indigo)] rounded-xl mb-6">
                                     <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -238,7 +351,7 @@
                                 </p>
                             </div>
                             
-                            <div class="card text-center">
+                            <div class="card text-center scroll-reveal-scale scroll-reveal-delayed">
                                 <div class="inline-block p-4 bg-indigo-100 text-[var(--accent-indigo)] rounded-xl mb-6">
                                     <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -250,7 +363,7 @@
                                 </p>
                             </div>
                             
-                            <div class="card text-center">
+                            <div class="card text-center scroll-reveal-scale scroll-reveal-delayed-2">
                                 <div class="inline-block p-4 bg-indigo-100 text-[var(--accent-indigo)] rounded-xl mb-6">
                                     <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -271,7 +384,7 @@
                     <div class="gradient-orb orb-8" style="animation-delay: 2.2s"></div>
                     
                     <div class="main-container">
-                        <div class="text-center max-w-2xl mx-auto">
+                        <div class="text-center max-w-2xl mx-auto scroll-reveal">
                             <h2 class="h2-heading">Jak tworzymy strony internetowe, które sprzedają - nasz proces krok po kroku</h2>
                             <p class="body-text mt-4">
                                 Stosujemy ustrukturyzowany i przejrzysty proces, aby zapewnić sukces Twojego projektu od początku do końca.
@@ -281,7 +394,7 @@
                         <div class="relative mt-16">
                             <div class="absolute left-1/2 top-4 bottom-4 w-px bg-gray-300 hidden md:block"></div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
-                                <div class="flex items-start gap-6">
+                                <div class="flex items-start gap-6 scroll-reveal-left">
                                     <div class="flex-shrink-0 bg-[var(--accent-indigo)] text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl">1</div>
                                     <div>
                                         <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)] mb-2">Odkrywanie i strategia</h3>
@@ -291,7 +404,7 @@
                                     </div>
                                 </div>
                                 
-                                <div class="flex items-start gap-6 md:flex-row-reverse md:text-right">
+                                <div class="flex items-start gap-6 md:flex-row-reverse md:text-right scroll-reveal-right">
                                     <div class="flex-shrink-0 bg-[var(--accent-indigo)] text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl">2</div>
                                     <div>
                                         <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)] mb-2">Projektowanie i prototypowanie</h3>
@@ -301,7 +414,7 @@
                                     </div>
                                 </div>
                                 
-                                <div class="flex items-start gap-6">
+                                <div class="flex items-start gap-6 scroll-reveal-left">
                                     <div class="flex-shrink-0 bg-[var(--accent-indigo)] text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl">3</div>
                                     <div>
                                         <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)] mb-2">Programowanie i testowanie</h3>
@@ -311,7 +424,7 @@
                                     </div>
                                 </div>
                                 
-                                <div class="flex items-start gap-6 md:flex-row-reverse md:text-right">
+                                <div class="flex items-start gap-6 md:flex-row-reverse md:text-right scroll-reveal-right">
                                     <div class="flex-shrink-0 bg-[var(--accent-indigo)] text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl">4</div>
                                     <div>
                                         <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)] mb-2">Wdrożenie i wsparcie</h3>
@@ -330,7 +443,7 @@
                     <div class="gradient-orb orb-5" style="animation-delay: 1.7s"></div>
                     
                     <div class="main-container">
-                        <div class="text-center max-w-2xl mx-auto">
+                        <div class="text-center max-w-2xl mx-auto scroll-reveal">
                             <h2 class="h2-heading">Nasze najnowsze prace</h2>
                             <p class="body-text mt-4">
                                 Spójrz na niektóre z cyfrowych doświadczeń, które niedawno stworzyliśmy dla naszych klientów.
@@ -338,7 +451,7 @@
                         </div>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-                            <a href="https://learnpilot.pl" target="_blank" rel="noopener" class="group card !p-0 overflow-hidden block">
+                            <a href="https://learnpilot.pl" target="_blank" rel="noopener" class="group card !p-0 overflow-hidden block scroll-reveal-scale">
                                 <img alt="LearnPilot" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-500" src="images/portfolio/learnpilot.pl_.webp"/>
                                 <div class="p-6">
                                     <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)]">LearnPilot</h3>
@@ -348,7 +461,7 @@
                                 </div>
                             </a>
                             
-                            <a href="https://iwalk.pl" target="_blank" rel="noopener" class="group card !p-0 overflow-hidden block">
+                            <a href="https://iwalk.pl" target="_blank" rel="noopener" class="group card !p-0 overflow-hidden block scroll-reveal-scale scroll-reveal-delayed">
                                 <img alt="iWalk" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-500" src="images/portfolio/iwalk.pl_.webp"/>
                                 <div class="p-6">
                                     <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)]">iWalk</h3>
@@ -358,7 +471,7 @@
                                 </div>
                             </a>
                             
-                            <a href="https://glowee.ai" target="_blank" rel="noopener" class="group card !p-0 overflow-hidden block">
+                            <a href="https://glowee.ai" target="_blank" rel="noopener" class="group card !p-0 overflow-hidden block scroll-reveal-scale scroll-reveal-delayed-2">
                                 <img alt="Glowee AI" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-500" src="images/portfolio/glowee.ai_.webp"/>
                                 <div class="p-6">
                                     <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)]">Glowee AI</h3>
@@ -368,7 +481,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="mt-12 text-center">
+                        <div class="mt-12 text-center scroll-reveal">
                             <a href="portfolio.html" class="cta-button">Pełne portfolio</a>
                         </div>
                     </div>
@@ -378,22 +491,22 @@
                 <section class="section bg-[var(--primary-light-gray)] relative overflow-hidden" id="pricing">
                     <div class="gradient-orb orb-7" style="animation-delay: 1.6s"></div>
                     <div class="main-container relative z-10">
-                        <div class="text-center max-w-2xl mx-auto">
+                        <div class="text-center max-w-2xl mx-auto scroll-reveal">
                             <h2 class="h2-heading">Cennik i pakiety</h2>
                             <p class="body-text mt-4">Wybierz najlepszą opcję dla swojego biznesu. W przypadku projektów niestandardowych skontaktuj się z nami po indywidualną wycenę.</p>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-                            <div class="card text-center">
+                            <div class="card text-center scroll-reveal-scale">
                                 <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)] mb-3">Starter</h3>
                                 <p class="text-base text-[var(--text-medium-charcoal)] mb-4">Idealne dla małych firm i freelancerów. Responsywna strona internetowa z formularzem kontaktowym, mapą Google, optymalizacją SEO i panelem CMS. Gotowa w 2 tygodnie!</p>
                                 <div class="text-3xl font-extrabold text-[var(--accent-indigo)] mb-2">5–10 tys. PLN</div>
                             </div>
-                            <div class="card text-center">
+                            <div class="card text-center scroll-reveal-scale scroll-reveal-delayed">
                                 <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)] mb-3">Business</h3>
                                 <p class="text-base text-[var(--text-medium-charcoal)] mb-4">Kompleksowy sklep online z systemem płatności, zarządzaniem produktami, integracją z kurierami i analityką sprzedaży. Zwiększ sprzedaż online już dziś!</p>
                                 <div class="text-3xl font-extrabold text-[var(--accent-indigo)] mb-2">15–30 tys. PLN</div>
                             </div>
-                            <div class="card text-center">
+                            <div class="card text-center scroll-reveal-scale scroll-reveal-delayed-2">
                                 <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)] mb-3">Enterprise</h3>
                                 <p class="text-base text-[var(--text-medium-charcoal)] mb-4">Zaawansowane systemy webowe, portale klientów, systemy CRM/ERP i dedykowane rozwiązania SaaS. Skalowalność i bezpieczeństwo na najwyższym poziomie.</p>
                                 <div class="text-3xl font-extrabold text-[var(--accent-indigo)] mb-2">30 tys. PLN +</div>
@@ -407,23 +520,23 @@
                 <section class="section relative overflow-hidden" id="faq">
                     <div class="gradient-orb orb-5" style="animation-delay: 2.1s"></div>
                     <div class="main-container relative z-10">
-                        <div class="text-center max-w-2xl mx-auto">
+                        <div class="text-center max-w-2xl mx-auto scroll-reveal">
                             <h2 class="h2-heading">Najczęściej zadawane pytania</h2>
                         </div>
                         <div class="mt-12 max-w-3xl mx-auto space-y-6">
-                            <div class="card">
+                            <div class="card scroll-reveal faq-card">
                                 <h3 class="font-semibold text-lg mb-2">Czy robicie strony internetowe dla firm z Białegostoku?</h3>
                                 <p class="text-[var(--text-medium-charcoal)]">Tak! Jesteśmy lokalną agencją z Białegostoku, ale obsługujemy klientów z całej Polski. Oferujemy spotkania w biurze lub online, dostosowując się do Twoich potrzeb.</p>
                             </div>
-                            <div class="card">
+                            <div class="card scroll-reveal scroll-reveal-delayed faq-card">
                                 <h3 class="font-semibold text-lg mb-2">Ile kosztuje profesjonalna strona internetowa?</h3>
                                 <p class="text-[var(--text-medium-charcoal)]">Ceny zaczynają się od 5000 PLN za stronę wizytówkę. Sklepy internetowe od 15000 PLN, a dedykowane aplikacje od 30000 PLN. Oferujemy bezpłatną wycenę w 24h!</p>
                             </div>
-                            <div class="card">
+                            <div class="card scroll-reveal scroll-reveal-delayed-2 faq-card">
                                 <h3 class="font-semibold text-lg mb-2">Czy zajmujecie się pozycjonowaniem stron?</h3>
                                 <p class="text-[var(--text-medium-charcoal)]">Każda nasza strona jest tworzona z myślą o SEO. Dodatkowo oferujemy kompleksowe pozycjonowanie stron internetowych, które zwiększa widoczność w Google o średnio 300%.</p>
                             </div>
-                            <div class="card">
+                            <div class="card scroll-reveal scroll-reveal-delayed-3 faq-card">
                                 <h3 class="font-semibold text-lg mb-2">Jak długo trwa tworzenie strony internetowej?</h3>
                                 <p class="text-[var(--text-medium-charcoal)]">Strony wizytówki: 2-3 tygodnie, sklepy online: 4-6 tygodni, aplikacje webowe: 6-12 tygodni. Zawsze dotrzymujemy ustalonych terminów!</p>
                             </div>
@@ -437,25 +550,25 @@
                     <div class="gradient-orb orb-4" style="animation-delay: 1.9s"></div>
                     <div class="gradient-orb orb-7" style="animation-delay: 2.4s"></div>
                     <div class="main-container relative z-10">
-                        <div class="text-center max-w-2xl mx-auto">
+                        <div class="text-center max-w-2xl mx-auto scroll-reveal">
                             <h2 class="h2-heading">Blog i materiały</h2>
                             <p class="body-text mt-4">Bądź na bieżąco z najnowszymi trendami, poradnikami i case studies. Rozwijaj swój biznes dzięki wiedzy ekspertów.</p>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-                            <div class="card">
+                            <div class="card scroll-reveal-scale">
                                 <h3 class="font-bold text-lg mb-2">Trendy webowe 2024</h3>
                                 <p class="text-[var(--text-medium-charcoal)]">Poznaj najgorętsze trendy w projektowaniu i tworzeniu stron na ten rok.</p>
                             </div>
-                            <div class="card">
+                            <div class="card scroll-reveal-scale scroll-reveal-delayed">
                                 <h3 class="font-bold text-lg mb-2">Poradniki dla klientów</h3>
                                 <p class="text-[var(--text-medium-charcoal)]">Praktyczne wskazówki i instrukcje krok po kroku, które pomogą Ci odnieść sukces online.</p>
                             </div>
-                            <div class="card">
+                            <div class="card scroll-reveal-scale scroll-reveal-delayed-2">
                                 <h3 class="font-bold text-lg mb-2">Case studies</h3>
                                 <p class="text-[var(--text-medium-charcoal)]">Zobacz, jak pomogliśmy naszym klientom osiągnąć cele dzięki dedykowanym rozwiązaniom.</p>
                             </div>
                         </div>
-                        <div class="mt-12 text-center">
+                        <div class="mt-12 text-center scroll-reveal">
                             <span class="inline-block bg-[var(--accent-indigo)] text-white rounded-full px-6 py-2 font-semibold">SEO boost i pozycjonowanie eksperckie</span>
                         </div>
                     </div>
@@ -467,46 +580,46 @@
                     <div class="gradient-orb orb-3" style="animation-delay: 2.2s"></div>
                     <div class="gradient-orb orb-6" style="animation-delay: 3.1s"></div>
                     <div class="main-container">
-                        <div class="text-center max-w-2xl mx-auto">
+                        <div class="text-center max-w-2xl mx-auto scroll-reveal">
                             <h2 class="h2-heading">Technologie, które używamy</h2>
                             <p class="body-text mt-4">
                                 Używamy nowoczesnego, solidnego i skalowalnego stosu technologicznego do tworzenia światowej klasy produktów cyfrowych.
                             </p>
                         </div>
                         <div class="mt-16 flex flex-row justify-center items-center gap-x-10 overflow-x-auto pb-4">
-                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors scroll-reveal-scale tech-item">
                                 <img src="https://cdn.simpleicons.org/react" alt="React" class="h-10 w-10" />
                                 <span class="font-semibold text-lg">React</span>
                             </div>
-                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors scroll-reveal-scale scroll-reveal-delayed tech-item">
                                 <img src="https://cdn.simpleicons.org/nextdotjs" alt="Next.js" class="h-10 w-10" />
                                 <span class="font-semibold text-lg">Next.js</span>
                             </div>
-                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors scroll-reveal-scale scroll-reveal-delayed-2 tech-item">
                                 <img src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js" class="h-10 w-10" />
                                 <span class="font-semibold text-lg">Node.js</span>
                             </div>
-                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors scroll-reveal-scale scroll-reveal-delayed-3 tech-item">
                                 <img src="https://cdn.simpleicons.org/typescript" alt="TypeScript" class="h-10 w-10" />
                                 <span class="font-semibold text-lg">TypeScript</span>
                             </div>
-                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors scroll-reveal-scale tech-item">
                                 <img src="https://cdn.simpleicons.org/python" alt="Python" class="h-10 w-10" />
                                 <span class="font-semibold text-lg">Python</span>
                             </div>
-                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors scroll-reveal-scale scroll-reveal-delayed tech-item">
                                 <img src="https://cdn-icons-png.flaticon.com/512/16183/16183567.png" alt="CSS3" class="h-10 w-10" />
                                 <span class="font-semibold text-lg">CSS3</span>
                             </div>
-                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors scroll-reveal-scale scroll-reveal-delayed-2 tech-item">
                                 <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" class="h-10 w-10" />
                                 <span class="font-semibold text-lg">JavaScript</span>
                             </div>
-                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors scroll-reveal-scale scroll-reveal-delayed-3 tech-item">
                                 <img src="https://cdn.simpleicons.org/figma" alt="Figma" class="h-10 w-10" />
                                 <span class="font-semibold text-lg">Figma</span>
                             </div>
-                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors">
+                            <div class="flex flex-col items-center gap-3 text-gray-500 hover:text-gray-800 transition-colors scroll-reveal-scale tech-item">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/AWS_Simple_Icons_AWS_Cloud.svg/512px-AWS_Simple_Icons_AWS_Cloud.svg.png" alt="AWS" class="h-10 w-20 object-contain" />
                                 <span class="font-semibold text-lg">AWS</span>
                             </div>
@@ -519,7 +632,7 @@
                     <div class="gradient-orb orb-6" style="animation-delay: 1.3s"></div>
                     
                     <div class="main-container">
-                        <div class="text-center max-w-2xl mx-auto">
+                        <div class="text-center max-w-2xl mx-auto scroll-reveal">
                             <h2 class="h2-heading">Poznaj nasz zespół</h2>
                             <p class="body-text mt-4">
                                 Jesteśmy zespołem pełnym pasji projektantów, programistów i strategów oddanych Twojemu sukcesowi.
@@ -527,25 +640,25 @@
                         </div>
                         
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
-                            <div class="text-center">
+                            <div class="text-center scroll-reveal-scale team-member">
                                 <img alt="Team member" class="w-32 h-32 rounded-full mx-auto object-cover" src="images/kacper.webp"/>
                                 <h3 class="mt-4 text-xl font-bold text-[var(--text-dark-charcoal)]">Kacper Popko</h3>
                                 <p class="text-[var(--accent-indigo)] font-semibold">Main Developer</p>
                             </div>
                             
-                            <div class="text-center">
+                            <div class="text-center scroll-reveal-scale scroll-reveal-delayed team-member">
                                 <img alt="Team member" class="w-32 h-32 rounded-full mx-auto object-cover" src="images/dawid.webp"/>
-                                <h3 class="mt-4 text-xl font-bold text-[var(--text-dark-charcoal)]">Karolina Marcinkiewicz</h3>
-                                <p class="text-[var(--accent-indigo)] font-semibold">UI/UX designer</p>
+                                <h3 class="mt-4 text-xl font-bold text-[var(--text-dark-charcoal)]">Dawid Lulewicz</h3>
+                                <p class="text-[var(--accent-indigo)] font-semibold">Frontend Developer</p>
                             </div>
                             
-                            <div class="text-center">
+                            <div class="text-center scroll-reveal-scale scroll-reveal-delayed-2 team-member">
                                 <img alt="Team member" class="w-32 h-32 rounded-full mx-auto object-cover" src="images/krzysztof.webp"/>
                                 <h3 class="mt-4 text-xl font-bold text-[var(--text-dark-charcoal)]">Krzysztof Konert</h3>
                                 <p class="text-[var(--accent-indigo)] font-semibold">Kierownik projektu</p>
                             </div>
                             
-                            <div class="text-center">
+                            <div class="text-center scroll-reveal-scale scroll-reveal-delayed-3 team-member">
                                 <img alt="Team member" class="w-32 h-32 rounded-full mx-auto object-cover" src="images/karolina.webp"/>
                                 <h3 class="mt-4 text-xl font-bold text-[var(--text-dark-charcoal)]">Karolina Marcinkiewicz</h3>
                                 <p class="text-[var(--accent-indigo)] font-semibold">UI/UX designer</p>
@@ -563,7 +676,7 @@
                         <div class="relative">
                             <div class="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-purple-50 via-purple-50/80 to-transparent pointer-events-none z-10"></div>
                             <div class="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-indigo-50 via-indigo-50/80 to-transparent pointer-events-none z-10"></div>
-                            <div id="testimonials-slider" class="flex gap-8 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-indigo-200 scrollbar-track-transparent" style="scroll-behavior: auto;">
+                            <div id="testimonials-slider" class="flex gap-8 overflow-x-auto pb-4 scrollbar-hide" style="scroll-behavior: auto;">
                                 <!-- OPINIE (oryginalne) -->
                                 <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col gap-4 min-w-[340px] max-w-xs snap-center">
                                     <div class="flex items-center gap-2 mb-2"><span class="text-yellow-400 text-xl">★</span><span class="font-semibold">Wzrost sprzedaży e-commerce</span></div>
@@ -621,37 +734,110 @@
                     </div>
                 </section>
                 <script>
-                // Płynne, nieskończone przewijanie opinii (infinite marquee)
-                document.addEventListener('DOMContentLoaded', function () {
-                  const slider = document.getElementById('testimonials-slider');
-                  let autoScroll = true;
-                  let scrollAmount = 0.5; // wolniejsze przewijanie
-                  let interval = null;
-
-                  // Oblicz szerokość połowy slidera (oryginalne opinie)
-                  function getHalfScrollWidth() {
-                    return slider.scrollWidth / 2;
-                  }
-
-                  function startAutoScroll() {
-                    if (interval) clearInterval(interval);
-                    interval = setInterval(() => {
-                      if (!autoScroll) return;
-                      if (slider) {
-                        slider.scrollLeft += scrollAmount;
-                        // Jeśli przewinęliśmy połowę (czyli oryginalne opinie), resetuj scrollLeft
-                        if (slider.scrollLeft >= getHalfScrollWidth()) {
-                          slider.scrollLeft = 0;
+                // Automatyczne przewijanie opinii - NAPRAWIONE
+                document.addEventListener('DOMContentLoaded', function() {
+                    const slider = document.getElementById('testimonials-slider');
+                    if (!slider) return;
+                    
+                    let scrollSpeed = 1;
+                    let isPaused = false;
+                    let animationId;
+                    
+                    function startScrolling() {
+                        function scroll() {
+                            if (!isPaused && slider) {
+                                slider.scrollLeft += scrollSpeed;
+                                
+                                if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+                                    slider.scrollLeft = 0;
+                                }
+                            }
+                            animationId = requestAnimationFrame(scroll);
                         }
-                      }
-                    }, 16); // ok. 60 FPS
-                  }
+                        scroll();
+                    }
+                    
+                    slider.addEventListener('mouseenter', () => {
+                        isPaused = true;
+                    });
+                    
+                    slider.addEventListener('mouseleave', () => {
+                        isPaused = false;
+                    });
+                    
+                    // Wymuś start po pełnym załadowaniu
+                    if (document.readyState === 'complete') {
+                        startScrolling();
+                    } else {
+                        window.addEventListener('load', startScrolling);
+                    }
+                });
+                </script>
 
-                  if (slider) {
-                    slider.addEventListener('mouseenter', () => { autoScroll = false; });
-                    slider.addEventListener('mouseleave', () => { autoScroll = true; });
-                    startAutoScroll();
-                  }
+                <!-- JavaScript dla animacji scroll reveal -->
+                <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Konfiguracja Intersection Observer
+                    const observerOptions = {
+                        threshold: 0.1,
+                        rootMargin: '0px 0px -50px 0px'
+                    };
+
+                    // Callback dla obserwatora
+                    const observerCallback = (entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('visible');
+                            }
+                        });
+                    };
+
+                    // Tworzenie obserwatora
+                    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+                    // Obserwowanie wszystkich elementów z klasami scroll-reveal
+                    const scrollElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-scale');
+                    
+                    scrollElements.forEach(element => {
+                        observer.observe(element);
+                    });
+
+                    // Animacja liczników
+                    function animateCounter(element) {
+                        const target = parseInt(element.getAttribute('data-target'));
+                        const suffix = element.getAttribute('data-suffix') || '';
+                        const duration = 2000; // 2 sekundy
+                        const increment = target / (duration / 16); // 60 FPS
+                        let current = 0;
+
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= target) {
+                                current = target;
+                                clearInterval(timer);
+                            }
+                            element.textContent = Math.floor(current) + suffix;
+                        }, 16);
+                    }
+
+                    // Obserwator dla liczników
+                    const counterObserver = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const counter = entry.target;
+                                if (counter.classList.contains('counter-number') && !counter.hasAttribute('data-animated')) {
+                                    counter.setAttribute('data-animated', 'true');
+                                    animateCounter(counter);
+                                }
+                            }
+                        });
+                    }, { threshold: 0.5 });
+
+                    // Obserwowanie liczników
+                    const counters = document.querySelectorAll('.counter-number');
+                    counters.forEach(counter => {
+                        counterObserver.observe(counter);
+                    });
                 });
                 </script>
 
@@ -662,7 +848,7 @@
                     
                     <div class="main-container">
                         <div class="grid md:grid-cols-2 gap-12 items-center">
-                            <div class="max-w-md">
+                            <div class="max-w-md scroll-reveal-left">
                                 <h2 class="h2-heading">Gotowy na wzrost sprzedaży? Skontaktuj się z nami już dziś!</h2>
                                 <p class="body-text mt-4">
                                     Bezpłatna konsultacja i wycena w 24h. Opowiedz nam o swoim projekcie, a my pokażemy, jak technologia może zwiększyć Twoje zyski. Zadzwoń lub napisz - pierwsza konsultacja jest darmowa!
@@ -685,7 +871,7 @@
                                 </div>
                             </div>
                             
-                            <div class="card !p-8 md:!p-12 bg-[var(--primary-light-gray)] border border-gray-200">
+                            <div class="card !p-8 md:!p-12 bg-[var(--primary-light-gray)] border border-gray-200 scroll-reveal-right">
                                 <form class="flex flex-col gap-6">
                                     <input class="input-field h-12" placeholder="Twoje imię" required="" type="text"/>
                                     <input class="input-field h-12" placeholder="Twój email" required="" type="email"/>
@@ -702,11 +888,11 @@
                     <div class="gradient-orb orb-2" style="animation-delay: 1.1s"></div>
                     <div class="gradient-orb orb-5" style="animation-delay: 2.8s"></div>
                     <div class="main-container relative z-10">
-                        <div class="text-center max-w-2xl mx-auto mb-12">
+                        <div class="text-center max-w-2xl mx-auto mb-12 scroll-reveal">
                             <h2 class="h2-heading text-[var(--accent-indigo)]">Dlaczego warto wybrać Kajpa?</h2>
                         </div>
                         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                            <div class="bg-white rounded-2xl shadow-lg p-6 flex items-start gap-4">
+                            <div class="bg-white rounded-2xl shadow-lg p-6 flex items-start gap-4 scroll-reveal-scale">
                                 <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-green-100 text-green-600 text-2xl">
                                     <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#22c55e" opacity="0.15"/><path d="M5 13l4 4L19 7" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                 </div>
@@ -715,7 +901,7 @@
                                     <div class="text-[var(--text-medium-charcoal)] text-base">Znamy polski rynek</div>
                                 </div>
                             </div>
-                            <div class="bg-white rounded-2xl shadow-lg p-6 flex items-start gap-4">
+                            <div class="bg-white rounded-2xl shadow-lg p-6 flex items-start gap-4 scroll-reveal-scale scroll-reveal-delayed">
                                 <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-green-100 text-green-600 text-2xl">
                                     <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#22c55e" opacity="0.15"/><path d="M5 13l4 4L19 7" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                 </div>
@@ -724,7 +910,7 @@
                                     <div class="text-[var(--text-medium-charcoal)] text-base">Sprawdzone doświadczenie</div>
                                 </div>
                             </div>
-                            <div class="bg-white rounded-2xl shadow-lg p-6 flex items-start gap-4">
+                            <div class="bg-white rounded-2xl shadow-lg p-6 flex items-start gap-4 scroll-reveal-scale scroll-reveal-delayed-2">
                                 <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-green-100 text-green-600 text-2xl">
                                     <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#22c55e" opacity="0.15"/><path d="M5 13l4 4L19 7" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                 </div>
@@ -733,7 +919,7 @@
                                     <div class="text-[var(--text-medium-charcoal)] text-base">Dotrzymujemy słowa</div>
                                 </div>
                             </div>
-                            <div class="bg-white rounded-2xl shadow-lg p-6 flex items-start gap-4">
+                            <div class="bg-white rounded-2xl shadow-lg p-6 flex items-start gap-4 scroll-reveal-scale">
                                 <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-green-100 text-green-600 text-2xl">
                                     <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#22c55e" opacity="0.15"/><path d="M5 13l4 4L19 7" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                 </div>
@@ -742,7 +928,7 @@
                                     <div class="text-[var(--text-medium-charcoal)] text-base">Bez ukrytych kosztów</div>
                                 </div>
                             </div>
-                            <div class="bg-white rounded-2xl shadow-lg p-6 flex items-start gap-4">
+                            <div class="bg-white rounded-2xl shadow-lg p-6 flex items-start gap-4 scroll-reveal-scale scroll-reveal-delayed">
                                 <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-green-100 text-green-600 text-2xl">
                                     <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#22c55e" opacity="0.15"/><path d="M5 13l4 4L19 7" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                 </div>
@@ -751,7 +937,7 @@
                                     <div class="text-[var(--text-medium-charcoal)] text-base">Nie zostawiamy Cię samego</div>
                                 </div>
                             </div>
-                            <div class="bg-white rounded-2xl shadow-lg p-6 flex items-start gap-4">
+                            <div class="bg-white rounded-2xl shadow-lg p-6 flex items-start gap-4 scroll-reveal-scale scroll-reveal-delayed-2">
                                 <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-green-100 text-green-600 text-2xl">
                                     <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#22c55e" opacity="0.15"/><path d="M5 13l4 4L19 7" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                 </div>

@@ -44,7 +44,12 @@
             @apply bg-[var(--accent-indigo)] text-[var(--primary-white)] rounded-full px-8 py-4 text-base font-semibold hover:bg-opacity-90 focus:outline-none focus:ring-4 focus:ring-indigo-300 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1;
         }
         .card {
-            @apply bg-[var(--primary-white)] rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2;
+            @apply bg-[var(--primary-white)] rounded-2xl shadow-lg p-8 transition-all duration-300;
+        }
+        
+        .card:hover {
+            box-shadow: 0 8px 0 0 #3b82f6, 0 20px 25px -5px rgba(59, 130, 246, 0.4);
+            transform: translateY(-8px);
         }
         .gradient-orb {
             @apply absolute rounded-full filter blur-3xl opacity-30 animate-pulse;
@@ -72,6 +77,67 @@
         }
         .orb-8 {
             @apply bg-gradient-to-br from-yellow-200 to-pink-300 w-64 h-64 bottom-10 left-1/4;
+        }
+        
+        /* Animacje scroll reveal */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .scroll-reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .scroll-reveal-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .scroll-reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .scroll-reveal-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .scroll-reveal-scale {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .scroll-reveal-scale.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .scroll-reveal-delayed {
+            transition-delay: 0.2s;
+        }
+        
+        .scroll-reveal-delayed-2 {
+            transition-delay: 0.4s;
+        }
+        
+        .scroll-reveal-delayed-3 {
+            transition-delay: 0.6s;
+        }
+        
+        .scroll-reveal-delayed-4 {
+            transition-delay: 0.8s;
         }
     </style>
 </head>
@@ -107,42 +173,42 @@
                 <section class="section relative overflow-hidden" id="portfolio">
                     <div class="gradient-orb orb-5" style="animation-delay: 1.7s"></div>
                     <div class="main-container">
-                        <div class="text-center max-w-2xl mx-auto">
+                        <div class="text-center max-w-2xl mx-auto scroll-reveal">
                             <h2 class="h2-heading">Pełne portfolio</h2>
                             <p class="body-text mt-4">
                                 Poznaj szeroki wachlarz naszych realizacji – od stron internetowych, przez aplikacje mobilne, po zaawansowane systemy webowe.
                             </p>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-                            <a href="https://rolletic.bialystok.pl" target="_blank" rel="noopener" class="group card !p-0 overflow-hidden block">
+                            <a href="https://rolletic.bialystok.pl" target="_blank" rel="noopener" class="group card !p-0 overflow-hidden block scroll-reveal-scale">
                                 <img alt="Rolletic Białystok" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-500" src="images/portfolio/rolletic.bialystok.pl_.webp"/>
                                 <div class="p-6">
                                     <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)]">Rolletic Białystok</h3>
                                     <p class="text-[var(--text-medium-charcoal)] text-base mt-2">Studio masażu i odnowy biologicznej, specjalizujące się w masażu rolkowym i zabiegach modelujących sylwetkę.</p>
                                 </div>
                             </a>
-                            <a href="https://learnpilot.pl" target="_blank" rel="noopener" class="group card !p-0 overflow-hidden block">
+                            <a href="https://learnpilot.pl" target="_blank" rel="noopener" class="group card !p-0 overflow-hidden block scroll-reveal-scale scroll-reveal-delayed">
                                 <img alt="LearnPilot" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-500" src="images/portfolio/learnpilot.pl_.webp"/>
                                 <div class="p-6">
                                     <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)]">LearnPilot</h3>
                                     <p class="text-[var(--text-medium-charcoal)] text-base mt-2">Platforma e-learningowa i szkoła pilotażu, oferująca kursy i szkolenia lotnicze dla przyszłych pilotów.</p>
                                 </div>
                             </a>
-                            <a href="https://iwalk.pl" target="_blank" rel="noopener" class="group card !p-0 overflow-hidden block">
+                            <a href="https://iwalk.pl" target="_blank" rel="noopener" class="group card !p-0 overflow-hidden block scroll-reveal-scale scroll-reveal-delayed-2">
                                 <img alt="iWalk" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-500" src="images/portfolio/iwalk.pl_.webp"/>
                                 <div class="p-6">
                                     <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)]">iWalk</h3>
                                     <p class="text-[var(--text-medium-charcoal)] text-base mt-2">Polski producent i dystrybutor nowoczesnych urządzeń do rehabilitacji i wspomagania ruchu, m.in. chodziki, egzoszkielety.</p>
                                 </div>
                             </a>
-                            <a href="https://glowee.ai" target="_blank" rel="noopener" class="group card !p-0 overflow-hidden block">
+                            <a href="https://glowee.ai" target="_blank" rel="noopener" class="group card !p-0 overflow-hidden block scroll-reveal-scale scroll-reveal-delayed-3">
                                 <img alt="Glowee AI" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-500" src="images/portfolio/glowee.ai_.webp"/>
                                 <div class="p-6">
                                     <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)]">Glowee AI</h3>
                                     <p class="text-[var(--text-medium-charcoal)] text-base mt-2">Startup technologiczny wykorzystujący sztuczną inteligencję i machine vision do optymalizacji procesów produkcyjnych.</p>
                                 </div>
                             </a>
-                            <a href="https://elitegram.pl" target="_blank" rel="noopener" class="group card !p-0 overflow-hidden block">
+                            <a href="https://elitegram.pl" target="_blank" rel="noopener" class="group card !p-0 overflow-hidden block scroll-reveal-scale scroll-reveal-delayed-4">
                                 <img alt="Elitegram" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-500" src="images/portfolio/elitegram.pl_.webp"/>
                                 <div class="p-6">
                                     <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)]">Elitegram</h3>
@@ -227,5 +293,35 @@
             </footer>
         </div>
     </div>
+
+    <!-- JavaScript dla animacji scroll reveal -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Konfiguracja Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        // Callback dla obserwatora
+        const observerCallback = (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        };
+
+        // Tworzenie obserwatora
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        // Obserwowanie wszystkich elementów z klasami scroll-reveal
+        const scrollElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-scale');
+        
+        scrollElements.forEach(element => {
+            observer.observe(element);
+        });
+    });
+    </script>
 </body>
 </html> 
