@@ -266,6 +266,79 @@
         .team-member:hover img {
             box-shadow: 0 0 32px 0 #8b5cf6, 0 0 64px 0 #6366f1;
         }
+        /* Wyłącz transform rodzica, aby nie psuć perspektywy flipu */
+        .team-member:hover {
+            transform: none !important;
+        }
+		/* Karta flip 3D dla członków zespołu */
+		.flip-card {
+			perspective: 1000px;
+		}
+		.flip-inner {
+			@apply relative w-32 h-32 mx-auto;
+			transform-style: preserve-3d;
+			transition: transform 0.6s ease;
+		}
+		.team-member:hover .flip-inner {
+			transform: rotateY(180deg);
+		}
+		.flip-front, .flip-back {
+			@apply absolute inset-0 rounded-full overflow-hidden;
+			backface-visibility: hidden;
+		}
+		.flip-front img {
+			@apply w-32 h-32 rounded-full object-cover;
+		}
+		.flip-back {
+			@apply flex flex-col items-center justify-center text-center px-3;
+			background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+			color: #ffffff;
+			transform: rotateY(180deg);
+		}
+		/* Karta flip 3D prostokątna (cała karta obraca się) */
+		.flip-card-rect {
+			perspective: 1000px;
+		}
+		.flip-inner-rect {
+			@apply relative w-full h-full rounded-2xl overflow-hidden bg-white;
+			transform-style: preserve-3d;
+			-webkit-transform-style: preserve-3d;
+			transition: transform 0.7s ease;
+			-webkit-transition: -webkit-transform 0.7s ease;
+			will-change: transform;
+			box-shadow: 0 4px 24px 0 rgba(99,102,241,0.10);
+		}
+		/* Wyłączamy obrót kontenera – zostawiamy miękki fade front/back dla stabilności */
+		.team-member:hover .flip-inner-rect,
+		.flip-card-rect:hover .flip-inner-rect {
+			transform: none;
+		}
+		.flip-front-rect, .flip-back-rect {
+			@apply absolute inset-0;
+			transition: opacity 0.35s ease;
+			-webkit-transition: opacity 0.35s ease;
+            z-index: 1;
+		}
+		.flip-front-rect {
+			@apply bg-white;
+			opacity: 1;
+			z-index: 2;
+		}
+		.flip-back-rect {
+			@apply bg-white text-[var(--text-dark-charcoal)];
+			opacity: 0;
+		}
+        .team-member:hover .flip-front-rect,
+        .flip-card-rect:hover .flip-front-rect {
+            opacity: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .team-member:hover .flip-back-rect,
+        .flip-card-rect:hover .flip-back-rect {
+			opacity: 1;
+			z-index: 2;
+        }
         
         .tech-item {
             @apply transition-all duration-500 hover:-translate-y-2 hover:scale-110 hover:rounded-xl p-3;
@@ -326,12 +399,7 @@
             <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-sm transition-all duration-300 shadow-sm">
                 <nav class="main-container flex items-center justify-between py-4">
                     <a class="flex items-center gap-2" href="#">
-                        <div class="size-9 text-[var(--accent-indigo)]">
-                            <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path>
-                            </svg>
-                        </div>
-                        <span class="text-2xl font-bold tracking-tight text-[var(--text-dark-charcoal)]">Kajpa</span>
+                        <img src="logo/logo-kajpa-przycięte.webp" alt="Kajpa" class="h-10 md:h-12 w-auto"/>
                     </a>
                     
                     <div class="hidden md:flex items-center gap-8">
@@ -372,7 +440,7 @@
                             </p>
                             <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 fade-in-up" style="animation-delay: 0.4s">
                                 <a class="cta-button" href="#portfolio">🚀 Sprawdź nasze realizacje</a>
-                                <a class="font-semibold text-[var(--text-medium-charcoal)] hover:text-[var(--text-dark-charcoal)] transition-colors duration-300" href="#contact">💰 Darmowa wycena w 24h</a>
+                                <a class="font-semibold text-[var(--text-medium-charcoal)] hover:text-[var(--text-dark-charcoal)] transition-colors duration-300" href="#contact">💰 Darmowa wycena w 10min</a>
                             </div>
                         </div>
                         
@@ -396,11 +464,11 @@
                     <div class="main-container relative z-10">
                         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
                             <div class="scroll-reveal stats-card">
-                                <h3 class="text-4xl font-extrabold text-[var(--accent-indigo)] counter-number" data-target="200" data-suffix="+">0+</h3>
+                                <h3 class="text-4xl font-extrabold text-[var(--accent-indigo)] counter-number" data-target="60" data-suffix="+">0+</h3>
                                 <p class="text-base text-[var(--text-medium-charcoal)] mt-2">zrealizowanych projektów webowych</p>
                             </div>
                             <div class="scroll-reveal scroll-reveal-delayed stats-card">
-                                <h3 class="text-4xl font-extrabold text-[var(--accent-indigo)] counter-number" data-target="50" data-suffix="+">0+</h3>
+                                <h3 class="text-4xl font-extrabold text-[var(--accent-indigo)] counter-number" data-target="25" data-suffix="+">0+</h3>
                                 <p class="text-base text-[var(--text-medium-charcoal)] mt-2">zadowolonych firm z całej Polski</p>
                             </div>
                             <div class="scroll-reveal scroll-reveal-delayed-2 stats-card">
@@ -438,7 +506,7 @@
                                     <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#22c55e" opacity="0.15"/><path d="M5 13l4 4L19 7" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                 </div>
                                 <div>
-                                    <div class="font-semibold text-lg text-[var(--text-dark-charcoal)]">200+ zrealizowanych projektów</div>
+                                    <div class="font-semibold text-lg text-[var(--text-dark-charcoal)]">60+ zrealizowanych projektów</div>
                                     <div class="text-[var(--text-medium-charcoal)] text-base">Sprawdzone doświadczenie</div>
                                 </div>
                             </div>
@@ -609,28 +677,64 @@
                         </div>
                         
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
-                            <div class="text-center scroll-reveal-scale team-member">
-                                <img alt="Team member" class="w-32 h-32 rounded-full mx-auto object-cover" src="images/kacper.webp"/>
-                                <h3 class="mt-4 text-xl font-bold text-[var(--text-dark-charcoal)]">Kacper Popko</h3>
-                                <p class="text-[var(--accent-indigo)] font-semibold">Main Developer</p>
+                            <div class="scroll-reveal-scale team-member">
+                                <div class="flip-card-rect h-[360px]">
+                                    <div class="flip-inner-rect">
+                                        <div class="flip-front-rect p-0">
+                                            <img alt="Kacper Popko" class="w-full h-full object-cover" src="images/kacper.webp"/>
+                                        </div>
+                                        <div class="flip-back-rect p-6 flex flex-col items-start justify-start text-left">
+                                            <h3 class="text-xl font-bold">Kacper Popko</h3>
+                                            <p class="text-[var(--accent-indigo)] font-semibold mt-1">Full Stack Developer</p>
+                                            <p class="text-sm mt-3">Specjalizuje się w projektowaniu architektury i tworzeniu kompletnych aplikacji web, mobilnych i desktopowych. Łączy frontend z backendem, automatyzuje procesy i dostarcza skalowalne rozwiązania.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             
-                            <div class="text-center scroll-reveal-scale scroll-reveal-delayed team-member">
-                                <img alt="Team member" class="w-32 h-32 rounded-full mx-auto object-cover" src="images/dawid.webp"/>
-                                <h3 class="mt-4 text-xl font-bold text-[var(--text-dark-charcoal)]">Dawid Lulewicz</h3>
-                                <p class="text-[var(--accent-indigo)] font-semibold">Frontend Developer</p>
+                            <div class="scroll-reveal-scale scroll-reveal-delayed team-member">
+                                <div class="flip-card-rect h-[360px]">
+                                    <div class="flip-inner-rect">
+                                        <div class="flip-front-rect p-0">
+                                            <img alt="Dawid Lulewicz" class="w-full h-full object-cover" src="images/dawid.webp"/>
+                                        </div>
+                                        <div class="flip-back-rect p-6 flex flex-col items-start justify-start text-left">
+                                            <h3 class="text-xl font-bold">Dawid Lulewicz</h3>
+                                            <p class="text-[var(--accent-indigo)] font-semibold mt-1">Frontend Developer & UI/UX</p>
+                                            <p class="text-sm mt-3">Projektuje i wdraża nowoczesne, szybkie i dostępne interfejsy. Dba o UX, animacje i pixel‑perfect, łącząc estetykę z funkcjonalnością na React/TypeScript.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             
-                            <div class="text-center scroll-reveal-scale scroll-reveal-delayed-2 team-member">
-                                <img alt="Team member" class="w-32 h-32 rounded-full mx-auto object-cover" src="images/krzysztof.webp"/>
-                                <h3 class="mt-4 text-xl font-bold text-[var(--text-dark-charcoal)]">Krzysztof Konert</h3>
-                                <p class="text-[var(--accent-indigo)] font-semibold">Kierownik projektu</p>
+                            <div class="scroll-reveal-scale scroll-reveal-delayed-2 team-member">
+                                <div class="flip-card-rect h-[360px]">
+                                    <div class="flip-inner-rect">
+                                        <div class="flip-front-rect p-0">
+                                            <img alt="Krzysztof Konert" class="w-full h-full object-cover" src="images/krzysztof.webp"/>
+                                        </div>
+                                        <div class="flip-back-rect p-6 flex flex-col items-start justify-start text-left">
+                                            <h3 class="text-xl font-bold">Krzysztof Konert</h3>
+                                            <p class="text-[var(--accent-indigo)] font-semibold mt-1">Kierownik projektu</p>
+                                            <p class="text-sm mt-3">Koordynuje cały cykl życia projektu. Łączy wymagania biznesowe z IT, pilnuje harmonogramu, budżetu i transparentnej komunikacji z klientem oraz zespołem.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             
-                            <div class="text-center scroll-reveal-scale scroll-reveal-delayed-3 team-member">
-                                <img alt="Team member" class="w-32 h-32 rounded-full mx-auto object-cover" src="images/karolina.webp"/>
-                                <h3 class="mt-4 text-xl font-bold text-[var(--text-dark-charcoal)]">Karolina Marcinkiewicz</h3>
-                                <p class="text-[var(--accent-indigo)] font-semibold">UI/UX designer</p>
+                            <div class="scroll-reveal-scale scroll-reveal-delayed-3 team-member">
+                                <div class="flip-card-rect h-[360px]">
+                                    <div class="flip-inner-rect">
+                                        <div class="flip-front-rect p-0">
+                                            <img alt="Karolina Marcinkiewicz" class="w-full h-full object-cover" src="images/karolina.webp"/>
+                                        </div>
+                                        <div class="flip-back-rect p-6 flex flex-col items-start justify-start text-left">
+                                            <h3 class="text-xl font-bold">Karolina Marcinkiewicz</h3>
+                                            <p class="text-[var(--accent-indigo)] font-semibold mt-1">UI/UX Designer</p>
+                                            <p class="text-sm mt-3">Tworzy intuicyjne interfejsy i spójne systemy designu. Prowadzi badania i testy UX, projektuje skalowalne komponenty oraz czytelne style guide dla zespołu.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -754,7 +858,7 @@
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
                             <div class="card scroll-reveal-scale">
-                                <h3 class="font-bold text-lg mb-2">Trendy webowe 2024</h3>
+                                <h3 class="font-bold text-lg mb-2">Trendy webowe 2025</h3>
                                 <p class="text-[var(--text-medium-charcoal)]">Poznaj najgorętsze trendy w projektowaniu i tworzeniu stron na ten rok.</p>
                             </div>
                             <div class="card scroll-reveal-scale scroll-reveal-delayed">
@@ -1053,12 +1157,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                         <div class="col-span-1 lg:col-span-1">
                             <a class="flex items-center gap-2" href="#">
-                                <div class="size-8 text-[var(--accent-indigo)]">
-                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 8V4m0 12v-4m8 4h-4m-4-8H4m16 4h-4M4 8h4m6 4a2 2 0 100-4 2 2 0 000 4z"></path>
-                                    </svg>
-                                </div>
-                                <span class="text-xl font-bold text-white">Kajpa</span>
+                                <img src="logo/logokajpa-biale-przycięte.webp" alt="Kajpa" class="h-8 md:h-10 w-auto"/>
                             </a>
                             <p class="mt-4 max-w-sm text-gray-300">
                                 Pionierzy przyszłości internetu z inteligentnymi rozwiązaniami.
