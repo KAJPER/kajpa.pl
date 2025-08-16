@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Silniki Personalizacji AI - Każdy klient widzi co chce | Kajpa</title>
+    <meta name="description" content="Systemy personalizacji AI, które dostosowują treści, produkty i doświadczenia do każdego użytkownika. Zwiększ konwersję o 400% dzięki spersonalizowanym doświadczeniom."/>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+            --primary-white: #ffffff;
+            --primary-light-gray: #f8f9fa;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-indigo: #6366f1;
+            --text-dark-charcoal: #1f2937;
+            --text-medium-charcoal: #374151;
+            --cta-green: #10b981;
+            --cta-blue: #0ea5e9;
+        }
+        
+        body { font-family: "Inter", sans-serif; background-color: var(--primary-white); color: var(--text-medium-charcoal); }
+        .main-container { @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+        .section { @apply py-20 md:py-28; }
+        .h1-heading { @apply text-4xl md:text-6xl font-extrabold text-[var(--text-dark-charcoal)] tracking-tighter; }
+        .h2-heading { @apply text-3xl md:text-4xl font-bold text-[var(--text-dark-charcoal)] tracking-tight; }
+        .body-text { @apply text-lg text-[var(--text-medium-charcoal)] leading-relaxed; }
+        .cta-button { @apply bg-[var(--accent-indigo)] text-[var(--primary-white)] rounded-full px-8 py-4 text-base font-semibold hover:bg-opacity-90 focus:outline-none focus:ring-4 focus:ring-indigo-300 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1; }
+        .card { @apply bg-[var(--primary-white)] rounded-2xl shadow-lg p-8 transition-all duration-500 hover:-translate-y-2 hover:scale-105; box-shadow: 0 4px 24px 0 rgba(99,102,241,0.10); }
+        .gradient-orb { @apply absolute rounded-full filter blur-3xl opacity-30 animate-pulse; }
+        .orb-1 { @apply bg-gradient-to-br from-pink-300 to-rose-400 w-96 h-96 -top-20 -left-40; }
+        .orb-2 { @apply bg-gradient-to-br from-violet-200 to-purple-300 w-80 h-80 -bottom-20 -right-40; }
+        .orb-3 { @apply bg-gradient-to-br from-fuchsia-200 to-pink-300 w-72 h-72 top-1/2 -translate-y-1/2 -right-32; }
+    </style>
+</head>
+
+<body class="antialiased">
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            
+            <!-- Header -->
+            <header class="fixed top-0 left-0 right-0 z-50 w-full bg-white/95 backdrop-blur-md transition-all duration-300 shadow-sm border-b border-gray-100">
+                <nav class="main-container flex items-center justify-between py-4">
+                    <a class="flex items-center gap-2" href="index.html">
+                        <img src="logo/logo-kajpa-przycięte.webp" alt="Kajpa" class="h-10 md:h-12 w-auto"/>
+                    </a>
+                    <div class="hidden md:flex items-center gap-8">
+                        <a class="text-base font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="index.html#services">Usługi</a>
+                        <a class="text-base font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="index.html#process">Proces</a>
+                        <a class="text-base font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="index.html#portfolio">Portfolio</a>
+                        <a class="text-base font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="index.html#about">O nas</a>
+                    </div>
+                    <a class="hidden md:inline-block cta-button px-6 py-2.5" href="index.html#contact">Kontakt</a>
+                </nav>
+            </header>
+
+            <div class="h-[72px]"></div>
+
+            <main>
+                <!-- Hero Section -->
+                <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+                    <div class="absolute inset-0 bg-[var(--primary-light-gray)] [clip-path:polygon(0_0,_100%_0,_100%_90%,_0_100%)]"></div>
+                    <div class="gradient-orb orb-1"></div>
+                    <div class="gradient-orb orb-2" style="animation-delay: 2s"></div>
+                    <div class="gradient-orb orb-3" style="animation-delay: 1s"></div>
+                    
+                    <div class="main-container relative z-10 text-center">
+                        <div class="max-w-4xl mx-auto">
+                            <h1 class="h1-heading">💎 Personalizacja AI - Każdy klient widzi co potrzebuje</h1>
+                            <p class="body-text mt-6 max-w-2xl mx-auto">
+                                Traktuj każdego klienta indywidualnie w skali. Nasze silniki personalizacji AI dostosowują treści, 
+                                produkty i doświadczenia w czasie rzeczywistym, zwiększając konwersję o 400%.
+                            </p>
+                            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                                <a class="cta-button" href="#demo-live">✨ Zobacz personalizację na żywo</a>
+                                <a class="font-semibold text-[var(--text-medium-charcoal)] hover:text-[var(--text-dark-charcoal)] transition-colors duration-300" href="#case-studies">📊 Wyniki klientów</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Live Personalization Demo -->
+                        <div class="mt-16 bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-2xl max-w-5xl mx-auto" id="demo-live">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-xl font-bold text-gray-800">Demo: Personalizacja w czasie rzeczywistym</h3>
+                                <div class="flex items-center gap-2">
+                                    <div class="w-3 h-3 bg-purple-500 rounded-full animate-pulse"></div>
+                                    <span class="text-sm text-gray-600">AI analizuje preferencje</span>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                <!-- Profil użytkownika -->
+                                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-6">
+                                    <h4 class="font-semibold text-lg mb-4">👤 Profil klienta (AI analysis)</h4>
+                                    <div class="space-y-3">
+                                        <div class="flex justify-between">
+                                            <span class="text-sm text-gray-600">Typ klienta:</span>
+                                            <span class="font-semibold text-purple-600">Business Owner</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-sm text-gray-600">Zainteresowania:</span>
+                                            <span class="font-semibold text-blue-600">E-commerce, Marketing</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-sm text-gray-600">Budżet:</span>
+                                            <span class="font-semibold text-green-600">Premium (15k+)</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-sm text-gray-600">Etap journey:</span>
+                                            <span class="font-semibold text-orange-600">Rozważa decyzję</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-sm text-gray-600">Preferencje:</span>
+                                            <span class="font-semibold text-indigo-600">Case studies, ROI</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Spersonalizowana treść -->
+                                <div class="bg-white border rounded-lg p-6">
+                                    <h4 class="font-semibold text-lg mb-4">🎯 Spersonalizowana oferta</h4>
+                                    <div class="space-y-4">
+                                        <div class="bg-blue-50 border border-blue-200 rounded p-3">
+                                            <div class="font-semibold text-blue-800">Sklep Internetowy Premium</div>
+                                            <div class="text-sm text-blue-600">Rekomendowany dla Ciebie</div>
+                                            <div class="text-xs text-gray-500 mt-1">Bazuje na: typ biznesu + budżet</div>
+                                        </div>
+                                        
+                                        <div class="bg-green-50 border border-green-200 rounded p-3">
+                                            <div class="font-semibold text-green-800">Case Study: +180% sprzedaży</div>
+                                            <div class="text-sm text-green-600">Similar business success</div>
+                                            <div class="text-xs text-gray-500 mt-1">Bazuje na: zainteresowania + preferencje</div>
+                                        </div>
+                                        
+                                        <div class="bg-purple-50 border border-purple-200 rounded p-3">
+                                            <div class="font-semibold text-purple-800">"ROI zwrócił się w 3 miesiące"</div>
+                                            <div class="text-sm text-purple-600">Testimonial dopasowany</div>
+                                            <div class="text-xs text-gray-500 mt-1">Bazuje na: etap journey + preferencje</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 grid grid-cols-3 gap-4 text-center">
+                                <div>
+                                    <div class="text-2xl font-bold text-purple-600">0.3s</div>
+                                    <div class="text-sm text-gray-600">czas analizy</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-green-600">400%</div>
+                                    <div class="text-sm text-gray-600">wyższa konwersja</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-blue-600">67%</div>
+                                    <div class="text-sm text-gray-600">więcej czasu na stronie</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- How Personalization Works -->
+                <section class="section bg-white">
+                    <div class="main-container">
+                        <div class="text-center max-w-2xl mx-auto mb-16">
+                            <h2 class="h2-heading">Jak działa personalizacja AI?</h2>
+                            <p class="body-text mt-4">Nasza technologia analizuje setki sygnałów w czasie rzeczywistym, aby stworzyć unikalną ścieżkę dla każdego użytkownika.</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <div class="text-center">
+                                <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center">
+                                    <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-bold mb-2">1. Zbieranie danych</h3>
+                                <p class="text-sm text-gray-600">Zachowania, preferencje, historia, demografię, źródło ruchu</p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center">
+                                    <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-bold mb-2">2. Analiza AI</h3>
+                                <p class="text-sm text-gray-600">Machine learning przetwarza sygnały i tworzy profil w 0.3s</p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center">
+                                    <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-bold mb-2">3. Personalizacja</h3>
+                                <p class="text-sm text-gray-600">Dynamiczne dostosowanie treści, ofert, layoutu, kolorów</p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center">
+                                    <svg class="w-10 h-10 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-bold mb-2">4. Optymalizacja</h3>
+                                <p class="text-sm text-gray-600">Ciągłe uczenie i dostrajanie na podstawie wyników</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Personalization Types -->
+                <section class="section bg-gradient-to-br from-purple-50 to-pink-50">
+                    <div class="main-container">
+                        <div class="text-center max-w-2xl mx-auto mb-16">
+                            <h2 class="h2-heading">Rodzaje personalizacji</h2>
+                            <p class="body-text mt-4">Od podstawowych rekomendacji po zaawansowane dynamiczne doświadczenia - dopasowujemy poziom do Twoich potrzeb.</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="card">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-center mb-3">Rekomendacje produktów</h3>
+                                <ul class="space-y-2 mb-4">
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        "Często kupowane razem"
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Produkty dla podobnych klientów
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Spersonalizowane kategorie
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Przewidywanie trendów
+                                    </li>
+                                </ul>
+                                <div class="text-center text-sm font-semibold text-blue-600">Wzrost sprzedaży: +65%</div>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-center mb-3">Dynamiczne treści</h3>
+                                <ul class="space-y-2 mb-4">
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Personalizowane nagłówki
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Dostosowane oferty
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Języki i lokalizacja
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Branżowe case studies
+                                    </li>
+                                </ul>
+                                <div class="text-center text-sm font-semibold text-green-600">Engagement: +120%</div>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17v4a2 2 0 002 2h4M13 13h4a2 2 0 012 2v4a2 2 0 01-2 2h-4m-6-4a2 2 0 01-2-2V7a2 2 0 012-2h2m0 0V3a2 2 0 012-2h4a2 2 0 012 2v2M9 5a2 2 0 012 2v2a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2h2z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-center mb-3">Adaptacyjny UI/UX</h3>
+                                <ul class="space-y-2 mb-4">
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Dynamiczny layout
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Kolory i motywy
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Poziom zaawansowania treści
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Preferencje interakcji
+                                    </li>
+                                </ul>
+                                <div class="text-center text-sm font-semibold text-purple-600">Konwersja: +180%</div>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-center mb-3">Timing i sekwencje</h3>
+                                <ul class="space-y-2 mb-4">
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Optymalne momenty popup
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Sekwencje email follow-up
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Retargeting campaigns
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Push notifications
+                                    </li>
+                                </ul>
+                                <div class="text-center text-sm font-semibold text-orange-600">Re-engagement: +90%</div>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-teal-100 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-center mb-3">Dynamiczne ceny</h3>
+                                <ul class="space-y-2 mb-4">
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Personalizowane rabaty
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Loyalty pricing
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Geo-lokalizacja cen
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Segment-based offers
+                                    </li>
+                                </ul>
+                                <div class="text-center text-sm font-semibold text-teal-600">Revenue: +35%</div>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-pink-100 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-center mb-3">Komunikacja 1:1</h3>
+                                <ul class="space-y-2 mb-4">
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Spersonalizowane emaile
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Chatbot conversations
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        SMS marketing
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Voiceboty AI
+                                    </li>
+                                </ul>
+                                <div class="text-center text-sm font-semibold text-pink-600">Odpowiedź: +250%</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Case Studies -->
+                <section class="section bg-white" id="case-studies">
+                    <div class="main-container">
+                        <div class="text-center max-w-2xl mx-auto mb-16">
+                            <h2 class="h2-heading">Rezultaty personalizacji</h2>
+                            <p class="body-text mt-4">Prawdziwe wyniki firm, które wdrożyły nasze silniki personalizacji AI</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                            <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-xl">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center">
+                                        <span class="text-purple-600 font-bold text-2xl">L</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold">LuxuryFashion.pl</h3>
+                                        <p class="text-gray-600">E-commerce moda premium</p>
+                                    </div>
+                                </div>
+                                
+                                <blockquote class="text-gray-700 italic mb-6">
+                                    "Personalizacja AI od Kajpa zrewolucjonizowała nasze wyniki. Każdy klient widzi dokładnie to, co go interesuje. 
+                                    Nasze konwersje wzrosły o 340%, a wartość średniego koszyka o 120%."
+                                </blockquote>
+                                
+                                <div class="grid grid-cols-3 gap-4 mb-6">
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-purple-600">340%</div>
+                                        <div class="text-sm text-gray-600">wzrost konwersji</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-pink-600">120%</div>
+                                        <div class="text-sm text-gray-600">wartość koszyka</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-indigo-600">89%</div>
+                                        <div class="text-sm text-gray-600">satysfakcja klientów</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-right">
+                                    <cite class="text-sm text-gray-600">- Katarzyna Nowak, Marketing Director</cite>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 shadow-xl">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                                        <span class="text-blue-600 font-bold text-2xl">B</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold">BookLover Academy</h3>
+                                        <p class="text-gray-600">Platforma edukacyjna online</p>
+                                    </div>
+                                </div>
+                                
+                                <blockquote class="text-gray-700 italic mb-6">
+                                    "Dzięki personalizacji każdy student otrzymuje indywidualnie dobrane kursy i materiały. 
+                                    Nasza retencja wzrosła o 280%, a studenci kończą 90% więcej kursów."
+                                </blockquote>
+                                
+                                <div class="grid grid-cols-3 gap-4 mb-6">
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-blue-600">280%</div>
+                                        <div class="text-sm text-gray-600">wyższa retencja</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-cyan-600">90%</div>
+                                        <div class="text-sm text-gray-600">więcej ukończonych</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-green-600">156%</div>
+                                        <div class="text-sm text-gray-600">wzrost przychodów</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-right">
+                                    <cite class="text-sm text-gray-600">- Tomasz Wiśniewski, CEO</cite>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- A/B Testing Interactive -->
+                <section class="section bg-gradient-to-br from-green-50 to-blue-50">
+                    <div class="main-container">
+                        <div class="text-center max-w-2xl mx-auto mb-16">
+                            <h2 class="h2-heading">Zobaczz różnicę w akcji</h2>
+                            <p class="body-text mt-4">Porównaj stronę standardową ze spersonalizowaną dla różnych typów klientów</p>
+                        </div>
+                        
+                        <div class="max-w-5xl mx-auto">
+                            <div class="bg-white rounded-2xl p-8 shadow-xl">
+                                <div class="flex justify-center mb-8">
+                                    <div class="bg-gray-100 rounded-full p-1 flex">
+                                        <button onclick="showVersion('standard')" id="btn-standard" class="px-6 py-2 rounded-full bg-white shadow text-gray-700 font-semibold">Strona standardowa</button>
+                                        <button onclick="showVersion('personalized')" id="btn-personalized" class="px-6 py-2 rounded-full text-gray-500 font-semibold">Spersonalizowana AI</button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Standard Version -->
+                                <div id="version-standard" class="version-content">
+                                    <div class="border rounded-lg p-6 bg-gray-50">
+                                        <h3 class="text-xl font-bold mb-4">🏢 Nasza oferta dla firm</h3>
+                                        <p class="text-gray-600 mb-4">Oferujemy profesjonalne strony internetowe, aplikacje mobilne i systemy webowe. Skontaktuj się z nami po więcej informacji.</p>
+                                        <div class="grid grid-cols-3 gap-4 mb-4">
+                                            <div class="bg-white p-4 rounded">
+                                                <div class="text-lg font-bold">Strony WWW</div>
+                                                <div class="text-sm text-gray-600">Od 2000 PLN</div>
+                                            </div>
+                                            <div class="bg-white p-4 rounded">
+                                                <div class="text-lg font-bold">Aplikacje</div>
+                                                <div class="text-sm text-gray-600">Od 10000 PLN</div>
+                                            </div>
+                                            <div class="bg-white p-4 rounded">
+                                                <div class="text-lg font-bold">E-commerce</div>
+                                                <div class="text-sm text-gray-600">Od 5000 PLN</div>
+                                            </div>
+                                        </div>
+                                        <button class="bg-blue-500 text-white px-6 py-2 rounded">Skontaktuj się</button>
+                                        <div class="mt-4 text-center text-sm text-gray-500">Konwersja: 2.3%</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Personalized Version -->
+                                <div id="version-personalized" class="version-content hidden">
+                                    <div class="border rounded-lg p-6 bg-gradient-to-br from-purple-50 to-pink-50">
+                                        <h3 class="text-xl font-bold mb-2 text-purple-800">🎯 Sklep internetowy dla Twojej restauracji</h3>
+                                        <p class="text-purple-600 text-sm mb-4">Wykryliśmy, że prowadzisz restaurację. Zobacz jak możemy zwiększyć Twoje zamówienia online o 200%!</p>
+                                        <div class="bg-white rounded-lg p-4 mb-4 border border-purple-200">
+                                            <div class="flex items-center gap-3 mb-3">
+                                                <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                                                    <span class="text-purple-600 font-bold">🍕</span>
+                                                </div>
+                                                <div>
+                                                    <div class="font-bold text-purple-800">Pakiet Restaurant Pro</div>
+                                                    <div class="text-sm text-purple-600">Idealny dla Twojego biznesu</div>
+                                                </div>
+                                            </div>
+                                            <ul class="text-sm space-y-1 mb-3">
+                                                <li>✅ System zamówień online</li>
+                                                <li>✅ Integracja z dostawcami</li>
+                                                <li>✅ Program lojalnościowy</li>
+                                                <li>✅ Panel zarządzania menu</li>
+                                            </ul>
+                                            <div class="text-lg font-bold text-green-600">6 500 PLN <span class="text-sm text-gray-500 line-through">8 500 PLN</span></div>
+                                        </div>
+                                        <div class="bg-green-50 border border-green-200 rounded p-3 mb-4">
+                                            <div class="text-sm text-green-800">💡 Case Study: Restauracja "Smakolyki" zwiększyła przychody o 180% w 3 miesiące</div>
+                                        </div>
+                                        <button class="bg-purple-600 text-white px-6 py-2 rounded font-semibold">🚀 Rozpocznij w 7 dni</button>
+                                        <div class="mt-4 text-center text-sm text-purple-600">Konwersja: 12.8% (+456%)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Pricing -->
+                <section class="section bg-white" id="pricing">
+                    <div class="main-container">
+                        <div class="text-center max-w-2xl mx-auto mb-16">
+                            <h2 class="h2-heading">Pakiety personalizacji AI</h2>
+                            <p class="body-text mt-4">Od podstawowych rekomendacji po zaawansowane systemy uczenia maszynowego</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div class="card text-center">
+                                <h3 class="text-xl font-bold mb-3">PersonaLite</h3>
+                                <div class="text-3xl font-extrabold text-indigo-600 mb-4">6 500 zł</div>
+                                <div class="text-sm text-gray-500 mb-6">jednorazowo + 400 zł/mies.</div>
+                                <ul class="text-left space-y-3 mb-8">
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Rekomendacje produktów</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Podstawowa segmentacja</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Spersonalizowane emaile</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Dashboard analityczny</span>
+                                    </li>
+                                </ul>
+                                <a href="index.html#contact" class="cta-button w-full">Rozpocznij personalizację</a>
+                            </div>
+                            
+                            <div class="card text-center border-2 border-indigo-500 relative">
+                                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Najlepszy wybór</div>
+                                <h3 class="text-xl font-bold mb-3">PersonaPro</h3>
+                                <div class="text-3xl font-extrabold text-indigo-600 mb-4">15 500 zł</div>
+                                <div class="text-sm text-gray-500 mb-6">jednorazowo + 900 zł/mies.</div>
+                                <ul class="text-left space-y-3 mb-8">
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Wszystko z PersonaLite</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Dynamiczne treści AI</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Adaptacyjny UI/UX</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Predykcyjne modele</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">A/B testing automatyczny</span>
+                                    </li>
+                                </ul>
+                                <a href="index.html#contact" class="cta-button w-full">Wybierz PersonaPro</a>
+                            </div>
+                            
+                            <div class="card text-center">
+                                <h3 class="text-xl font-bold mb-3">PersonaMax</h3>
+                                <div class="text-3xl font-extrabold text-indigo-600 mb-4">35 000 zł</div>
+                                <div class="text-sm text-gray-500 mb-6">jednorazowo + 2000 zł/mies.</div>
+                                <ul class="text-left space-y-3 mb-8">
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Wszystko z PersonaPro</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Custom ML models</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Real-time personalizacja</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Omnichannel experiences</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Dedykowany data scientist</span>
+                                    </li>
+                                </ul>
+                                <a href="index.html#contact" class="cta-button w-full">Maksymalna personalizacja</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="section bg-gradient-to-br from-purple-600 to-pink-700 text-white">
+                    <div class="main-container text-center">
+                        <h2 class="text-4xl font-bold mb-6">Czas na indywidualne podejście!</h2>
+                        <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+                            Przestań traktować wszystkich klientów tak samo. Personalizacja AI da Ci przewagę, 
+                            o której konkurencja może tylko pomarzyć.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="index.html#contact" class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors">💎 Darmowa analiza personalizacji</a>
+                            <a href="tel:+48600580888" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-colors">📞 Zadzwoń: +48 600 580 888</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="bg-gray-900 text-gray-400 py-16">
+                <div class="main-container">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                        <div>
+                            <a href="index.html"><img src="logo/logokajpa-biale-przycięte.webp" alt="Kajpa" class="h-10 w-auto mb-4"/></a>
+                            <p class="text-gray-300">Personalizuj doświadczenia z AI.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-semibold mb-4">Rozwiązania AI</h3>
+                            <ul class="space-y-2">
+                                <li><a href="chatboty-ai.html" class="hover:text-white">Chatboty AI</a></li>
+                                <li><a href="analityka-predykcyjna.html" class="hover:text-white">Analityka predykcyjna</a></li>
+                                <li><a href="narzedzia-automatyzacji.html" class="hover:text-white">Automatyzacja</a></li>
+                                <li><a href="silniki-personalizacji.html" class="hover:text-white">Personalizacja</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-semibold mb-4">Firma</h3>
+                            <ul class="space-y-2">
+                                <li><a href="index.html#about" class="hover:text-white">O nas</a></li>
+                                <li><a href="index.html#portfolio" class="hover:text-white">Portfolio</a></li>
+                                <li><a href="index.html#contact" class="hover:text-white">Kontakt</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-semibold mb-4">Kontakt</h3>
+                            <p class="mb-2">📧 kontakt@kajpa.pl</p>
+                            <p class="mb-4">📞 +48 600 580 888</p>
+                            <p class="text-sm">Białystok, Polska</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                        <p>&copy; 2025 Kajpa. Wszystkie prawa zastrzeżone.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        function showVersion(version) {
+            // Ukryj wszystkie wersje
+            document.querySelectorAll('.version-content').forEach(el => {
+                el.classList.add('hidden');
+            });
+            
+            // Pokaż wybraną wersję
+            document.getElementById('version-' + version).classList.remove('hidden');
+            
+            // Aktualizuj przyciski
+            document.querySelectorAll('button[id^="btn-"]').forEach(btn => {
+                btn.classList.remove('bg-white', 'shadow', 'text-gray-700');
+                btn.classList.add('text-gray-500');
+            });
+            
+            const activeBtn = document.getElementById('btn-' + version);
+            activeBtn.classList.add('bg-white', 'shadow', 'text-gray-700');
+            activeBtn.classList.remove('text-gray-500');
+        }
+        
+        // Domyślnie pokaż standardową wersję
+        document.addEventListener('DOMContentLoaded', function() {
+            showVersion('standard');
+        });
+    </script>
+</body>
+</html>

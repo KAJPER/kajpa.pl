@@ -162,7 +162,7 @@
     <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
         <div class="layout-container flex h-full grow flex-col">
             <!-- Header -->
-            <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-sm transition-all duration-300 shadow-sm">
+            <header class="fixed top-0 left-0 right-0 z-50 w-full bg-white/95 backdrop-blur-md transition-all duration-300 shadow-sm border-b border-gray-100">
                 <nav class="main-container flex items-center justify-between py-4">
                     <a class="flex items-center gap-2" href="index.html">
                         <div class="size-9 text-[var(--accent-indigo)]">
@@ -179,13 +179,31 @@
                         <a class="text-base font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="index.html#about">O nas</a>
                     </div>
                     <a class="hidden md:inline-block cta-button px-6 py-2.5" href="index.html#contact">Kontakt</a>
-                    <button class="md:hidden p-2 rounded-md text-[var(--text-dark-charcoal)]">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-md text-[var(--text-dark-charcoal)]">
+                        <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
                         </svg>
                     </button>
                 </nav>
+                
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="md:hidden bg-white/95 backdrop-blur-sm shadow-lg hidden">
+                    <div class="px-4 py-6 space-y-4">
+                        <a class="block text-lg font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="index.html#services">Usługi</a>
+                        <a class="block text-lg font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="index.html#process">Proces</a>
+                        <a class="block text-lg font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="portfolio.html">Portfolio</a>
+                        <a class="block text-lg font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="index.html#about">O nas</a>
+                        <a class="block w-full text-center cta-button mt-4" href="index.html#contact">Kontakt</a>
+                    </div>
+                </div>
             </header>
+            
+            <!-- Spacer dla fixed header -->
+            <div class="h-[80px] md:h-[88px]"></div>
+            
             <main>
                 <section class="section relative overflow-hidden" id="portfolio">
                     <div class="gradient-orb orb-5" style="animation-delay: 1.7s"></div>
@@ -338,6 +356,42 @@
         scrollElements.forEach(element => {
             observer.observe(element);
         });
+    });
+    </script>
+
+    <!-- JavaScript dla hamburger menu -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        
+        if (mobileMenuToggle && mobileMenu) {
+            mobileMenuToggle.addEventListener('click', function() {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    hamburgerIcon.classList.add('hidden');
+                    closeIcon.classList.remove('hidden');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    hamburgerIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                }
+            });
+            
+            // Zamknij menu po kliknięciu w link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                    hamburgerIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                });
+            });
+        }
     });
     </script>
 </body>

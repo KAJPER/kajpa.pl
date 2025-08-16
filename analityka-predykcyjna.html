@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Analityka Predykcyjna AI - Przewiduj przyszłość biznesu | Kajpa</title>
+    <meta name="description" content="Systemy analityki predykcyjnej AI, które przewidują trendy, zachowania klientów i wyniki sprzedaży. Podejmuj decyzje biznesowe oparte na danych z przyszłości."/>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+            --primary-white: #ffffff;
+            --primary-light-gray: #f8f9fa;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-indigo: #6366f1;
+            --text-dark-charcoal: #1f2937;
+            --text-medium-charcoal: #374151;
+            --cta-green: #10b981;
+            --cta-blue: #0ea5e9;
+        }
+        
+        body { font-family: "Inter", sans-serif; background-color: var(--primary-white); color: var(--text-medium-charcoal); }
+        .main-container { @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+        .section { @apply py-20 md:py-28; }
+        .h1-heading { @apply text-4xl md:text-6xl font-extrabold text-[var(--text-dark-charcoal)] tracking-tighter; }
+        .h2-heading { @apply text-3xl md:text-4xl font-bold text-[var(--text-dark-charcoal)] tracking-tight; }
+        .body-text { @apply text-lg text-[var(--text-medium-charcoal)] leading-relaxed; }
+        .cta-button { @apply bg-[var(--accent-indigo)] text-[var(--primary-white)] rounded-full px-8 py-4 text-base font-semibold hover:bg-opacity-90 focus:outline-none focus:ring-4 focus:ring-indigo-300 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1; }
+        .card { @apply bg-[var(--primary-white)] rounded-2xl shadow-lg p-8 transition-all duration-500 hover:-translate-y-2 hover:scale-105; box-shadow: 0 4px 24px 0 rgba(99,102,241,0.10); }
+        .gradient-orb { @apply absolute rounded-full filter blur-3xl opacity-30 animate-pulse; }
+        .orb-1 { @apply bg-gradient-to-br from-blue-300 to-cyan-400 w-96 h-96 -top-20 -left-40; }
+        .orb-2 { @apply bg-gradient-to-br from-green-200 to-emerald-300 w-80 h-80 -bottom-20 -right-40; }
+        .orb-3 { @apply bg-gradient-to-br from-purple-200 to-violet-300 w-72 h-72 top-1/2 -translate-y-1/2 -right-32; }
+    </style>
+</head>
+
+<body class="antialiased">
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            
+            <!-- Header -->
+            <header class="fixed top-0 left-0 right-0 z-50 w-full bg-white/95 backdrop-blur-md transition-all duration-300 shadow-sm border-b border-gray-100">
+                <nav class="main-container flex items-center justify-between py-4">
+                    <a class="flex items-center gap-2" href="index.html">
+                        <img src="logo/logo-kajpa-przycięte.webp" alt="Kajpa" class="h-10 md:h-12 w-auto"/>
+                    </a>
+                    <div class="hidden md:flex items-center gap-8">
+                        <a class="text-base font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="index.html#services">Usługi</a>
+                        <a class="text-base font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="index.html#process">Proces</a>
+                        <a class="text-base font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="index.html#portfolio">Portfolio</a>
+                        <a class="text-base font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="index.html#about">O nas</a>
+                    </div>
+                    <a class="hidden md:inline-block cta-button px-6 py-2.5" href="index.html#contact">Kontakt</a>
+                </nav>
+            </header>
+
+            <div class="h-[72px]"></div>
+
+            <main>
+                <!-- Hero Section -->
+                <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+                    <div class="absolute inset-0 bg-[var(--primary-light-gray)] [clip-path:polygon(0_0,_100%_0,_100%_90%,_0_100%)]"></div>
+                    <div class="gradient-orb orb-1"></div>
+                    <div class="gradient-orb orb-2" style="animation-delay: 2s"></div>
+                    <div class="gradient-orb orb-3" style="animation-delay: 1s"></div>
+                    
+                    <div class="main-container relative z-10 text-center">
+                        <div class="max-w-4xl mx-auto">
+                            <h1 class="h1-heading">📊 Analityka Predykcyjna AI - Zobacz przyszłość swojego biznesu</h1>
+                            <p class="body-text mt-6 max-w-2xl mx-auto">
+                                Przewiduj zachowania klientów, trendy sprzedaży i ryzyko biznesowe zanim to się wydarzy. 
+                                Nasze systemy AI analizują miliony danych i dają Ci konkretne prognozy z dokładnością 95%.
+                            </p>
+                            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                                <a class="cta-button" href="#demo">🔮 Zobacz demo predykcji</a>
+                                <a class="font-semibold text-[var(--text-medium-charcoal)] hover:text-[var(--text-dark-charcoal)] transition-colors duration-300" href="#case-studies">📈 Case studies</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Live Dashboard Preview -->
+                        <div id="demo" class="mt-16 bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-2xl max-w-5xl mx-auto">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-xl font-bold text-gray-800">Dashboard Predykcyjny - Demo na żywo</h3>
+                                <div class="flex items-center gap-4">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                                        <span id="lastUpdate" class="text-sm text-gray-600">Ładowanie danych...</span>
+                                    </div>
+                                    <button onclick="refreshAnalytics()" id="refreshBtn" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors text-sm font-semibold">
+                                        🔄 Odśwież prognozy
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Loading State -->
+                            <div id="loadingState" class="text-center py-8">
+                                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
+                                <p class="text-gray-600">Generowanie prognoz AI...</p>
+                            </div>
+                            
+                            <!-- Main Metrics -->
+                            <div id="mainMetrics" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 hidden">
+                                <!-- Metrics będą dynamicznie wstawiane tutaj -->
+                            </div>
+                            
+                            <!-- Alert Section -->
+                            <div id="alertSection" class="mt-6 hidden">
+                                <!-- Alert będzie dynamicznie wstawiany tutaj -->
+                            </div>
+                            
+                            <!-- Forecast Sections -->
+                            <div id="forecastSection" class="mt-8 hidden">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h4 class="text-lg font-bold text-gray-800">Prognozy szczegółowe</h4>
+                                    <div class="flex gap-2">
+                                        <button onclick="showForecast('7_days')" class="forecast-btn active px-3 py-1 rounded-full text-sm font-semibold bg-blue-500 text-white hover:bg-blue-600 transition-colors">7 dni</button>
+                                        <button onclick="showForecast('30_days')" class="forecast-btn px-3 py-1 rounded-full text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">30 dni</button>
+                                        <button onclick="showForecast('90_days')" class="forecast-btn px-3 py-1 rounded-full text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">90 dni</button>
+                                    </div>
+                                </div>
+                                
+                                <div id="forecastData" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <!-- Forecast data będą dynamicznie wstawiane tutaj -->
+                                </div>
+                            </div>
+                            
+                            <!-- Accuracy Badge -->
+                            <div id="accuracyBadge" class="mt-6 text-center hidden">
+                                <div class="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                    <span class="font-semibold">Dokładność AI: <span id="accuracyValue">95</span>%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Capabilities Section -->
+                <section class="section bg-white">
+                    <div class="main-container">
+                        <div class="text-center max-w-2xl mx-auto mb-16">
+                            <h2 class="h2-heading">Co przewiduje nasza AI?</h2>
+                            <p class="body-text mt-4">Od zachowań klientów po trendy rynkowe - nasze modele AI analizują setki zmiennych, aby dać Ci przewagę konkurencyjną.</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="card text-center">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Zachowania klientów</h3>
+                                <p class="text-gray-600 mb-4">Przewidujemy, którzy klienci zrezygnują, kto kupi więcej i jakie produkty będą popularne</p>
+                                <div class="text-sm font-semibold text-blue-600">Dokładność: 94.2%</div>
+                            </div>
+                            
+                            <div class="card text-center">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Prognoza sprzedaży</h3>
+                                <p class="text-gray-600 mb-4">Dokładne prognozy przychodów, sezonowości i wpływu kampanii marketingowych</p>
+                                <div class="text-sm font-semibold text-green-600">Dokładność: 91.7%</div>
+                            </div>
+                            
+                            <div class="card text-center">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Analiza ryzyka</h3>
+                                <p class="text-gray-600 mb-4">Identyfikacja zagrożeń biznesowych, problemów z płatnościami i ryzyka operacyjnego</p>
+                                <div class="text-sm font-semibold text-purple-600">Dokładność: 89.3%</div>
+                            </div>
+                            
+                            <div class="card text-center">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Optymalizacja zapasów</h3>
+                                <p class="text-gray-600 mb-4">Przewidywanie popytu, optymalne poziomy magazynowe i zarządzanie łańcuchem dostaw</p>
+                                <div class="text-sm font-semibold text-orange-600">Oszczędności: 25-40%</div>
+                            </div>
+                            
+                            <div class="card text-center">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-teal-100 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Trendy rynkowe</h3>
+                                <p class="text-gray-600 mb-4">Analiza konkurencji, trendów branżowych i zmian w zachowaniach konsumentów</p>
+                                <div class="text-sm font-semibold text-teal-600">Wyprzedzenie: 3-6 miesięcy</div>
+                            </div>
+                            
+                            <div class="card text-center">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-pink-100 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Personalizacja ofert</h3>
+                                <p class="text-gray-600 mb-4">Przewidywanie preferencji klientów i automatyczne dopasowywanie ofert</p>
+                                <div class="text-sm font-semibold text-pink-600">Wzrost konwersji: +185%</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Case Studies -->
+                <section class="section bg-gradient-to-br from-blue-50 to-indigo-50" id="case-studies">
+                    <div class="main-container">
+                        <div class="text-center max-w-2xl mx-auto mb-16">
+                            <h2 class="h2-heading">Sukcesy naszych klientów</h2>
+                            <p class="body-text mt-4">Prawdziwe rezultaty firm, które wdrożyły analitykę predykcyjną AI</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                            <div class="bg-white rounded-2xl p-8 shadow-xl">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                        <span class="text-blue-600 font-bold">E</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg">E-commerce Fashion</h3>
+                                        <p class="text-gray-600 text-sm">Sklep odzieżowy online</p>
+                                    </div>
+                                </div>
+                                
+                                <h4 class="font-semibold text-lg mb-3">Wyzwanie:</h4>
+                                <p class="text-gray-600 mb-4">Nadmierne zapasy produktów sezonowych i brak popularnych rozmiarów</p>
+                                
+                                <h4 class="font-semibold text-lg mb-3">Rozwiązanie AI:</h4>
+                                <p class="text-gray-600 mb-6">System predykcyjny analizujący trendy mody, pogodę, social media i historie zakupów</p>
+                                
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-green-600">-65%</div>
+                                        <div class="text-sm text-gray-600">nadmiarowych zapasów</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-blue-600">+43%</div>
+                                        <div class="text-sm text-gray-600">zysku brutto</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white rounded-2xl p-8 shadow-xl">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                        <span class="text-green-600 font-bold">F</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg">FinTech Startup</h3>
+                                        <p class="text-gray-600 text-sm">Aplikacja pożyczkowa</p>
+                                    </div>
+                                </div>
+                                
+                                <h4 class="font-semibold text-lg mb-3">Wyzwanie:</h4>
+                                <p class="text-gray-600 mb-4">Wysokie ryzyko niespłacenia pożyczek i brak skutecznej oceny kredytowej</p>
+                                
+                                <h4 class="font-semibold text-lg mb-3">Rozwiązanie AI:</h4>
+                                <p class="text-gray-600 mb-6">ML model analizujący 200+ zmiennych: historia transakcji, dane behawioralne, social media</p>
+                                
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-red-600">-78%</div>
+                                        <div class="text-sm text-gray-600">złych długów</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-purple-600">+156%</div>
+                                        <div class="text-sm text-gray-600">akceptacji kredytów</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Technology Stack -->
+                <section class="section bg-white">
+                    <div class="main-container">
+                        <div class="text-center max-w-2xl mx-auto mb-16">
+                            <h2 class="h2-heading">Technologie AI, które używamy</h2>
+                            <p class="body-text mt-4">Najnowsze modele uczenia maszynowego i Big Data dla maksymalnej dokładności predykcji</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                            <div class="text-center">
+                                <div class="w-16 h-16 mx-auto mb-3 bg-gray-100 rounded-lg flex items-center justify-center">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" class="w-10 h-10"/>
+                                </div>
+                                <span class="text-sm font-medium">Scikit-learn</span>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 mx-auto mb-3 bg-gray-100 rounded-lg flex items-center justify-center">
+                                    <img src="https://www.tensorflow.org/images/tf_logo_social.png" alt="TensorFlow" class="w-10 h-6"/>
+                                </div>
+                                <span class="text-sm font-medium">TensorFlow</span>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 mx-auto mb-3 bg-gray-100 rounded-lg flex items-center justify-center">
+                                    <img src="https://pytorch.org/assets/images/pytorch-logo.png" alt="PyTorch" class="w-10 h-10"/>
+                                </div>
+                                <span class="text-sm font-medium">PyTorch</span>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 mx-auto mb-3 bg-gray-100 rounded-lg flex items-center justify-center">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" alt="Pandas" class="w-10 h-8"/>
+                                </div>
+                                <span class="text-sm font-medium">Pandas</span>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 mx-auto mb-3 bg-gray-100 rounded-lg flex items-center justify-center">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" alt="Matplotlib" class="w-10 h-10"/>
+                                </div>
+                                <span class="text-sm font-medium">Matplotlib</span>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 mx-auto mb-3 bg-gray-100 rounded-lg flex items-center justify-center">
+                                    <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="Seaborn" class="w-10 h-10"/>
+                                </div>
+                                <span class="text-sm font-medium">Seaborn</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Pricing -->
+                <section class="section bg-gradient-to-br from-gray-50 to-blue-50" id="pricing">
+                    <div class="main-container">
+                        <div class="text-center max-w-2xl mx-auto mb-16">
+                            <h2 class="h2-heading">Pakiety analityki predykcyjnej</h2>
+                            <p class="body-text mt-4">Od podstawowych prognoz po zaawansowane systemy uczenia maszynowego</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div class="card text-center">
+                                <h3 class="text-xl font-bold mb-3">Insight Basic</h3>
+                                <div class="text-3xl font-extrabold text-indigo-600 mb-4">8 500 zł</div>
+                                <div class="text-sm text-gray-500 mb-6">jednorazowo + 500 zł/mies.</div>
+                                <ul class="text-left space-y-3 mb-8">
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Prognoza sprzedaży (3 miesiące)</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Analiza trendów klientów</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Dashboard predykcyjny</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Raporty miesięczne</span>
+                                    </li>
+                                </ul>
+                                <a href="index.html#contact" class="cta-button w-full">Wybierz pakiet</a>
+                            </div>
+                            
+                            <div class="card text-center border-2 border-indigo-500 relative">
+                                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Najlepszy wybór</div>
+                                <h3 class="text-xl font-bold mb-3">Insight Pro</h3>
+                                <div class="text-3xl font-extrabold text-indigo-600 mb-4">18 500 zł</div>
+                                <div class="text-sm text-gray-500 mb-6">jednorazowo + 1200 zł/mies.</div>
+                                <ul class="text-left space-y-3 mb-8">
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Wszystko z pakietu Basic</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Prognoza 12 miesięcy</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Analiza ryzyka churn</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Personalizacja rekomendacji</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">API integration</span>
+                                    </li>
+                                </ul>
+                                <a href="index.html#contact" class="cta-button w-full">Wybierz pakiet</a>
+                            </div>
+                            
+                            <div class="card text-center">
+                                <h3 class="text-xl font-bold mb-3">Insight Enterprise</h3>
+                                <div class="text-3xl font-extrabold text-indigo-600 mb-4">45 000 zł</div>
+                                <div class="text-sm text-gray-500 mb-6">jednorazowo + 2500 zł/mies.</div>
+                                <ul class="text-left space-y-3 mb-8">
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Wszystko z pakietu Pro</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Modele custom ML</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Real-time predykcje</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Dedykowany data scientist</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Wsparcie 24/7</span>
+                                    </li>
+                                </ul>
+                                <a href="index.html#contact" class="cta-button w-full">Wybierz pakiet</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="section bg-gradient-to-br from-indigo-600 to-blue-700 text-white">
+                    <div class="main-container text-center">
+                        <h2 class="text-4xl font-bold mb-6">Zacznij przewidywać przyszłość już dziś!</h2>
+                        <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+                            Nie czekaj na konkurencję. Wdrożenie analityki predykcyjnej AI da Ci przewagę, 
+                            której potrzebujesz w dzisiejszym szybko zmieniającym się rynku.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="index.html#contact" class="bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors">🔮 Darmowa analiza danych</a>
+                            <a href="tel:+48600580888" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-indigo-600 transition-colors">📞 Zadzwoń: +48 600 580 888</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="bg-gray-900 text-gray-400 py-16">
+                <div class="main-container">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                        <div>
+                            <a href="index.html"><img src="logo/logokajpa-biale-przycięte.webp" alt="Kajpa" class="h-10 w-auto mb-4"/></a>
+                            <p class="text-gray-300">Przewiduj przyszłość swojego biznesu z AI.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-semibold mb-4">Rozwiązania AI</h3>
+                            <ul class="space-y-2">
+                                <li><a href="chatboty-ai.html" class="hover:text-white">Chatboty AI</a></li>
+                                <li><a href="analityka-predykcyjna.html" class="hover:text-white">Analityka predykcyjna</a></li>
+                                <li><a href="narzedzia-automatyzacji.html" class="hover:text-white">Automatyzacja</a></li>
+                                <li><a href="silniki-personalizacji.html" class="hover:text-white">Personalizacja</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-semibold mb-4">Firma</h3>
+                            <ul class="space-y-2">
+                                <li><a href="index.html#about" class="hover:text-white">O nas</a></li>
+                                <li><a href="index.html#portfolio" class="hover:text-white">Portfolio</a></li>
+                                <li><a href="index.html#contact" class="hover:text-white">Kontakt</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-semibold mb-4">Kontakt</h3>
+                            <p class="mb-2">📧 kontakt@kajpa.pl</p>
+                            <p class="mb-4">📞 +48 600 580 888</p>
+                            <p class="text-sm">Białystok, Polska</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                        <p>&copy; 2025 Kajpa. Wszystkie prawa zastrzeżone.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Analytics Demo functionality
+        let currentData = null;
+        let currentForecastPeriod = '7_days';
+
+        // Initialize demo on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            refreshAnalytics();
+        });
+
+        async function refreshAnalytics() {
+            const refreshBtn = document.getElementById('refreshBtn');
+            const loadingState = document.getElementById('loadingState');
+            const mainMetrics = document.getElementById('mainMetrics');
+            const alertSection = document.getElementById('alertSection');
+            const forecastSection = document.getElementById('forecastSection');
+            const accuracyBadge = document.getElementById('accuracyBadge');
+            
+            // Show loading state
+            showLoading(true);
+            refreshBtn.disabled = true;
+            refreshBtn.textContent = '🔄 Generowanie...';
+            
+            try {
+                const response = await fetch('http://51.68.137.107:5000/api/analytics-demo', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ action: 'refresh' })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    currentData = result.data;
+                    
+                    // Update metrics
+                    updateMainMetrics(result.data.metrics);
+                    
+                    // Update alert
+                    updateAlert(result.data.alert);
+                    
+                    // Update forecast
+                    updateForecast(result.data.forecasts[currentForecastPeriod], currentForecastPeriod);
+                    
+                    // Update accuracy
+                    document.getElementById('accuracyValue').textContent = result.data.accuracy;
+                    
+                    // Update last update time
+                    document.getElementById('lastUpdate').textContent = result.data.last_update;
+                    
+                    // Show all sections
+                    showLoading(false);
+                    mainMetrics.classList.remove('hidden');
+                    alertSection.classList.remove('hidden');
+                    forecastSection.classList.remove('hidden');
+                    accuracyBadge.classList.remove('hidden');
+                    
+                } else {
+                    showError(result.error || 'Błąd generowania prognoz');
+                }
+                
+            } catch (error) {
+                console.error('Error:', error);
+                showError('Nie można połączyć się z serwerem AI. Sprawdź czy aplikacja działa na http://51.68.137.107:5000');
+            } finally {
+                refreshBtn.disabled = false;
+                refreshBtn.textContent = '🔄 Odśwież prognozy';
+            }
+        }
+
+        function updateMainMetrics(metrics) {
+            const container = document.getElementById('mainMetrics');
+            container.innerHTML = '';
+            
+            Object.keys(metrics).forEach(key => {
+                const metric = metrics[key];
+                const trendColor = getTrendColor(metric.trend);
+                const trendIcon = getTrendIcon(metric.trend);
+                
+                const metricDiv = document.createElement('div');
+                metricDiv.className = `bg-gradient-to-br ${trendColor.gradient} p-4 rounded-lg transition-all hover:scale-105`;
+                metricDiv.innerHTML = `
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="text-2xl font-bold ${trendColor.text}">${metric.value}</div>
+                        <div class="${trendColor.text}">${trendIcon}</div>
+                    </div>
+                    <div class="text-sm text-gray-600 font-semibold">${metric.label}</div>
+                    <div class="text-xs text-gray-500 mt-1">${metric.period}</div>
+                `;
+                container.appendChild(metricDiv);
+            });
+        }
+
+        function updateAlert(alert) {
+            const container = document.getElementById('alertSection');
+            const alertColor = getAlertColor(alert.type);
+            
+            container.innerHTML = `
+                <div class="p-4 ${alertColor.bg} border ${alertColor.border} rounded-lg">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-2xl">${alert.icon}</span>
+                        <span class="font-semibold ${alertColor.text}">${alert.title}</span>
+                    </div>
+                    <p class="text-sm ${alertColor.textSecondary}">${alert.message}</p>
+                </div>
+            `;
+        }
+
+        function updateForecast(forecastData, period) {
+            const container = document.getElementById('forecastData');
+            const periodLabels = {
+                '7_days': '7 dni',
+                '30_days': '30 dni', 
+                '90_days': '90 dni'
+            };
+            
+            container.innerHTML = `
+                <div class="bg-blue-50 p-4 rounded-lg">
+                    <div class="text-xl font-bold text-blue-600">${forecastData.visitors.toLocaleString()}</div>
+                    <div class="text-sm text-gray-600">Odwiedzających</div>
+                    <div class="text-xs text-gray-500 mt-1">prognoza na ${periodLabels[period]}</div>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg">
+                    <div class="text-xl font-bold text-green-600">${forecastData.sales}</div>
+                    <div class="text-sm text-gray-600">Sprzedanych</div>
+                    <div class="text-xs text-gray-500 mt-1">prognoza na ${periodLabels[period]}</div>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-lg">
+                    <div class="text-xl font-bold text-purple-600">${forecastData.revenue.toLocaleString()} PLN</div>
+                    <div class="text-sm text-gray-600">Przychód</div>
+                    <div class="text-xs text-gray-500 mt-1">prognoza na ${periodLabels[period]}</div>
+                </div>
+            `;
+        }
+
+        function showForecast(period) {
+            if (!currentData) return;
+            
+            currentForecastPeriod = period;
+            
+            // Update active button
+            document.querySelectorAll('.forecast-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-blue-500', 'text-white');
+                btn.classList.add('bg-gray-200', 'text-gray-700');
+            });
+            
+            event.target.classList.add('active', 'bg-blue-500', 'text-white');
+            event.target.classList.remove('bg-gray-200', 'text-gray-700');
+            
+            // Update forecast data
+            updateForecast(currentData.forecasts[period], period);
+        }
+
+        function showLoading(show) {
+            const loadingState = document.getElementById('loadingState');
+            if (show) {
+                loadingState.classList.remove('hidden');
+            } else {
+                loadingState.classList.add('hidden');
+            }
+        }
+
+        function showError(message) {
+            const container = document.getElementById('alertSection');
+            container.classList.remove('hidden');
+            container.innerHTML = `
+                <div class="p-4 bg-red-50 border border-red-200 rounded-lg">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-red-600">❌</span>
+                        <span class="font-semibold text-red-800">Błąd systemu</span>
+                    </div>
+                    <p class="text-sm text-red-700">${message}</p>
+                </div>
+            `;
+        }
+
+        function getTrendColor(trend) {
+            switch(trend) {
+                case 'up':
+                    return {
+                        gradient: 'from-green-50 to-green-100',
+                        text: 'text-green-600',
+                        bg: 'bg-green-100'
+                    };
+                case 'down':
+                    return {
+                        gradient: 'from-blue-50 to-blue-100', 
+                        text: 'text-blue-600',
+                        bg: 'bg-blue-100'
+                    };
+                case 'warning':
+                    return {
+                        gradient: 'from-yellow-50 to-yellow-100',
+                        text: 'text-yellow-600',
+                        bg: 'bg-yellow-100'
+                    };
+                default:
+                    return {
+                        gradient: 'from-gray-50 to-gray-100',
+                        text: 'text-gray-600',
+                        bg: 'bg-gray-100'
+                    };
+            }
+        }
+
+        function getTrendIcon(trend) {
+            switch(trend) {
+                case 'up':
+                    return '📈';
+                case 'down':
+                    return '📉';
+                case 'warning':
+                    return '⚠️';
+                default:
+                    return '📊';
+            }
+        }
+
+        function getAlertColor(type) {
+            switch(type) {
+                case 'warning':
+                    return {
+                        bg: 'bg-yellow-50',
+                        border: 'border-yellow-200',
+                        text: 'text-yellow-800',
+                        textSecondary: 'text-yellow-700'
+                    };
+                case 'success':
+                    return {
+                        bg: 'bg-green-50',
+                        border: 'border-green-200', 
+                        text: 'text-green-800',
+                        textSecondary: 'text-green-700'
+                    };
+                case 'info':
+                    return {
+                        bg: 'bg-blue-50',
+                        border: 'border-blue-200',
+                        text: 'text-blue-800', 
+                        textSecondary: 'text-blue-700'
+                    };
+                default:
+                    return {
+                        bg: 'bg-gray-50',
+                        border: 'border-gray-200',
+                        text: 'text-gray-800',
+                        textSecondary: 'text-gray-700'
+                    };
+            }
+        }
+
+        // Auto-refresh every 30 seconds
+        setInterval(() => {
+            if (document.visibilityState === 'visible') {
+                refreshAnalytics();
+            }
+        }, 30000);
+    </script>
+</body>
+</html>

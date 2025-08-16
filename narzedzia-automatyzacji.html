@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Narzędzia Automatyzacji AI - Oszczędzaj czas i pieniądze | Kajpa</title>
+    <meta name="description" content="Automatyzacja procesów biznesowych z AI. Oszczędź 70% czasu na rutynowych zadaniach dzięki inteligentnym narzędziom automatyzacji od Kajpa."/>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+            --primary-white: #ffffff;
+            --primary-light-gray: #f8f9fa;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-indigo: #6366f1;
+            --text-dark-charcoal: #1f2937;
+            --text-medium-charcoal: #374151;
+            --cta-green: #10b981;
+            --cta-blue: #0ea5e9;
+        }
+        
+        body { font-family: "Inter", sans-serif; background-color: var(--primary-white); color: var(--text-medium-charcoal); }
+        .main-container { @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+        .section { @apply py-20 md:py-28; }
+        .h1-heading { @apply text-4xl md:text-6xl font-extrabold text-[var(--text-dark-charcoal)] tracking-tighter; }
+        .h2-heading { @apply text-3xl md:text-4xl font-bold text-[var(--text-dark-charcoal)] tracking-tight; }
+        .body-text { @apply text-lg text-[var(--text-medium-charcoal)] leading-relaxed; }
+        .cta-button { @apply bg-[var(--accent-indigo)] text-[var(--primary-white)] rounded-full px-8 py-4 text-base font-semibold hover:bg-opacity-90 focus:outline-none focus:ring-4 focus:ring-indigo-300 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1; }
+        .card { @apply bg-[var(--primary-white)] rounded-2xl shadow-lg p-8 transition-all duration-500 hover:-translate-y-2 hover:scale-105; box-shadow: 0 4px 24px 0 rgba(99,102,241,0.10); }
+        .gradient-orb { @apply absolute rounded-full filter blur-3xl opacity-30 animate-pulse; }
+        .orb-1 { @apply bg-gradient-to-br from-green-300 to-emerald-400 w-96 h-96 -top-20 -left-40; }
+        .orb-2 { @apply bg-gradient-to-br from-orange-200 to-yellow-300 w-80 h-80 -bottom-20 -right-40; }
+        .orb-3 { @apply bg-gradient-to-br from-teal-200 to-cyan-300 w-72 h-72 top-1/2 -translate-y-1/2 -right-32; }
+    </style>
+</head>
+
+<body class="antialiased">
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            
+            <!-- Header -->
+            <header class="fixed top-0 left-0 right-0 z-50 w-full bg-white/95 backdrop-blur-md transition-all duration-300 shadow-sm border-b border-gray-100">
+                <nav class="main-container flex items-center justify-between py-4">
+                    <a class="flex items-center gap-2" href="index.html">
+                        <img src="logo/logo-kajpa-przycięte.webp" alt="Kajpa" class="h-10 md:h-12 w-auto"/>
+                    </a>
+                    <div class="hidden md:flex items-center gap-8">
+                        <a class="text-base font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="index.html#services">Usługi</a>
+                        <a class="text-base font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="index.html#process">Proces</a>
+                        <a class="text-base font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="index.html#portfolio">Portfolio</a>
+                        <a class="text-base font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="index.html#about">O nas</a>
+                    </div>
+                    <a class="hidden md:inline-block cta-button px-6 py-2.5" href="index.html#contact">Kontakt</a>
+                </nav>
+            </header>
+
+            <div class="h-[72px]"></div>
+
+            <main>
+                <!-- Hero Section -->
+                <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+                    <div class="absolute inset-0 bg-[var(--primary-light-gray)] [clip-path:polygon(0_0,_100%_0,_100%_90%,_0_100%)]"></div>
+                    <div class="gradient-orb orb-1"></div>
+                    <div class="gradient-orb orb-2" style="animation-delay: 2s"></div>
+                    <div class="gradient-orb orb-3" style="animation-delay: 1s"></div>
+                    
+                    <div class="main-container relative z-10 text-center">
+                        <div class="max-w-4xl mx-auto">
+                            <h1 class="h1-heading">⚡ Automatyzacja AI - Pracuj mądrzej, nie więcej</h1>
+                            <p class="body-text mt-6 max-w-2xl mx-auto">
+                                Zautomatyzuj rutynowe zadania, które zabierają Ci 70% czasu. Nasze inteligentne narzędzia AI pracują za Ciebie 24/7, 
+                                a Ty skupiasz się na rozwoju biznesu i strategicznych decyzjach.
+                            </p>
+                            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                                <a class="cta-button" href="#automation-types">🚀 Zobacz możliwości</a>
+                                <a class="font-semibold text-[var(--text-medium-charcoal)] hover:text-[var(--text-dark-charcoal)] transition-colors duration-300" href="#roi-calculator">💰 Kalkulator oszczędności</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Automation Workflow Preview -->
+                        <div class="mt-16 bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-2xl max-w-5xl mx-auto">
+                            <h3 class="text-xl font-bold text-gray-800 mb-6">Przykład automatyzacji: Obsługa zamówień e-commerce</h3>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center">
+                                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
+                                    <div class="text-2xl mb-2">📧</div>
+                                    <div class="text-sm font-semibold">Nowe zamówienie</div>
+                                    <div class="text-xs text-gray-600">Email/Web</div>
+                                </div>
+                                
+                                <div class="flex justify-center">
+                                    <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                                
+                                <div class="bg-green-50 border border-green-200 rounded-lg p-4 text-center">
+                                    <div class="text-2xl mb-2">🤖</div>
+                                    <div class="text-sm font-semibold">AI przetwarza</div>
+                                    <div class="text-xs text-gray-600">Analiza + CRM</div>
+                                </div>
+                                
+                                <div class="flex justify-center">
+                                    <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                                
+                                <div class="bg-purple-50 border border-purple-200 rounded-lg p-4 text-center">
+                                    <div class="text-2xl mb-2">✅</div>
+                                    <div class="text-sm font-semibold">Auto-realizacja</div>
+                                    <div class="text-xs text-gray-600">Wysyłka + Faktury</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 grid grid-cols-3 gap-4 text-center">
+                                <div>
+                                    <div class="text-2xl font-bold text-green-600">95%</div>
+                                    <div class="text-sm text-gray-600">mniej pracy manualnej</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-blue-600">3 min</div>
+                                    <div class="text-sm text-gray-600">czas procesowania</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-purple-600">0%</div>
+                                    <div class="text-sm text-gray-600">błędów ludzkich</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Automation Types -->
+                <section class="section bg-white" id="automation-types">
+                    <div class="main-container">
+                        <div class="text-center max-w-2xl mx-auto mb-16">
+                            <h2 class="h2-heading">Co możemy zautomatyzować?</h2>
+                            <p class="body-text mt-4">Od prostych zadań po złożone procesy biznesowe - nasze narzędzia AI radzą sobie ze wszystkim.</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="card">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-center mb-3">Marketing Email</h3>
+                                <ul class="space-y-2 mb-4">
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Segmentacja klientów AI
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Personalizowane treści
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        A/B testing automatyczny
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Optymalizacja godzin wysyłki
+                                    </li>
+                                </ul>
+                                <div class="text-center text-sm font-semibold text-blue-600">Oszczędność: 80% czasu</div>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-center mb-3">Zarządzanie zamówieniami</h3>
+                                <ul class="space-y-2 mb-4">
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Automatyczne przyjmowanie
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Sprawdzanie dostępności
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Generowanie faktur
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Aktualizacja statusów
+                                    </li>
+                                </ul>
+                                <div class="text-center text-sm font-semibold text-green-600">Oszczędność: 90% czasu</div>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-center mb-3">Zarządzanie HR</h3>
+                                <ul class="space-y-2 mb-4">
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Selekcja CV kandydatów
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Umawianie rozmów
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Onboarding nowych pracowników
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Ewaluacje performance
+                                    </li>
+                                </ul>
+                                <div class="text-center text-sm font-semibold text-purple-600">Oszczędność: 60% czasu</div>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-center mb-3">Analiza i raporty</h3>
+                                <ul class="space-y-2 mb-4">
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Raporty sprzedażowe
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        KPI dashboards
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Analiza konkurencji
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Powiadomienia o trendach
+                                    </li>
+                                </ul>
+                                <div class="text-center text-sm font-semibold text-orange-600">Oszczędność: 85% czasu</div>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-teal-100 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-center mb-3">Finanse i księgowość</h3>
+                                <ul class="space-y-2 mb-4">
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Automatyczne faktury
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Księgowanie transakcji
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Monitorowanie płatności
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Windykacja automatyczna
+                                    </li>
+                                </ul>
+                                <div class="text-center text-sm font-semibold text-teal-600">Oszczędność: 75% czasu</div>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-pink-100 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-center mb-3">Social Media</h3>
+                                <ul class="space-y-2 mb-4">
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Automatyczne posty
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Generowanie contentu AI
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Odpowiedzi na komentarze
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        Analiza engagement
+                                    </li>
+                                </ul>
+                                <div class="text-center text-sm font-semibold text-pink-600">Oszczędność: 70% czasu</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ROI Calculator -->
+                <section class="section bg-gradient-to-br from-green-50 to-emerald-50" id="roi-calculator">
+                    <div class="main-container">
+                        <div class="text-center max-w-2xl mx-auto mb-16">
+                            <h2 class="h2-heading">Kalkulator oszczędności</h2>
+                            <p class="body-text mt-4">Zobacz ile możesz oszczędzić dzięki automatyzacji AI w Twojej firmie</p>
+                        </div>
+                        
+                        <div class="max-w-4xl mx-auto">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                                <div class="bg-white rounded-2xl p-8 shadow-xl">
+                                    <h3 class="text-xl font-bold mb-6">Wprowadź dane swojej firmy:</h3>
+                                    
+                                    <div class="space-y-6">
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Liczba pracowników administracyjnych:</label>
+                                            <input type="number" id="employees" value="3" class="w-full border border-gray-300 rounded-lg px-4 py-2" min="1" max="100">
+                                        </div>
+                                        
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Średnia stawka godzinowa (PLN):</label>
+                                            <input type="number" id="hourlyRate" value="35" class="w-full border border-gray-300 rounded-lg px-4 py-2" min="10" max="200">
+                                        </div>
+                                        
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Godziny pracy dziennie na rutynowe zadania:</label>
+                                            <input type="number" id="routineHours" value="6" class="w-full border border-gray-300 rounded-lg px-4 py-2" min="1" max="8">
+                                        </div>
+                                        
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Dni pracy w miesiącu:</label>
+                                            <input type="number" id="workDays" value="22" class="w-full border border-gray-300 rounded-lg px-4 py-2" min="15" max="30">
+                                        </div>
+                                    </div>
+                                    
+                                    <button onclick="calculateROI()" class="w-full mt-6 cta-button">📊 Oblicz oszczędności</button>
+                                </div>
+                                
+                                <div class="bg-white rounded-2xl p-8 shadow-xl">
+                                    <h3 class="text-xl font-bold mb-6">Twoje potencjalne oszczędności:</h3>
+                                    
+                                    <div id="calculatorResults" class="space-y-6">
+                                        <div class="text-center text-gray-500">
+                                            Wprowadź dane i kliknij "Oblicz oszczędności"
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Success Stories -->
+                <section class="section bg-white">
+                    <div class="main-container">
+                        <div class="text-center max-w-2xl mx-auto mb-16">
+                            <h2 class="h2-heading">Historie sukcesu automatyzacji</h2>
+                            <p class="body-text mt-4">Poznaj firmy, które już zaoszczędziły tysiące godzin dzięki naszym rozwiązaniom</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                                        <span class="text-blue-600 font-bold text-2xl">S</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold">TechStart Solutions</h3>
+                                        <p class="text-gray-600">Software House</p>
+                                    </div>
+                                </div>
+                                
+                                <blockquote class="text-gray-700 italic mb-6">
+                                    "Automatyzacja zarządzania projektami od Kajpa pozwoliła nam obsłużyć 3x więcej klientów tym samym zespołem. 
+                                    Rutynowe zadania jak aktualizacje statusów, raporty i komunikacja z klientami dzieją się same."
+                                </blockquote>
+                                
+                                <div class="grid grid-cols-3 gap-4 mb-6">
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-blue-600">240h</div>
+                                        <div class="text-sm text-gray-600">oszczędzone miesięcznie</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-green-600">85 000 zł</div>
+                                        <div class="text-sm text-gray-600">roczne oszczędności</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-purple-600">300%</div>
+                                        <div class="text-sm text-gray-600">wzrost produktywności</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-right">
+                                    <cite class="text-sm text-gray-600">- Marcin Kowalski, CEO</cite>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                                        <span class="text-green-600 font-bold text-2xl">E</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold">EcoStore Online</h3>
+                                        <p class="text-gray-600">E-commerce</p>
+                                    </div>
+                                </div>
+                                
+                                <blockquote class="text-gray-700 italic mb-6">
+                                    "Dzięki automatyzacji obsługi zamówień i marketingu email nasze przychody wzrosły o 180%, 
+                                    a ja mogę się skupić na strategii zamiast codziennych operacji."
+                                </blockquote>
+                                
+                                <div class="grid grid-cols-3 gap-4 mb-6">
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-green-600">95%</div>
+                                        <div class="text-sm text-gray-600">automatyzacji procesów</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-blue-600">180%</div>
+                                        <div class="text-sm text-gray-600">wzrost przychodów</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-purple-600">2 mies</div>
+                                        <div class="text-sm text-gray-600">ROI payback</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-right">
+                                    <cite class="text-sm text-gray-600">- Anna Nowak, Właścicielka</cite>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Pricing -->
+                <section class="section bg-gradient-to-br from-gray-50 to-indigo-50" id="pricing">
+                    <div class="main-container">
+                        <div class="text-center max-w-2xl mx-auto mb-16">
+                            <h2 class="h2-heading">Pakiety automatyzacji</h2>
+                            <p class="body-text mt-4">Wybierz poziom automatyzacji odpowiedni dla Twojego biznesu</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div class="card text-center">
+                                <h3 class="text-xl font-bold mb-3">AutoStart</h3>
+                                <div class="text-3xl font-extrabold text-indigo-600 mb-4">4 500 zł</div>
+                                <div class="text-sm text-gray-500 mb-6">jednorazowo + 300 zł/mies.</div>
+                                <ul class="text-left space-y-3 mb-8">
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">2-3 podstawowe procesy</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Email marketing automation</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Podstawowe raporty</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Wsparcie email</span>
+                                    </li>
+                                </ul>
+                                <a href="index.html#contact" class="cta-button w-full">Rozpocznij automatyzację</a>
+                            </div>
+                            
+                            <div class="card text-center border-2 border-indigo-500 relative">
+                                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Bestseller</div>
+                                <h3 class="text-xl font-bold mb-3">AutoPro</h3>
+                                <div class="text-3xl font-extrabold text-indigo-600 mb-4">12 500 zł</div>
+                                <div class="text-sm text-gray-500 mb-6">jednorazowo + 800 zł/mies.</div>
+                                <ul class="text-left space-y-3 mb-8">
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Wszystko z AutoStart</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">5-7 zaawansowanych procesów</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">CRM integration</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Zaawansowana analityka</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Wsparcie telefoniczne</span>
+                                    </li>
+                                </ul>
+                                <a href="index.html#contact" class="cta-button w-full">Wybierz AutoPro</a>
+                            </div>
+                            
+                            <div class="card text-center">
+                                <h3 class="text-xl font-bold mb-3">AutoEnterprise</h3>
+                                <div class="text-3xl font-extrabold text-indigo-600 mb-4">25 000 zł</div>
+                                <div class="text-sm text-gray-500 mb-6">jednorazowo + 1500 zł/mies.</div>
+                                <ul class="text-left space-y-3 mb-8">
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Wszystko z AutoPro</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Nielimitowane procesy</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Dedykowane workflow</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">Dedykowany account manager</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                        <span class="text-sm">24/7 priorytetowe wsparcie</span>
+                                    </li>
+                                </ul>
+                                <a href="index.html#contact" class="cta-button w-full">Skaluj automatyzację</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="section bg-gradient-to-br from-green-600 to-emerald-700 text-white">
+                    <div class="main-container text-center">
+                        <h2 class="text-4xl font-bold mb-6">Przestań tracić czas na rutynę!</h2>
+                        <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+                            Każdy dzień bez automatyzacji to stracone pieniądze. Zacznij oszczędzać czas i koszty już dziś 
+                            dzięki inteligentnym narzędziom AI.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="index.html#contact" class="bg-white text-green-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors">⚡ Darmowa analiza procesów</a>
+                            <a href="tel:+48600580888" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-green-600 transition-colors">📞 Zadzwoń: +48 600 580 888</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="bg-gray-900 text-gray-400 py-16">
+                <div class="main-container">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                        <div>
+                            <a href="index.html"><img src="logo/logokajpa-biale-przycięte.webp" alt="Kajpa" class="h-10 w-auto mb-4"/></a>
+                            <p class="text-gray-300">Zautomatyzuj swój biznes z AI.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-semibold mb-4">Rozwiązania AI</h3>
+                            <ul class="space-y-2">
+                                <li><a href="chatboty-ai.html" class="hover:text-white">Chatboty AI</a></li>
+                                <li><a href="analityka-predykcyjna.html" class="hover:text-white">Analityka predykcyjna</a></li>
+                                <li><a href="narzedzia-automatyzacji.html" class="hover:text-white">Automatyzacja</a></li>
+                                <li><a href="silniki-personalizacji.html" class="hover:text-white">Personalizacja</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-semibold mb-4">Firma</h3>
+                            <ul class="space-y-2">
+                                <li><a href="index.html#about" class="hover:text-white">O nas</a></li>
+                                <li><a href="index.html#portfolio" class="hover:text-white">Portfolio</a></li>
+                                <li><a href="index.html#contact" class="hover:text-white">Kontakt</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-semibold mb-4">Kontakt</h3>
+                            <p class="mb-2">📧 kontakt@kajpa.pl</p>
+                            <p class="mb-4">📞 +48 600 580 888</p>
+                            <p class="text-sm">Białystok, Polska</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                        <p>&copy; 2025 Kajpa. Wszystkie prawa zastrzeżone.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        function calculateROI() {
+            const employees = parseInt(document.getElementById('employees').value) || 0;
+            const hourlyRate = parseInt(document.getElementById('hourlyRate').value) || 0;
+            const routineHours = parseInt(document.getElementById('routineHours').value) || 0;
+            const workDays = parseInt(document.getElementById('workDays').value) || 0;
+            
+            // Obliczenia
+            const monthlyCostCurrent = employees * hourlyRate * routineHours * workDays;
+            const automationSavings = monthlyCostCurrent * 0.75; // 75% oszczędności
+            const annualSavings = automationSavings * 12;
+            const hoursFreed = employees * routineHours * workDays * 0.75;
+            
+            const results = `
+                <div class="space-y-4">
+                    <div class="bg-green-100 border border-green-200 rounded-lg p-4">
+                        <div class="text-2xl font-bold text-green-600 mb-1">${automationSavings.toLocaleString()} zł</div>
+                        <div class="text-sm text-gray-600">miesięczne oszczędności</div>
+                    </div>
+                    
+                    <div class="bg-blue-100 border border-blue-200 rounded-lg p-4">
+                        <div class="text-2xl font-bold text-blue-600 mb-1">${annualSavings.toLocaleString()} zł</div>
+                        <div class="text-sm text-gray-600">roczne oszczędności</div>
+                    </div>
+                    
+                    <div class="bg-purple-100 border border-purple-200 rounded-lg p-4">
+                        <div class="text-2xl font-bold text-purple-600 mb-1">${Math.round(hoursFreed)}h</div>
+                        <div class="text-sm text-gray-600">uwolnionych godzin miesięcznie</div>
+                    </div>
+                    
+                    <div class="bg-orange-100 border border-orange-200 rounded-lg p-4 text-center">
+                        <div class="text-lg font-semibold text-orange-800 mb-2">ROI w pierwszym roku:</div>
+                        <div class="text-3xl font-bold text-orange-600">${Math.round((annualSavings / 15000) * 100)}%</div>
+                        <div class="text-xs text-gray-600 mt-1">zakładając koszt wdrożenia 15 000 zł</div>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('calculatorResults').innerHTML = results;
+        }
+        
+        // Automatyczne obliczenie przy ładowaniu strony
+        document.addEventListener('DOMContentLoaded', function() {
+            calculateROI();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Chatboty AI - Inteligentne asystenty dla Twojego biznesu | Kajpa</title>
+    <meta name="description" content="Profesjonalne chatboty AI, które automatyzują obsługę klienta 24/7. Zwiększ konwersję o 300% dzięki inteligentnym asystentom wirtualnym od Kajpa."/>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+            --primary-white: #ffffff;
+            --primary-light-gray: #f8f9fa;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-indigo: #6366f1;
+            --text-dark-charcoal: #1f2937;
+            --text-medium-charcoal: #374151;
+            --cta-green: #10b981;
+            --cta-blue: #0ea5e9;
+        }
+        
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: var(--primary-white);
+            color: var(--text-medium-charcoal);
+        }
+        
+        .main-container {
+            @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+        }
+        
+        .section {
+            @apply py-20 md:py-28;
+        }
+        
+        .h1-heading {
+            @apply text-4xl md:text-6xl font-extrabold text-[var(--text-dark-charcoal)] tracking-tighter;
+        }
+        
+        .h2-heading {
+            @apply text-3xl md:text-4xl font-bold text-[var(--text-dark-charcoal)] tracking-tight;
+        }
+        
+        .body-text {
+            @apply text-lg text-[var(--text-medium-charcoal)] leading-relaxed;
+        }
+        
+        .cta-button {
+            @apply bg-[var(--accent-indigo)] text-[var(--primary-white)] rounded-full px-8 py-4 text-base font-semibold hover:bg-opacity-90 focus:outline-none focus:ring-4 focus:ring-indigo-300 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1;
+        }
+        
+        .card {
+            @apply bg-[var(--primary-white)] rounded-2xl shadow-lg p-8 transition-all duration-500 hover:-translate-y-2 hover:scale-105;
+            box-shadow: 0 4px 24px 0 rgba(99,102,241,0.10);
+        }
+        
+        .gradient-orb {
+            @apply absolute rounded-full filter blur-3xl opacity-30 animate-pulse;
+        }
+        
+        .orb-1 { @apply bg-gradient-to-br from-indigo-300 to-purple-300 w-96 h-96 -top-20 -left-40; }
+        .orb-2 { @apply bg-gradient-to-br from-blue-200 to-green-200 w-80 h-80 -bottom-20 -right-40; }
+        .orb-3 { @apply bg-gradient-to-br from-purple-200 to-pink-200 w-72 h-72 top-1/2 -translate-y-1/2 -right-32; }
+    </style>
+</head>
+
+<body class="antialiased">
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            
+            <!-- Header -->
+            <header class="fixed top-0 left-0 right-0 z-50 w-full bg-white/95 backdrop-blur-md transition-all duration-300 shadow-sm border-b border-gray-100">
+                <nav class="main-container flex items-center justify-between py-4">
+                    <a class="flex items-center gap-2" href="index.html">
+                        <img src="logo/logo-kajpa-przycięte.webp" alt="Kajpa" class="h-10 md:h-12 w-auto"/>
+                    </a>
+                    
+                    <div class="hidden md:flex items-center gap-8">
+                        <a class="text-base font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="index.html#services">Usługi</a>
+                        <a class="text-base font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="index.html#process">Proces</a>
+                        <a class="text-base font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="index.html#portfolio">Portfolio</a>
+                        <a class="text-base font-medium text-[var(--text-medium-charcoal)] hover:text-[var(--accent-indigo)] transition-colors duration-300" href="index.html#about">O nas</a>
+                    </div>
+                    
+                    <a class="hidden md:inline-block cta-button px-6 py-2.5" href="index.html#contact">Kontakt</a>
+                </nav>
+            </header>
+
+            <!-- Spacer dla fixed header -->
+            <div class="h-[72px]"></div>
+
+            <main>
+                <!-- Hero Section -->
+                <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+                    <div class="absolute inset-0 bg-[var(--primary-light-gray)] [clip-path:polygon(0_0,_100%_0,_100%_90%,_0_100%)]"></div>
+                    <div class="gradient-orb orb-1"></div>
+                    <div class="gradient-orb orb-2" style="animation-delay: 2s"></div>
+                    <div class="gradient-orb orb-3" style="animation-delay: 1s"></div>
+                    
+                    <div class="main-container relative z-10 text-center">
+                        <div class="max-w-4xl mx-auto">
+                            <h1 class="h1-heading">🤖 Chatboty AI, które sprzedają za Ciebie 24/7</h1>
+                            <p class="body-text mt-6 max-w-2xl mx-auto">
+                                Inteligentne asystenty wirtualne, które automatyzują obsługę klienta, zwiększają konwersję o 300% i pracują nieprzerwanie. Nasza technologia AI rozumie kontekst, odpowiada naturalnie i generuje leady nawet w nocy.
+                            </p>
+                            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                                <a class="cta-button" href="#demo">🚀 Zobacz demo na żywo</a>
+                                <a class="font-semibold text-[var(--text-medium-charcoal)] hover:text-[var(--text-dark-charcoal)] transition-colors duration-300" href="#pricing">💰 Wycena w 24h</a>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-16 bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-2xl max-w-2xl mx-auto">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
+                                <span class="font-semibold text-gray-700">Chatbot AI - Demo na żywo</span>
+                            </div>
+                            
+                            <!-- Chat Messages Container -->
+                            <div id="chatMessages" class="bg-gray-50 rounded-lg p-4 text-left min-h-[200px] max-h-[400px] overflow-y-auto mb-4">
+                                <div class="flex items-start gap-3 mb-3">
+                                    <div class="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center text-white text-sm font-bold">AI</div>
+                                    <div class="bg-white rounded-lg p-3 shadow-sm flex-1">
+                                        <p class="text-sm">Witaj! 👋 Jestem asystentem AI firmy Kajpa. Jak mogę Ci dzisiaj pomóc? Możesz zapytać o ceny, funkcje chatbotów lub nasze usługi!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Chat Input -->
+                            <div class="flex gap-2">
+                                <input 
+                                    type="text" 
+                                    id="chatInput" 
+                                    placeholder="Napisz wiadomość..." 
+                                    class="flex-1 border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                                    onkeypress="if(event.key==='Enter') sendMessage()"
+                                />
+                                <button 
+                                    onclick="sendMessage()" 
+                                    id="sendButton"
+                                    class="bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition-colors text-sm font-semibold">
+                                    Wyślij
+                                </button>
+                            </div>
+                            
+                            <!-- Quick Actions -->
+                            <div class="flex flex-wrap gap-2 mt-3">
+                                <button onclick="sendQuickMessage('ile kosztuje')" class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs hover:bg-blue-200 transition-colors">💰 Ile kosztuje?</button>
+                                <button onclick="sendQuickMessage('funkcje')" class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs hover:bg-green-200 transition-colors">⚡ Funkcje</button>
+                                <button onclick="sendQuickMessage('kontakt')" class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs hover:bg-purple-200 transition-colors">📞 Kontakt</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Benefits Section -->
+                <section class="section bg-white" id="benefits">
+                    <div class="main-container">
+                        <div class="text-center max-w-2xl mx-auto mb-16">
+                            <h2 class="h2-heading">Dlaczego chatboty AI zwiększają sprzedaż?</h2>
+                            <p class="body-text mt-4">Dane nie kłamią - firmy z chatbotami AI osiągają lepsze wyniki we wszystkich kluczowych metrykach biznesowych.</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="card text-center">
+                                <div class="text-4xl mb-4">⚡</div>
+                                <h3 class="text-xl font-bold mb-3">Odpowiedź w sekundach</h3>
+                                <p class="text-gray-600">Średni czas odpowiedzi: 0.3 sekundy vs 24h przy tradycyjnym kontakcie</p>
+                                <div class="mt-4 text-2xl font-bold text-green-600">+89% satysfakcji klienta</div>
+                            </div>
+                            
+                            <div class="card text-center">
+                                <div class="text-4xl mb-4">🌙</div>
+                                <h3 class="text-xl font-bold mb-3">Praca 24/7</h3>
+                                <p class="text-gray-600">40% leadów generowanych poza godzinami pracy</p>
+                                <div class="mt-4 text-2xl font-bold text-blue-600">+156% więcej leadów</div>
+                            </div>
+                            
+                            <div class="card text-center">
+                                <div class="text-4xl mb-4">🎯</div>
+                                <h3 class="text-xl font-bold mb-3">Personalizacja AI</h3>
+                                <p class="text-gray-600">Dostosowuje odpowiedzi do profilu i potrzeb każdego klienta</p>
+                                <div class="mt-4 text-2xl font-bold text-purple-600">+234% konwersja</div>
+                            </div>
+                            
+                            <div class="card text-center">
+                                <div class="text-4xl mb-4">💰</div>
+                                <h3 class="text-xl font-bold mb-3">Redukcja kosztów</h3>
+                                <p class="text-gray-600">Jeden chatbot zastępuje 3-5 pracowników obsługi klienta</p>
+                                <div class="mt-4 text-2xl font-bold text-orange-600">-70% kosztów obsługi</div>
+                            </div>
+                            
+                            <div class="card text-center">
+                                <div class="text-4xl mb-4">📊</div>
+                                <h3 class="text-xl font-bold mb-3">Zaawansowana analityka</h3>
+                                <p class="text-gray-600">Pełna analiza rozmów, najczęstsze pytania, ścieżki klienta</p>
+                                <div class="mt-4 text-2xl font-bold text-indigo-600">100% przejrzystość</div>
+                            </div>
+                            
+                            <div class="card text-center">
+                                <div class="text-4xl mb-4">🔄</div>
+                                <h3 class="text-xl font-bold mb-3">Integracja z systemami</h3>
+                                <p class="text-gray-600">CRM, e-commerce, kalendarz, płatności - wszystko w jednym</p>
+                                <div class="mt-4 text-2xl font-bold text-teal-600">+400% efektywność</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Features Section -->
+                <section class="section bg-gradient-to-br from-indigo-50 to-purple-50">
+                    <div class="main-container">
+                        <div class="text-center max-w-2xl mx-auto mb-16">
+                            <h2 class="h2-heading">Funkcje naszych chatbotów AI</h2>
+                            <p class="body-text mt-4">Nie są to zwykłe chatboty - to inteligentne asystenty biznesowe napędzane najnowszymi modelami AI.</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            <div class="space-y-8">
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center text-white font-bold">🧠</div>
+                                    <div>
+                                        <h3 class="text-xl font-bold mb-2">Sztuczna inteligencja GPT-4</h3>
+                                        <p class="text-gray-600">Wykorzystujemy najnowsze modele językowe OpenAI dla naturalnych, kontekstowych rozmów</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center text-white font-bold">📋</div>
+                                    <div>
+                                        <h3 class="text-xl font-bold mb-2">Kwalifikacja leadów</h3>
+                                        <p class="text-gray-600">Automatycznie ocenia potencjał klienta i kieruje go do odpowiedniego specjalisty</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold">📅</div>
+                                    <div>
+                                        <h3 class="text-xl font-bold mb-2">Automatyczne umówienie spotkań</h3>
+                                        <p class="text-gray-600">Integracja z kalendarzem - chatbot sam umawia spotkania w wolnych terminach</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center text-white font-bold">💬</div>
+                                    <div>
+                                        <h3 class="text-xl font-bold mb-2">Rozmowy wielokanałowe</h3>
+                                        <p class="text-gray-600">Strona www, Facebook Messenger, WhatsApp, Instagram - jeden bot, wszędzie</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white rounded-2xl p-8 shadow-2xl">
+                                <div class="text-center mb-6">
+                                    <div class="inline-block p-4 bg-indigo-100 rounded-full mb-4">
+                                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-xl font-bold">Analityka w czasie rzeczywistym</h3>
+                                </div>
+                                
+                                <div class="space-y-4">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-sm text-gray-600">Rozmowy dzisiaj</span>
+                                        <span class="font-bold text-lg">247</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-indigo-600 h-2 rounded-full" style="width: 78%"></div>
+                                    </div>
+                                    
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-sm text-gray-600">Konwersja na leady</span>
+                                        <span class="font-bold text-lg text-green-600">23.4%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-green-600 h-2 rounded-full" style="width: 23%"></div>
+                                    </div>
+                                    
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-sm text-gray-600">Średni czas rozmowy</span>
+                                        <span class="font-bold text-lg text-blue-600">2m 34s</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-blue-600 h-2 rounded-full" style="width: 45%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Pricing Section -->
+                <section class="section bg-white" id="pricing">
+                    <div class="main-container">
+                        <div class="text-center max-w-2xl mx-auto mb-16">
+                            <h2 class="h2-heading">Pakiety chatbotów AI</h2>
+                            <p class="body-text mt-4">Od prostych asystentów po zaawansowane systemy sprzedażowe. Wybierz pakiet idealny dla Twojego biznesu.</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div class="card text-center">
+                                <h3 class="text-xl font-bold mb-3">Asystent Podstawowy</h3>
+                                <div class="text-3xl font-extrabold text-indigo-600 mb-4">2 500 zł</div>
+                                <div class="text-sm text-gray-500 mb-6">jednorazowo + 200 zł/mies.</div>
+                                <ul class="text-left space-y-3 mb-8">
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">Odpowiedzi na pytania FAQ</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">Zbieranie danych kontaktowych</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">Integracja ze stroną www</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">Podstawowa analityka</span>
+                                    </li>
+                                </ul>
+                                <a href="index.html#contact" class="cta-button w-full">Wybierz pakiet</a>
+                            </div>
+                            
+                            <div class="card text-center border-2 border-indigo-500 relative">
+                                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Najpopularniejszy</div>
+                                <h3 class="text-xl font-bold mb-3">Asystent Sprzedażowy</h3>
+                                <div class="text-3xl font-extrabold text-indigo-600 mb-4">6 500 zł</div>
+                                <div class="text-sm text-gray-500 mb-6">jednorazowo + 400 zł/mies.</div>
+                                <ul class="text-left space-y-3 mb-8">
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">Wszystko z pakietu podstawowego</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">Kwalifikacja leadów AI</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">Automatyczne wyceny</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">Integracja z CRM</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">Umawianie spotkań</span>
+                                    </li>
+                                </ul>
+                                <a href="index.html#contact" class="cta-button w-full">Wybierz pakiet</a>
+                            </div>
+                            
+                            <div class="card text-center">
+                                <h3 class="text-xl font-bold mb-3">Asystent Enterprise</h3>
+                                <div class="text-3xl font-extrabold text-indigo-600 mb-4">15 000 zł</div>
+                                <div class="text-sm text-gray-500 mb-6">jednorazowo + 800 zł/mies.</div>
+                                <ul class="text-left space-y-3 mb-8">
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">Wszystko z pakietu sprzedażowego</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">Kanały: FB, WhatsApp, Instagram</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">AI głosowy (rozmowy telefoniczne)</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">Zaawansowana analityka</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                        </svg>
+                                        <span class="text-sm">Dedykowany menedżer</span>
+                                    </li>
+                                </ul>
+                                <a href="index.html#contact" class="cta-button w-full">Wybierz pakiet</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="section bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
+                    <div class="main-container text-center">
+                        <h2 class="text-4xl font-bold mb-6">Gotowy na rewolucję w obsłudze klienta?</h2>
+                        <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+                            Dołącz do firm, które zwiększyły sprzedaż o 300% dzięki chatbotom AI. 
+                            Pierwsza konsultacja i demo - całkowicie za darmo!
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="index.html#contact" class="bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors">🚀 Bezpłatna konsultacja</a>
+                            <a href="tel:+48600580888" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-indigo-600 transition-colors">📞 Zadzwoń: +48 600 580 888</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="bg-gray-900 text-gray-400 py-16">
+                <div class="main-container">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                        <div>
+                            <a href="index.html">
+                                <img src="logo/logokajpa-biale-przycięte.webp" alt="Kajpa" class="h-10 w-auto mb-4"/>
+                            </a>
+                            <p class="text-gray-300">Inteligentne rozwiązania AI dla nowoczesnego biznesu.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-semibold mb-4">Rozwiązania AI</h3>
+                            <ul class="space-y-2">
+                                <li><a href="chatboty-ai.html" class="hover:text-white">Chatboty AI</a></li>
+                                <li><a href="analityka-predykcyjna.html" class="hover:text-white">Analityka predykcyjna</a></li>
+                                <li><a href="narzedzia-automatyzacji.html" class="hover:text-white">Automatyzacja</a></li>
+                                <li><a href="silniki-personalizacji.html" class="hover:text-white">Personalizacja</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-semibold mb-4">Firma</h3>
+                            <ul class="space-y-2">
+                                <li><a href="index.html#about" class="hover:text-white">O nas</a></li>
+                                <li><a href="index.html#portfolio" class="hover:text-white">Portfolio</a></li>
+                                <li><a href="index.html#contact" class="hover:text-white">Kontakt</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-semibold mb-4">Kontakt</h3>
+                            <p class="mb-2">📧 kontakt@kajpa.pl</p>
+                            <p class="mb-4">📞 +48 600 580 888</p>
+                            <p class="text-sm">Białystok, Polska</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                        <p>&copy; 2025 Kajpa. Wszystkie prawa zastrzeżone.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Chat demo functionality
+        async function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const sendButton = document.getElementById('sendButton');
+            const chatMessages = document.getElementById('chatMessages');
+            
+            const message = input.value.trim();
+            if (!message) return;
+            
+            // Dodaj wiadomość użytkownika
+            addUserMessage(message);
+            
+            // Wyczyść input i wyłącz przycisk
+            input.value = '';
+            sendButton.disabled = true;
+            sendButton.textContent = 'Wysyłam...';
+            
+            // Pokaż typing indicator
+            showTypingIndicator();
+            
+            try {
+                // Wyślij do API
+                const response = await fetch('http://51.68.137.107:5000/api/chatbot-demo', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ message: message })
+                });
+                
+                const result = await response.json();
+                
+                // Usuń typing indicator
+                removeTypingIndicator();
+                
+                if (result.success) {
+                    // Dodaj odpowiedź AI
+                    addAIMessage(result.response);
+                } else {
+                    // Pokaż błąd
+                    addAIMessage(result.error || 'Przepraszam, wystąpił błąd. Spróbuj ponownie.');
+                }
+                
+            } catch (error) {
+                console.error('Error:', error);
+                removeTypingIndicator();
+                addAIMessage('Przepraszam, nie mogę połączyć się z serwerem. Sprawdź czy aplikacja AI działa na http://51.68.137.107:5000');
+            } finally {
+                // Przywróć przycisk
+                sendButton.disabled = false;
+                sendButton.textContent = 'Wyślij';
+                input.focus();
+            }
+        }
+        
+        function sendQuickMessage(message) {
+            document.getElementById('chatInput').value = message;
+            sendMessage();
+        }
+        
+        function addUserMessage(message) {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'flex items-start gap-3 justify-end mb-3';
+            messageDiv.innerHTML = `
+                <div class="bg-indigo-500 text-white rounded-lg p-3 shadow-sm max-w-xs">
+                    <p class="text-sm">${escapeHtml(message)}</p>
+                </div>
+                <div class="w-8 h-8 bg-gray-400 rounded-full flex items-center justify-center text-white text-sm font-bold">Ty</div>
+            `;
+            chatMessages.appendChild(messageDiv);
+            scrollToBottom();
+        }
+        
+        function addAIMessage(message) {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'flex items-start gap-3 mb-3';
+            
+            // Konwertuj \n na <br> dla właściwego wyświetlania
+            const formattedMessage = escapeHtml(message).replace(/\n/g, '<br>');
+            
+            messageDiv.innerHTML = `
+                <div class="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center text-white text-sm font-bold">AI</div>
+                <div class="bg-white rounded-lg p-3 shadow-sm flex-1">
+                    <p class="text-sm">${formattedMessage}</p>
+                </div>
+            `;
+            chatMessages.appendChild(messageDiv);
+            scrollToBottom();
+        }
+        
+        function showTypingIndicator() {
+            const chatMessages = document.getElementById('chatMessages');
+            const typingDiv = document.createElement('div');
+            typingDiv.id = 'typing-indicator';
+            typingDiv.className = 'flex items-start gap-3 mb-3';
+            typingDiv.innerHTML = `
+                <div class="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center text-white text-sm font-bold">AI</div>
+                <div class="bg-white rounded-lg p-3 shadow-sm flex-1">
+                    <div class="flex items-center gap-2 text-gray-500 text-xs">
+                        <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                        <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
+                        <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+                        <span class="ml-2">AI pisze odpowiedź...</span>
+                    </div>
+                </div>
+            `;
+            chatMessages.appendChild(typingDiv);
+            scrollToBottom();
+        }
+        
+        function removeTypingIndicator() {
+            const typingIndicator = document.getElementById('typing-indicator');
+            if (typingIndicator) {
+                typingIndicator.remove();
+            }
+        }
+        
+        function scrollToBottom() {
+            const chatMessages = document.getElementById('chatMessages');
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        // Focus na input po załadowaniu strony
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('chatInput').focus();
+        });
+    </script>
+</body>
+</html>
