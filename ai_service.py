@@ -84,6 +84,37 @@ Zespół Kajpa
             # Fallback odpowiedź w przypadku błędu
             return self._get_fallback_response(user_name)
     
+    def generate_chatbot_demo_response(self, user_message):
+        """
+        Generuje odpowiedź dla demo chatbota używając specjalnego prompta
+        """
+        try:
+            response = self.client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[
+                    {"role": "system", "content": Config.CHATBOT_DEMO_PROMPT},
+                    {"role": "user", "content": user_message}
+                ],
+                max_tokens=800,
+                temperature=0.7
+            )
+            
+            ai_response = response.choices[0].message.content.strip()
+            
+            # Wyczyść odpowiedź z placeholder (tak jak w głównej metodzie)
+            ai_response = ai_response.replace("[Twoje Imię]", "").replace("[twoje imię]", "")
+            ai_response = ai_response.replace("Pozdrawiam,\nKonsultant ds. stron internetowych w Kajpa", "")
+            ai_response = ai_response.replace("Pozdrawiam,\nAsystent AI Kajpa", "")
+            ai_response = ai_response.strip()
+            
+            # Dla demo chatbota nie dodajemy dodatkowego footer - prompt już zawiera kontakt
+            return ai_response
+            
+        except Exception as e:
+            print(f"Błąd podczas generowania odpowiedzi demo chatbota: {str(e)}")
+            # Fallback odpowiedź
+            return "Cześć! 👋 Jestem Asystentem AI Kajpa. Przepraszam, ale mam chwilowe problemy techniczne. Skontaktuj się z nami bezpośrednio: 📧 kontakt@kajpa.pl, 📞 +48 600 580 888"
+    
     def _get_fallback_response(self, user_name: str = None) -> str:
         """
         Zwraca zapasową odpowiedź w przypadku problemów z AI

@@ -271,7 +271,7 @@ def test_email():
 def chatbot_demo():
     """
     Demo endpoint dla chatbota na stronie chatboty-ai.html
-    Symuluje rozmowę z chatbotem bez wysyłania emaili
+    Używa prawdziwego OpenAI AI z specjalnym promptem dla chatbotów
     """
     # Obsługa preflight OPTIONS request dla CORS
     if request.method == 'OPTIONS':
@@ -284,48 +284,30 @@ def chatbot_demo():
         
         user_message = data['message'].strip()
         
-        # Proste odpowiedzi demo - można rozszerzyć o prawdziwe AI
-        demo_responses = {
-            'cześć': 'Witaj! 👋 Jestem chatbotem AI firmy Kajpa. Jak mogę Ci pomóc?',
-            'witaj': 'Cześć! Miło Cię poznać! Jestem tutaj, aby odpowiedzieć na Twoje pytania o nasze usługi.',
-            'ile kosztuje': 'Nasze chatboty zaczynają się od 2 500 zł. Cena zależy od funkcjonalności:\n\n🔹 Asystent Podstawowy: 2 500 zł\n🔹 Asystent Sprzedażowy: 6 500 zł\n🔹 Asystent Enterprise: 15 000 zł\n\nChcesz poznać szczegóły konkretnego pakietu?',
-            'cena': 'Cennik naszych chatbotów:\n\n💡 **Asystent Podstawowy** - 2 500 zł + 200 zł/mies.\n🚀 **Asystent Sprzedażowy** - 6 500 zł + 400 zł/mies.\n⭐ **Asystent Enterprise** - 15 000 zł + 800 zł/mies.\n\nKażdy pakiet zawiera inne funkcjonalności. O którym chciałbyś wiedzieć więcej?',
-            'funkcje': 'Nasze chatboty mogą:\n\n✅ Odpowiadać na pytania FAQ\n✅ Zbierać dane kontaktowe\n✅ Kwalifikować leadów\n✅ Przygotowywać wyceny\n✅ Umawiać spotkania\n✅ Integrować się z CRM\n✅ Pracować 24/7\n\nJaka funkcjonalność najbardziej Cię interesuje?',
-            'kontakt': 'Skontaktuj się z nami:\n\n📧 kontakt@kajpa.pl\n📞 +48 600 580 888\n\nMożesz też wypełnić formularz na stronie - odpowiemy w 24h!',
-            'pomoc': 'Oczywiście! Mogę opowiedzieć Ci o:\n\n🤖 Rodzajach chatbotów\n💰 Cenach i pakietach\n⚡ Funkcjonalnościach\n📊 Korzyściach biznesowych\n📞 Kontakcie z naszym zespołem\n\nO czym chciałbyś się dowiedzieć?'
-        }
+        if not user_message:
+            return jsonify({'error': 'Wiadomość nie może być pusta'}), 400
         
-        # Znajdź najlepszą odpowiedź
-        response_text = None
-        user_lower = user_message.lower()
+        # Użyj prawdziwego AI z specjalnym promptem dla chatbotów
+        print(f"Demo chatbot - pytanie użytkownika: {user_message}")
         
-        for keyword, response in demo_responses.items():
-            if keyword in user_lower:
-                response_text = response
-                break
+        # Wygeneruj odpowiedź AI z specjalnym promptem
+        ai_response = ai_service.generate_chatbot_demo_response(user_message)
         
-        # Domyślna odpowiedź AI
-        if not response_text:
-            if len(user_message) < 10:
-                response_text = 'Czy możesz zadać bardziej szczegółowe pytanie? Jestem tutaj, aby pomóc! 😊'
-            elif 'strona' in user_lower or 'website' in user_lower:
-                response_text = 'Oprócz chatbotów tworzymy też profesjonalne strony internetowe! Nasze ceny zaczynają się od 2 000 PLN. Chcesz dowiedzieć się więcej o stronach czy zostańmy przy chatbotach? 🤖'
-            elif 'aplikacja' in user_lower or 'app' in user_lower:
-                response_text = 'Tworzymy również aplikacje mobilne! Ale skoro jesteś na stronie o chatbotach, może chcesz poznać ich możliwości? Nasze chatboty mogą pracować też w aplikacjach mobilnych! 📱'
-            else:
-                response_text = f'Interesujące pytanie! Najlepiej będzie jak skontaktujemy się bezpośrednio - nasi eksperci odpowiedzą na wszystkie Twoje pytania.\n\n📧 kontakt@kajpa.pl\n📞 +48 600 580 888\n\nA tymczasem, czy chcesz poznać podstawowe informacje o naszych chatbotach?'
+        print(f"Demo chatbot - odpowiedź AI: {ai_response[:100]}...")
         
         return jsonify({
             'success': True,
-            'response': response_text,
-            'timestamp': datetime.now().isoformat()
+            'response': ai_response,
+            'timestamp': datetime.now().isoformat(),
+            'demo_mode': True
         }), 200
         
     except Exception as e:
         print(f"Błąd w demo chatbota: {str(e)}")
         return jsonify({
-            'error': 'Przepraszam, wystąpił błąd. Spróbuj ponownie.',
-            'fallback_message': 'Jeśli problem będzie się powtarzał, skontaktuj się z nami: kontakt@kajpa.pl'
+            'error': 'Przepraszam, wystąpił błąd z AI. Spróbuj ponownie.',
+            'fallback_message': 'Jeśli problem będzie się powtarzał, skontaktuj się z nami: kontakt@kajpa.pl',
+            'demo_mode': True
         }), 500
 
 @app.route('/api/analytics-demo', methods=['POST', 'OPTIONS'])
