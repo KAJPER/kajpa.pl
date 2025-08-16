@@ -64,7 +64,7 @@ Flask API z integracją OpenAI GPT-4 do automatycznych odpowiedzi na zapytania k
 
 #### Images  
 - **`images/`** - Zdjęcia zespołu (dawid.webp, kacper.webp, karolina.webp, krzysztof.webp), loga partnerów (logo_iwalk.svg, logo-glowee.png)
-- **`images/blog/`** - Ilustracje do artykułów blogowych (blog-rosnące-ceny.webp, case-studies.webp, poradniki.webp, trendy.webp)
+- **`images/blog/`** - Ilustracje do artykułów blogowych (blog-rosnace-ceny.webp, case-studies.webp, poradniki.webp, trendy.webp)
 - **`images/portfolio/`** - Screenshots projektów portfolio w formacie .webp (elitegram.pl_.webp, glowee.ai_.webp, iwalk.pl_.webp, learnpilot.pl_.webp, rolletic.bialystok.pl_.webp)
 
 #### Logos
