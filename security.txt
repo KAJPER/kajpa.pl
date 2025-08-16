@@ -1,0 +1,8 @@
+Contact: mailto:security@kajpa.pl
+Contact: mailto:kontakt@kajpa.pl
+Expires: 2025-12-31T23:59:59.000Z
+Encryption: https://kajpa.pl/pgp-key.txt
+Preferred-Languages: pl, en
+Canonical: https://kajpa.pl/.well-known/security.txt
+Policy: https://kajpa.pl/security-policy
+Hiring: https://kajpa.pl/careers

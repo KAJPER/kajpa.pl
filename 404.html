@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    
+    <!-- SEO Meta Tags -->
+    <title>404 - Strona nie znaleziona | Kajpa.pl 🔍</title>
+    <meta name="description" content="🔍 Ups! Strona nie została znaleziona. Wróć do Kajpa.pl i odkryj nasze usługi: strony WWW, chatboty AI, aplikacje mobilne. Białystok 2025"/>
+    <meta name="keywords" content="404, strona nie znaleziona, kajpa, błąd, error page, agencja internetowa białystok"/>
+    <meta name="author" content="Kajpa - Agencja Internetowa"/>
+    <meta name="robots" content="noindex, nofollow"/>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kajpa.pl/404.html"/>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/logo/logo-kajpa-500x500.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/logo/logo-kajpa-500x500.png"/>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://kajpa.pl/404.html"/>
+    <meta property="og:title" content="404 - Strona nie znaleziona | Kajpa.pl 🔍"/>
+    <meta property="og:description" content="🔍 Ups! Strona nie została znaleziona. Wróć do Kajpa.pl - agencja internetowa z Białegostoku."/>
+    <meta property="og:image" content="https://kajpa.pl/logo/logo-kajpa-500x500.webp"/>
+    <meta property="og:site_name" content="Kajpa"/>
+    <meta property="og:locale" content="pl_PL"/>
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
+    <link rel="dns-prefetch" href="//fonts.gstatic.com"/>
+    <link rel="dns-prefetch" href="//cdn.tailwindcss.com"/>
+    
+    <!-- Preconnect for performance -->
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <style type="text/tailwindcss">
+        :root {
+            --primary-white: #ffffff;
+            --primary-light-gray: #f8f9fa;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-indigo: #6366f1;
+            --text-dark-charcoal: #1f2937;
+            --text-medium-charcoal: #374151;
+            --cta-green: #10b981;
+            --cta-blue: #0ea5e9;
+        }
+        
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: var(--primary-white);
+            color: var(--text-medium-charcoal);
+        }
+        
+        .main-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--accent-indigo) 0%, var(--accent-purple) 100%);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes bounce-404 {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .bounce-404 {
+            animation: bounce-404 2s ease-in-out infinite;
+        }
+        
+        @keyframes gradient-x {
+            0%, 100% {
+                background-size: 200% 200%;
+                background-position: left center;
+            }
+            50% {
+                background-size: 200% 200%;
+                background-position: right center;
+            }
+        }
+        
+        .gradient-animate {
+            background: linear-gradient(-45deg, #667eea, #764ba2, #667eea, #764ba2);
+            background-size: 400% 400%;
+            animation: gradient-x 15s ease infinite;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800 min-h-screen">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 w-full bg-white/95 backdrop-blur-md transition-all duration-300 shadow-sm border-b border-gray-100">
+        <nav class="main-container flex items-center justify-between py-4">
+            <a class="flex items-center gap-2" href="/">
+                <img src="logo/logo-kajpa-przycięte.webp" alt="Kajpa" class="h-10 md:h-12 w-auto"/>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-base font-medium text-gray-600 hover:text-indigo-600 transition-colors duration-300" href="/#services">Usługi</a>
+                <a class="text-base font-medium text-gray-600 hover:text-indigo-600 transition-colors duration-300" href="/#process">Proces</a>
+                <a class="text-base font-medium text-gray-600 hover:text-indigo-600 transition-colors duration-300" href="/#portfolio">Portfolio</a>
+                <a class="text-base font-medium text-gray-600 hover:text-indigo-600 transition-colors duration-300" href="/#about">O nas</a>
+            </div>
+            
+            <a class="hidden md:inline-block bg-indigo-600 text-white rounded-full px-6 py-2.5 text-base font-semibold hover:bg-indigo-700 transition-colors" href="/#contact">Kontakt</a>
+            
+            <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-md text-gray-800">
+                <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white/95 backdrop-blur-sm shadow-lg hidden">
+            <div class="px-4 py-6 space-y-4">
+                <a class="block text-lg font-medium text-gray-600 hover:text-indigo-600 transition-colors duration-300" href="/#services">Usługi</a>
+                <a class="block text-lg font-medium text-gray-600 hover:text-indigo-600 transition-colors duration-300" href="/#process">Proces</a>
+                <a class="block text-lg font-medium text-gray-600 hover:text-indigo-600 transition-colors duration-300" href="/#portfolio">Portfolio</a>
+                <a class="block text-lg font-medium text-gray-600 hover:text-indigo-600 transition-colors duration-300" href="/#about">O nas</a>
+                <a class="block w-full text-center bg-indigo-600 text-white rounded-full px-6 py-3 font-semibold hover:bg-indigo-700 transition-colors mt-4" href="/#contact">Kontakt</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Spacer dla fixed header -->
+    <div class="h-[80px] md:h-[88px]"></div>
+
+    <!-- 404 Section -->
+    <section class="gradient-animate min-h-screen flex items-center justify-center py-20">
+        <div class="main-container">
+            <div class="text-center text-white">
+                <!-- 404 Animation -->
+                <div class="bounce-404 mb-8">
+                    <div class="text-9xl font-bold text-yellow-300 mb-4">404</div>
+                </div>
+                
+                <!-- Floating emoji -->
+                <div class="float-animation mb-8">
+                    <div class="text-6xl mb-6">🔍</div>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Ups! <span class="text-yellow-300">Strona zniknęła</span> 👻
+                </h1>
+                
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed opacity-90">
+                    🤔 Wygląda na to, że szukana strona nie istnieje lub została przeniesiona.<br>
+                    <span class="text-yellow-300 font-semibold">Ale nie martw się!</span> Pomożemy Ci znaleźć to czego szukasz! 🎯
+                </p>
+                
+                <!-- Search suggestions -->
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 mb-8 max-w-4xl mx-auto">
+                    <h2 class="text-2xl font-bold mb-6 text-yellow-300">🤝 Może szukasz:</h2>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <!-- Service 1 -->
+                        <a href="/" class="bg-white/20 hover:bg-white/30 p-4 rounded-xl transition-all card-hover">
+                            <div class="text-3xl mb-2">🌐</div>
+                            <div class="font-semibold">Strony WWW</div>
+                            <div class="text-sm opacity-80">Od 2000 PLN</div>
+                        </a>
+                        
+                        <!-- Service 2 -->
+                        <a href="/chatboty-ai.html" class="bg-white/20 hover:bg-white/30 p-4 rounded-xl transition-all card-hover">
+                            <div class="text-3xl mb-2">🤖</div>
+                            <div class="font-semibold">Chatboty AI</div>
+                            <div class="text-sm opacity-80">GPT-4 powered</div>
+                        </a>
+                        
+                        <!-- Service 3 -->
+                        <a href="/portfolio.html" class="bg-white/20 hover:bg-white/30 p-4 rounded-xl transition-all card-hover">
+                            <div class="text-3xl mb-2">🏆</div>
+                            <div class="font-semibold">Portfolio</div>
+                            <div class="text-sm opacity-80">60+ projektów</div>
+                        </a>
+                        
+                        <!-- Service 4 -->
+                        <a href="/careers.html" class="bg-white/20 hover:bg-white/30 p-4 rounded-xl transition-all card-hover">
+                            <div class="text-3xl mb-2">💼</div>
+                            <div class="font-semibold">Kariera</div>
+                            <div class="text-sm opacity-80">Dołącz do nas!</div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Action buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="/" class="bg-white text-indigo-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
+                        🏠 Wróć do strony głównej
+                    </a>
+                    <a href="/portfolio.html" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-indigo-600 transition-all transform hover:scale-105">
+                        🎯 Zobacz portfolio
+                    </a>
+                </div>
+                
+                <!-- Contact info -->
+                <div class="mt-12 text-lg">
+                    <p class="text-white/80 mb-4">
+                        🆘 Potrzebujesz pomocy? Skontaktuj się z nami:
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="mailto:kontakt@kajpa.pl" class="text-yellow-300 font-bold hover:text-yellow-200 transition-colors">
+                            📧 kontakt@kajpa.pl
+                        </a>
+                        <span class="text-white/60 hidden sm:inline">|</span>
+                        <a href="tel:+48600580888" class="text-yellow-300 font-bold hover:text-yellow-200 transition-colors">
+                            📞 +48 600 580 888
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular pages section -->
+    <section class="py-20 bg-gray-50">
+        <div class="main-container">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">
+                    Popularne <span class="text-indigo-600">strony</span> 📈
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Może któraś z tych stron jest tym czego szukasz? 🎯
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Page 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg card-hover">
+                    <div class="text-4xl mb-4">🏠</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Strona główna</h3>
+                    <p class="text-gray-600 mb-4">
+                        Poznaj Kajpa - agencję internetową z Białegostoku. Strony WWW, chatboty AI, aplikacje mobilne.
+                    </p>
+                    <a href="/" class="text-indigo-600 font-semibold hover:text-indigo-700 transition-colors">
+                        Przejdź → 
+                    </a>
+                </div>
+
+                <!-- Page 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg card-hover">
+                    <div class="text-4xl mb-4">🎨</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Portfolio</h3>
+                    <p class="text-gray-600 mb-4">
+                        Zobacz nasze realizacje: EliteGram, Glowee AI, iWalk, LearnPilot. 60+ projektów.
+                    </p>
+                    <a href="/portfolio.html" class="text-indigo-600 font-semibold hover:text-indigo-700 transition-colors">
+                        Zobacz portfolio →
+                    </a>
+                </div>
+
+                <!-- Page 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg card-hover">
+                    <div class="text-4xl mb-4">🤖</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Chatboty AI</h3>
+                    <p class="text-gray-600 mb-4">
+                        Inteligentne chatboty z OpenAI GPT-4. Demo na żywo, +89% satysfakcji klientów.
+                    </p>
+                    <a href="/chatboty-ai.html" class="text-indigo-600 font-semibold hover:text-indigo-700 transition-colors">
+                        Testuj demo →
+                    </a>
+                </div>
+
+                <!-- Page 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg card-hover">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Analityka AI</h3>
+                    <p class="text-gray-600 mb-4">
+                        Analityka predykcyjna z 94% dokładnością. Dashboard na żywo, przewidywanie trendów.
+                    </p>
+                    <a href="/analityka-predykcyjna.html" class="text-indigo-600 font-semibold hover:text-indigo-700 transition-colors">
+                        Zobacz demo →
+                    </a>
+                </div>
+
+                <!-- Page 5 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg card-hover">
+                    <div class="text-4xl mb-4">💼</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Kariera</h3>
+                    <p class="text-gray-600 mb-4">
+                        Dołącz do zespołu Kajpa! Junior, Mid, Senior Developer. Nauka od zera, remote work.
+                    </p>
+                    <a href="/careers.html" class="text-indigo-600 font-semibold hover:text-indigo-700 transition-colors">
+                        Aplikuj →
+                    </a>
+                </div>
+
+                <!-- Page 6 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg card-hover">
+                    <div class="text-4xl mb-4">📝</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Blog</h3>
+                    <p class="text-gray-600 mb-4">
+                        Case studies, trendy 2025, poradniki. Ekspertiza w web development i AI.
+                    </p>
+                    <a href="/blog-trendy-2025.html" class="text-indigo-600 font-semibold hover:text-indigo-700 transition-colors">
+                        Czytaj blog →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 relative overflow-hidden py-16">
+        <div class="gradient-orb orb-7" style="animation-delay: 2.5s"></div>
+        <div class="gradient-orb orb-8" style="animation-delay: 3.2s"></div>
+        
+        <div class="main-container relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="col-span-1 lg:col-span-1">
+                    <a class="flex items-center gap-2" href="/">
+                        <img src="logo/logokajpa-biale-przycięte.webp" alt="Kajpa" class="h-8 md:h-10 w-auto"/>
+                    </a>
+                    <p class="mt-4 max-w-sm text-gray-300">
+                        Pionierzy przyszłości internetu z inteligentnymi rozwiązaniami.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Szybkie linki</h3>
+                    <ul class="space-y-3">
+                        <li><a class="hover:text-white transition-colors" href="/#services">Usługi</a></li>
+                        <li><a class="hover:text-white transition-colors" href="/#process">Proces</a></li>
+                        <li><a class="hover:text-white transition-colors" href="/#portfolio">Portfolio</a></li>
+                        <li><a class="hover:text-white transition-colors" href="/#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Nasze rozwiązania</h3>
+                    <ul class="space-y-3">
+                        <li><a class="hover:text-white transition-colors" href="/chatboty-ai.html">Chatboty AI</a></li>
+                        <li><a class="hover:text-white transition-colors" href="/analityka-predykcyjna.html">Analityka predykcyjna</a></li>
+                        <li><a class="hover:text-white transition-colors" href="/narzedzia-automatyzacji.html">Narzędzia automatyzacji</a></li>
+                        <li><a class="hover:text-white transition-colors" href="/silniki-personalizacji.html">Silniki personalizacji</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Skontaktuj się z nami</h3>
+                    <div class="flex items-center gap-4">
+                        <a class="text-gray-400 hover:text-white transition-colors" href="https://www.facebook.com/profile.php?id=61573444238442" target="_blank" rel="noopener">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a class="text-gray-400 hover:text-white transition-colors" href="mailto:kontakt@kajpa.pl">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </a>
+                        <a class="text-gray-400 hover:text-white transition-colors" href="tel:+48600580888">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <p class="text-sm">
+                            Bądź na bieżąco. Zapisz się do naszego newslettera, aby otrzymywać najnowsze informacje z zakresu technologii internetowych.
+                        </p>
+                        <form class="mt-4 flex">
+                            <input class="w-full bg-gray-800 border-gray-700 rounded-l-md px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-600" placeholder="Wpisz swój email" type="email"/>
+                            <button class="bg-indigo-600 text-white font-semibold px-4 py-2 rounded-r-md hover:bg-indigo-700 transition-colors" type="submit">Zapisz się</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-800/50 text-center text-sm">
+                <p>© 2025 Kajpa. Wszelkie prawa zastrzeżone. Made with ❤️ in Białystok</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top on scroll -->
+    <script>
+        // Simple back to top functionality
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > 300) {
+                // Could add back to top button here if needed
+            }
+        });
+        
+        // Track 404 page visit (could be extended with analytics)
+        console.log('404 Page visited:', new Date().toISOString());
+    </script>
+</body>
+</html>

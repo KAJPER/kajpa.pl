@@ -1,0 +1,29 @@
+/* TEAM */
+CEO & Lead Developer: Kacper
+Contact: kacper [at] kajpa.pl
+Twitter: @kajpa_pl
+From: Białystok, Poland
+
+Frontend Developer: Dawid  
+Contact: dawid [at] kajpa.pl
+From: Białystok, Poland
+
+UI/UX Designer: Karolina
+Contact: karolina [at] kajpa.pl
+From: Białystok, Poland
+
+Project Manager: Krzysztof
+Contact: krzysztof [at] kajpa.pl
+From: Białystok, Poland
+
+/* THANKS */
+OpenAI for GPT-4 API
+TailwindCSS for amazing CSS framework
+All our amazing clients!
+
+/* SITE */
+Last update: 2025/01/16
+Language: Polish / English
+Doctype: HTML5
+IDE: Cursor, VS Code
+Technologies: React, Next.js, Node.js, TypeScript, Python, OpenAI GPT-4, TailwindCSS, Flask

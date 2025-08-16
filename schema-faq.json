@@ -1,0 +1,54 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ile kosztuje profesjonalna strona internetowa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ceny zaczynają się już od 2000 PLN za stronę wizytówkę. Sklepy internetowe od 6000 PLN, a dedykowane aplikacje od 15000 PLN. Każdy projekt wyceniamy indywidualnie po szczegółowej analizie wymagań."
+      }
+    },
+    {
+      "@type": "Question", 
+      "name": "Jak długo trwa realizacja strony internetowej?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standardowy czas realizacji to 3-4 tygodnie. Proste strony wizytówki mogą być gotowe w 1-2 tygodnie, natomiast złożone sklepy internetowe lub aplikacje wymagają 6-8 tygodni."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy oferujecie wsparcie techniczne po zakończeniu projektu?",
+      "acceptedAnswer": {
+        "@type": "Answer", 
+        "text": "Tak! Każdy projekt obejmuje 3 miesiące bezpłatnego wsparcia technicznego. Dodatkowo oferujemy pakiety serwisowe i aktualizacje zgodnie z potrzebami klienta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jakie technologie wykorzystujecie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Specjalizujemy się w nowoczesnych technologiach: React, Next.js, Node.js, TypeScript, Python, AI/ML (OpenAI GPT-4), oraz narzędziach designu jak Figma. Każdy projekt dostosowujemy do konkretnych potrzeb."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy strony są responsywne i zoptymalizowane pod SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zdecydowanie tak! Wszystkie nasze strony są w pełni responsywne (mobile-first), szybkie i zoptymalizowane pod SEO. Dbamy o Core Web Vitals, structured data i wszystkie współczesne standardy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Co to są chatboty AI i jak mogą pomóc mojemu biznesowi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chatboty AI to inteligentne asystenci wykorzystujące OpenAI GPT-4, które automatyzują obsługę klienta 24/7. Zwiększają konwersję o 156%, satysfakcję o 89% i pozwalają oszczędzić 70% czasu zespołu obsługi."
+      }
+    }
+  ]
+}

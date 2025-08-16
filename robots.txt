@@ -1,0 +1,52 @@
+User-agent: *
+Allow: /
+
+# Główne strony
+Allow: /index.html
+Allow: /portfolio.html
+
+# AI Solutions
+Allow: /chatboty-ai.html
+Allow: /analityka-predykcyjna.html
+Allow: /narzedzia-automatyzacji.html
+Allow: /silniki-personalizacji.html
+
+# Blog
+Allow: /blog-case-studies.html
+Allow: /blog-ceny-stron.html
+Allow: /blog-poradniki.html
+Allow: /blog-trendy-2025.html
+
+# Assets
+Allow: /images/
+Allow: /logo/
+
+# Blokowane zasoby
+Disallow: /__pycache__/
+Disallow: /*.py
+Disallow: /*.txt
+Disallow: /*.json
+Disallow: /*.md
+Disallow: /blog/*.txt
+
+# Preferowane dla botów społecznościowych
+User-agent: facebookexternalhit
+Allow: /
+Allow: /images/
+Allow: /logo/
+
+User-agent: Twitterbot
+Allow: /
+Allow: /images/
+Allow: /logo/
+
+User-agent: LinkedInBot
+Allow: /
+Allow: /images/
+Allow: /logo/
+
+# Sitemap
+Sitemap: https://kajpa.pl/sitemap.xml
+
+# Crawl-delay dla lepszej wydajności
+Crawl-delay: 1
