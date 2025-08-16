@@ -1,6 +1,3 @@
-"""
-Skrypt testowy dla AI Contact System
-"""
 import requests
 import json
 from config import Config
@@ -55,12 +52,10 @@ def test_api_endpoint():
     """Test API endpoint (jeśli serwer działa)"""
     print("\n🌐 Testowanie API endpoint...")
     try:
-        # Test health check
         response = requests.get("http://localhost:5000/health", timeout=5)
         if response.status_code == 200:
             print("✅ Health check działa")
             
-            # Test contact endpoint
             test_data = {
                 "name": "Test User",
                 "email": "test@example.com", 
@@ -119,7 +114,6 @@ def main():
             print(f"❌ Test {test_name} się nie powiódł: {e}")
             results.append((test_name, False))
     
-    # Podsumowanie
     print("\n" + "=" * 50)
     print("📊 PODSUMOWANIE TESTÓW")
     print("=" * 50)

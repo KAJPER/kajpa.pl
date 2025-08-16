@@ -1,6 +1,3 @@
-"""
-Główna aplikacja Flask - AI Contact System dla Kajpa.pl
-"""
 from flask import Flask, request, jsonify, render_template_string
 from flask_cors import CORS
 import json
@@ -9,18 +6,13 @@ from config import Config
 from ai_service import AIService
 from email_service import EmailService
 
-# Inicjalizacja aplikacji Flask
 app = Flask(__name__)
 app.config.from_object(Config)
-
-# Włącz CORS dla wszystkich route'ów
 CORS(app, origins=["*"])
-
-# Inicjalizacja serwisów
 ai_service = AIService()
 email_service = EmailService()
 
-# Template HTML dla formularza kontaktowego
+
 CONTACT_FORM_TEMPLATE = """
 <!DOCTYPE html>
 <html lang="pl">
@@ -164,7 +156,6 @@ CONTACT_FORM_TEMPLATE = """
 
 @app.route('/')
 def index():
-    """Strona główna z formularzem kontaktowym"""
     return render_template_string(CONTACT_FORM_TEMPLATE)
 
 @app.route('/api/contact', methods=['POST', 'OPTIONS'])
@@ -175,18 +166,17 @@ def handle_contact():
     Returns:
         JSON: Odpowiedź z wynikiem przetwarzania
     """
-    # Obsługa preflight OPTIONS request dla CORS
     if request.method == 'OPTIONS':
         return jsonify({'status': 'ok'}), 200
     
     try:
-        # Pobierz dane z żądania
+
         data = request.get_json()
         
         if not data:
             return jsonify({'success': False, 'error': 'Brak danych w żądaniu'}), 400
         
-        # Walidacja wymaganych pól
+
         required_fields = ['name', 'email', 'message']
         for field in required_fields:
             if not data.get(field):
@@ -196,7 +186,7 @@ def handle_contact():
         client_email = data['email'].strip()
         client_message = data['message'].strip()
         
-        # Generuj odpowiedź AI
+
         print(f"Generowanie odpowiedzi AI dla: {client_email}")
         ai_response = ai_service.generate_response(
             user_message=client_message,
@@ -204,7 +194,7 @@ def handle_contact():
             user_name=client_name
         )
         
-        # Wyślij odpowiedź do klienta
+
         print(f"Wysyłanie odpowiedzi do klienta: {client_email}")
         email_sent = email_service.send_ai_response_to_client(
             client_email=client_email,
@@ -213,7 +203,6 @@ def handle_contact():
             ai_response=ai_response
         )
         
-        # Wyślij powiadomienie do administratora
         print(f"Wysyłanie powiadomienia do admina")
         notification_sent = email_service.send_notification_to_admin(
             client_email=client_email,
@@ -222,7 +211,6 @@ def handle_contact():
             ai_response=ai_response
         )
         
-        # Zapisz log
         log_entry = {
             'timestamp': datetime.now().isoformat(),
             'client_name': client_name,
@@ -233,7 +221,6 @@ def handle_contact():
             'notification_sent': notification_sent
         }
         
-        # Zapisz do pliku log (opcjonalnie)
         with open('contact_log.json', 'a', encoding='utf-8') as f:
             f.write(json.dumps(log_entry, ensure_ascii=False) + '\n')
         
@@ -273,7 +260,6 @@ def chatbot_demo():
     Demo endpoint dla chatbota na stronie chatboty-ai.html
     Używa prawdziwego OpenAI AI z specjalnym promptem dla chatbotów
     """
-    # Obsługa preflight OPTIONS request dla CORS
     if request.method == 'OPTIONS':
         return jsonify({'status': 'ok'}), 200
     
@@ -287,10 +273,8 @@ def chatbot_demo():
         if not user_message:
             return jsonify({'error': 'Wiadomość nie może być pusta'}), 400
         
-        # Użyj prawdziwego AI z specjalnym promptem dla chatbotów
         print(f"Demo chatbot - pytanie użytkownika: {user_message}")
         
-        # Wygeneruj odpowiedź AI z specjalnym promptem
         ai_response = ai_service.generate_chatbot_demo_response(user_message)
         
         print(f"Demo chatbot - odpowiedź AI: {ai_response[:100]}...")
@@ -316,7 +300,6 @@ def analytics_demo():
     Demo endpoint dla analityki predykcyjnej na stronie analityka-predykcyjna.html
     Generuje symulowane dane analityczne i prognozy
     """
-    # Obsługa preflight OPTIONS request dla CORS
     if request.method == 'OPTIONS':
         return jsonify({'status': 'ok'}), 200
     
@@ -327,10 +310,8 @@ def analytics_demo():
         import random
         import time
         
-        # Symuluj generowanie prognoz w czasie rzeczywistym
         current_time = int(time.time())
         
-        # Generuj realistyczne, ale losowe dane
         sales_growth = round(random.uniform(15.0, 35.0), 1)
         new_customers = random.randint(280, 420)
         churn_risk = round(random.uniform(8.0, 18.0), 1)
@@ -338,7 +319,6 @@ def analytics_demo():
         revenue_forecast = random.randint(45000, 85000)
         market_trend = random.choice(['wzrostowy', 'stabilny', 'opadający'])
         
-        # Różne scenariusze alertów
         alerts = [
             {
                 'type': 'warning',
@@ -368,7 +348,6 @@ def analytics_demo():
         
         current_alert = random.choice(alerts)
         
-        # Prognoza na różne okresy
         forecasts = {
             '7_days': {
                 'visitors': random.randint(1200, 2800),
@@ -387,7 +366,6 @@ def analytics_demo():
             }
         }
         
-        # Główne metryki dashboard
         metrics = {
             'sales_growth': {
                 'value': f'+{sales_growth}%',
@@ -451,11 +429,9 @@ def health_check():
 
 if __name__ == '__main__':
     try:
-        # Sprawdź konfigurację przed startem
         Config.validate_config()
         print("✅ Konfiguracja OK")
         
-        # Testuj połączenie email
         if email_service.test_connection():
             print("✅ Połączenie email OK")
         else:
@@ -466,7 +442,6 @@ if __name__ == '__main__':
         print("🔧 API dostępne na: http://localhost:5000/api/contact")
         print("❤️  Health check: http://localhost:5000/health")
         
-        # Uruchom aplikację
         app.run(debug=Config.DEBUG, host='0.0.0.0', port=5000)
         
     except Exception as e:

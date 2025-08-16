@@ -1,34 +1,23 @@
-"""
-Konfiguracja aplikacji AI Contact System dla Kajpa.pl
-"""
 import os
 from dotenv import load_dotenv
 
-# Załaduj zmienne środowiskowe z pliku .env
 load_dotenv()
 
 class Config:
-    """Konfiguracja aplikacji"""
     
-    # OpenAI API
     OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
     
-    # Email Configuration
     COMPANY_EMAIL = os.getenv('COMPANY_EMAIL', 'kontakt@kajpa.pl')
     COMPANY_EMAIL_PASSWORD = os.getenv('COMPANY_EMAIL_PASSWORD')
     
-    # SMTP Configuration
     SMTP_SERVER = os.getenv('SMTP_SERVER', 'h24.seohost.pl')
     SMTP_PORT = int(os.getenv('SMTP_PORT', 465))
     
-    # Notification Email
     NOTIFICATION_EMAIL = os.getenv('NOTIFICATION_EMAIL', 'kacperpopkols@gmail.com')
     
-    # Flask Configuration
     SECRET_KEY = os.getenv('SECRET_KEY', 'dev-secret-key-change-in-production')
     DEBUG = os.getenv('FLASK_DEBUG', 'True').lower() == 'true'
     
-    # System Prompt dla AI
     SYSTEM_PROMPT = """
     Jesteś profesjonalnym konsultantem ds. stron internetowych w firmie Kajpa - agencji internetowej z Białegostoku.
 
@@ -69,7 +58,6 @@ class Config:
     - Odpowiadaj bezpośrednio bez dodatkowych formatów czy template
     """
     
-    # Specjalny prompt dla demo chatbota na stronie chatboty-ai.html
     CHATBOT_DEMO_PROMPT = """
     Jesteś specjalistą od chatbotów AI w firmie Kajpa - przedstawiasz się jako "Asystent AI Kajpa".
     

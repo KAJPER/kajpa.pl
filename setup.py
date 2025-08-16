@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-"""
-Prosty setup dla AI Contact System
-"""
 import os
 import sys
 
@@ -10,7 +6,6 @@ def main():
     print(f"Python: {sys.version}")
     print(f"Katalog: {os.getcwd()}")
     
-    # Sprawdź czy pliki istnieją
     files_to_check = [
         'app.py',
         'app_minimal.py', 
@@ -25,7 +20,6 @@ def main():
         else:
             print(f"❌ {file} - BRAK")
     
-    # Sprawdź zmienne środowiskowe
     print("\n🔑 Zmienne środowiskowe:")
     env_vars = [
         'OPENAI_API_KEY',
