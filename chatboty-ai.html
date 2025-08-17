@@ -526,7 +526,7 @@
             
             try {
                 // Wyślij do API
-                const response = await fetch('http://51.68.137.107:5000/api/chatbot-demo', {
+                const response = await fetch('http://api.kajpa.pl:8888/api/chatbot-demo', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -550,7 +550,7 @@
             } catch (error) {
                 console.error('Error:', error);
                 removeTypingIndicator();
-                addAIMessage('Przepraszam, nie mogę połączyć się z serwerem. Sprawdź czy aplikacja AI działa na http://51.68.137.107:5000');
+                addAIMessage('Przepraszam, nie mogę połączyć się z serwerem. Sprawdź czy aplikacja AI działa na http://api.kajpa.pl:8888');
             } finally {
                 // Przywróć przycisk
                 sendButton.disabled = false;

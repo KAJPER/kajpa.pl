@@ -534,7 +534,7 @@
             refreshBtn.textContent = '🔄 Generowanie...';
             
             try {
-                const response = await fetch('http://51.68.137.107:5000/api/analytics-demo', {
+                const response = await fetch('http://api.kajpa.pl:8888/api/analytics-demo', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -575,7 +575,7 @@
                 
             } catch (error) {
                 console.error('Error:', error);
-                showError('Nie można połączyć się z serwerem AI. Sprawdź czy aplikacja działa na http://51.68.137.107:5000');
+                showError('Nie można połączyć się z serwerem AI. Sprawdź czy aplikacja działa na http://api.kajpa.pl:8888');
             } finally {
                 refreshBtn.disabled = false;
                 refreshBtn.textContent = '🔄 Odśwież prognozy';

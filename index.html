@@ -1021,7 +1021,7 @@
                                 <div class="p-6">
                                     <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)]">LearnPilot</h3>
                                     <p class="text-[var(--text-medium-charcoal)] text-base mt-2">
-                                        Platforma e-learningowa i szkoła pilotażu, oferująca kursy i szkolenia lotnicze dla przyszłych pilotów.
+                                        Platforma e-learningowa, oferująca kursy i szkolenia dla przyszłych maturzystów.
                                     </p>
                                 </div>
                             </a>
@@ -1031,7 +1031,7 @@
                                 <div class="p-6">
                                     <h3 class="text-xl font-bold text-[var(--text-dark-charcoal)]">iWalk</h3>
                                     <p class="text-[var(--text-medium-charcoal)] text-base mt-2">
-                                        Polski producent i dystrybutor nowoczesnych urządzeń do rehabilitacji i wspomagania ruchu, m.in. chodziki, egzoszkielety.
+                                        Polski producent i dystrybutor nowoczesnych powerbanków.
                                     </p>
                                 </div>
                             </a>
@@ -1446,8 +1446,8 @@
                                     message: document.getElementById('clientMessage').value
                                 };
                                 
-                                // URL do systemu AI - adres VPS
-                                let apiUrl = 'http://51.68.137.107:5000/api/contact';
+                                // URL do systemu AI - subdomena HTTP
+                                let apiUrl = 'http://api.kajpa.pl:8888/api/contact';
                                 
                                 const response = await fetch(apiUrl, {
                                     method: 'POST',
