@@ -3,6 +3,15 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WHR36RC5');</script>
+    <!-- End Google Tag Manager -->
+    
     <!-- SEO Meta Tags -->
     <title>Chatboty AI Kajpa - OpenAI GPT-4 | Demo na Żywo | Od 2500 PLN 🤖</title>
     <meta name="description" content="🤖 Inteligentne chatboty AI z OpenAI GPT-4! ✅ Demo na żywo ✅ +89% satysfakcji ✅ +156% leadów ✅ 24/7 obsługa ✅ Od 2500 PLN. Wycena w 24h | Kajpa Białystok"/>
@@ -97,6 +106,11 @@
 </head>
 
 <body class="antialiased">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHR36RC5"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
     <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
         <div class="layout-container flex h-full grow flex-col">
             
@@ -526,7 +540,7 @@
             
             try {
                 // Wyślij do API
-                const response = await fetch('http://api.kajpa.pl:8888/api/chatbot-demo', {
+                const response = await fetch('http://51.68.137.107:8889/api/chatbot-demo', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -550,7 +564,7 @@
             } catch (error) {
                 console.error('Error:', error);
                 removeTypingIndicator();
-                addAIMessage('Przepraszam, nie mogę połączyć się z serwerem. Sprawdź czy aplikacja AI działa na http://api.kajpa.pl:8888');
+                addAIMessage('Przepraszam, nie mogę połączyć się z serwerem. Sprawdź czy aplikacja AI działa na http://51.68.137.107:8889');
             } finally {
                 // Przywróć przycisk
                 sendButton.disabled = false;
